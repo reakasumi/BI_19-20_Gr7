@@ -1,0 +1,85 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+footer{
+    background-color: #E2E2E2 ;
+    padding: 20px 200px;
+}
+footer h2{
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+.details{
+    display: inline-block;
+    padding: 1em;
+    margin: 0  1.5em;
+}
+.blog1 img{
+    border: #919191 solid 1px;
+    padding: 0.2em;
+    float: left;
+    margin right: 1em;
+}
+
+.blog1{
+    width: 450px;
+    display: block;
+}
+.blog1 h3{
+    font-size: 0.7em;
+    color: #E9424C;
+    text-align: left;
+    margin-left: 0.5em;    
+}
+.blog1 span {
+    word-break: break-all;
+    font-size: 0.7em;
+    color: #9A9A9A;
+}
+.company{
+    font-size: 0.7em;
+    color: #9A9A9A;
+    margin-top: 1em;
+}
+.company p{
+    margin: 0;
+    padding: 0;
+}
+#contact{
+    display: block;
+    width: 220px;
+}
+input[type=text], input[type=email] {
+    border: none;
+    width: 100%;
+    border-radius: 7px;
+    height:35px;
+    padding-left: 0.7em;
+    margin: 0.35em;
+}
+textarea{
+    border: none;
+    border-radius: 7px;
+    height: 130px;
+    padding: 0.7em 0 0 0.7em;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0.35em;
+    width: 100%;
+    resize: none;
+}
+input[type=submit]{
+    background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.7em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 33.3%;
+    height: 35px;
+}
+#copyright{
+    color: #9A9A9A;
+    font-size: 0.7em;
+}
