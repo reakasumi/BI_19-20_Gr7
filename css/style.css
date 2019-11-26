@@ -126,3 +126,30 @@ footer .footer-bottom{
     /* margin: 50px; */
     margin-left: 25px;
 }
+
+/*Body css*/
+.serveices div{
+    display: inline-block;
+}
+
+.players figure{
+    display: inline-block;
+}
+
+.work img{
+    display: inline-block;
+}
+
+.redbox{
+    background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.7em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 10%;
+    height: 20px;
+    margin-left: 4px;
+
+}
