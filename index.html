@@ -1,77 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
 
-    <body>
-        <header>
-        	<h3>Compositon</h3>
-        	<nav>
-        		
-        		 <ul>
-        		<li><a href="#">HOMEPAGE</a></li>
-        	    <li><a href="#">STYLE DEMO</a></li>
-        	    <li><a href="#">FULL WIDTH</a></li>
-        	    <li><a href="#">DROPDOWN</a></li>
-        	    <li><a href="#">LINK TEXT</a></li>
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-        	</ul>
+<body>
+    <header>
+        <h3>Compositon</h3>
+        <nav>
 
-        	</nav>
+            <ul>
+                <li><a href="#">HOMEPAGE</a></li>
+                <li><a href="#">STYLE DEMO</a></li>
+                <li><a href="#">FULL WIDTH</a></li>
+                <li><a href="#">DROPDOWN</a></li>
+                <li><a href="#">LINK TEXT</a></li>
 
-        </header>
-        <article></article>
-        
-        <footer>
-            <section class="details">
+            </ul>
+
+        </nav>
+
+    </header>
+    <article></article>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section blog">
                 <h2>Latest From The Blog</h2>
-                <div class="blog1">
-                    <a href="#"><img src="images/Capture.png" alt="lorem"></a>
-                    <h3>lorem ipsum</h3>
-                    <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime numquam natus consectetur, est sit,optio debitis fugiat maiores molestias suscipit ab!</span></p>   
-                </div>
-                <!-- <div class="blog2">
-                    <a href="#"><img src="images/Capture2.png" alt="lorem"></a>
-                    <h3>lorem ipsum</h3>
-                   <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime numquam natus consectetur, est sit,optio debitis fugiat maiores molestias suscipit ab!</span></p>   
-                </div> -->
-            </section>
+                <a href="#">
+                    <img src="images/Capture.png" alt="lorem">
+                    <h4>lorem ipsum</h4>
+                    <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                            explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime numquam
+                            natus consectetur.</span></p>
+                </a>
 
-            <section class="details">
+                <a href="#" style="float: left; margin-top: 25px;"><img src="images/Capture2.png" alt="lorem">
+
+                    <h4>lorem ipsum</h4>
+                    <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                            explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime numquam
+                            natus consectetur.</span></p>
+                </a>
+            </div>
+
+            <div class="footer-section details">
                 <h2>Company Details</h2>
-                <div class="company">
-                    <p>Company Name</p>
-                    <address>Street Name & Number</address>
-                    <p>Town</p>
-                    <p>Post Code/Zip</p>
-                </div>
-                <div class="company">
-                    <p>Tel:xxxxxxxxxxxxxxxx</p>
-                    <p>Fax: xxxxxxxxx  xxxx</p>
-                    <p>Email:</p>
-                </div>
-                <div class="company">
-                    <p>Office hours</p>
-                    <p>Monday xxxxxxxxx</p>
-                    <p>Saturday xxxxxxx</p>
-                </div>
-            </section>
+                <ul>
+                    <li>Company Name</li>
+                    <li>
+                        <address>Street Name & Number</address>
+                    </li>
+                    <li>Town</li>
+                    <li>Post Code/Zip</li>
+                    <br>
+                    <li>Tel:xxxxxxxxxxxxxxxx</li>
+                    <li>Fax: xxxxxxxxx xxxx</li>
+                    <li>Email: <a href="mailto:contact@mydomain.com">contact@mydomain.com</a></li>
+                    <br>
+                    <li>Office hours</li>
+                    <li>Monday xxxxxxxxx</li>
+                    <li>Saturday xxxxxxx</li>
+                </ul>
+            </div>
 
-            <section class="details">
-                <form action="" method="post" id="contact" >
-                    <h2>Contact Us</h2>
+            <div class="footer-section contact-form">
+                <h2>Contact Us</h2>
+                <form action="" method="post" id="contact">
                     <input type="text" placeholder="Name"><br>
                     <input type="email" placeholder="Email" required><br>
                     <textarea placeholder="Message"></textarea><br>
                     <input type="submit" form="contact" value="SUBMIT">
                 </form>
-            </section>
-            <hr>
-            <p id="copyright">Copyright &copy; 2019 - All rights reserved - Name </p>
-                
-        </footer>
-    </body>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            Copyright &copy; 2019 - All rights reserved - Name
+        </div>
+    </footer>
+    <!-- //footer -->
+
+</body>
+
 </html>
