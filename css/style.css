@@ -130,6 +130,7 @@ footer .footer-bottom{
 /*Body css*/
 .serveices div{
     display: inline-block;
+    margin-left: 13%;
 }
 
 .players figure{
@@ -138,6 +139,9 @@ footer .footer-bottom{
 
 .work img{
     display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 7.5%;
 }
 
 .redbox{
@@ -145,11 +149,16 @@ footer .footer-bottom{
     border: none;
     border-radius: 7px;
     color: #E7FFFD;
-    font-size: 0.7em;
     text-decoration: none;
+    text-align: center;
+    padding-top: 2px;
+    font-weight: lighter;
     cursor: pointer;
-    width: 10%;
-    height: 20px;
+    width: 11%;
+    height: 22px;
     margin-left: 4px;
-
+    position: relative;
+    top:34px;
+    left:43%
+   
 }
