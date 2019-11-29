@@ -3,38 +3,11 @@ html, body{
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif;
     background-color: #ffffff;
-    width:1000px;
+    width:100%;
     align-content: center;
-    padding: 0rem 3rem;
+    /* padding: 0rem 3rem; */
 }
 
-/* FOOTER */
-footer{
-    background-color: #E2E2E2 ;
-    color: #9A9A9A;
-    height: 400px;
-    position: relative;
-    /* margin: 0 50px 0 50px; */
-}
-footer .footer-content{
-    height: 350px;
-    display: grid;
-    grid-template-columns: 50% 25% 25%;
-}
-
-footer .footer-content h2{
-    font-size: 0.8em;
-    font-weight: lighter;
-    color: #000000;
-} 
-
-/* footer blog */
-footer .footer-content .blog{
-    padding: 20px 0 0 10px;
-    margin-left: 25px;
-    width: 100%;
-    display: block;
-}
 header nav{
     /* background-color: red ; */
     padding: 1rem 2rem;
@@ -195,7 +168,74 @@ header a:hover{
  /* transition: background-color 0.6s ease; */
     padding: 0rem 0rem;
   }
+
+
+/*Body css*/
+.serveices div{
+    display: inline-block;
+    margin-left: 13%;
+}
+
+.players figure{
+    display: inline-block;
+}
+
+.work img{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 7.5%;
+}
+
+.redbox{
+    background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 2px;
+    font-weight: lighter;
+    cursor: pointer;
+    width: 11%;
+    height: 22px;
+    margin-left: 4px;
+    position: relative;
+    top:34px;
+    left:43%
+   
+}
+
+
+
  
+/* FOOTER */
+footer{
+    background-color: #E2E2E2 ;
+    color: #9A9A9A;
+    height: 400px;
+    position: relative;
+    /* margin: 0 50px 0 50px; */
+}
+footer .footer-content{
+    height: 350px;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+}
+
+footer .footer-content h2{
+    font-size: 0.8em;
+    font-weight: lighter;
+    color: #000000;
+} 
+
+/* footer blog */
+footer .footer-content .blog{
+    padding: 20px 0 0 10px;
+    margin-left: 25px;
+    width: 100%;
+    display: block;
+}
 .details{
     display: inline-block;
     padding: 1em;
@@ -288,38 +328,3 @@ footer .footer-bottom{
     margin-left: 25px;
 }
 
-/*Body css*/
-.serveices div{
-    display: inline-block;
-    margin-left: 13%;
-}
-
-.players figure{
-    display: inline-block;
-}
-
-.work img{
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 7.5%;
-}
-
-.redbox{
-    background-color: #E2494C;
-    border: none;
-    border-radius: 7px;
-    color: #E7FFFD;
-    text-decoration: none;
-    text-align: center;
-    padding-top: 2px;
-    font-weight: lighter;
-    cursor: pointer;
-    width: 11%;
-    height: 22px;
-    margin-left: 4px;
-    position: relative;
-    top:34px;
-    left:43%
-   
-}
