@@ -233,6 +233,7 @@ footer{
     color: #9A9A9A;
     height: 400px;
     position: relative;
+    width: 100%;
     /* padding: 0 5em; */
     /* margin: 0 50px 0 50px; */
 }
@@ -240,6 +241,7 @@ footer .footer-content{
     height: 350px;
     display: grid;
     grid-template-columns: 50% 25% 25%;
+    /* border: 1px solid blue; */
 }
 
 footer .footer-content h2{
@@ -339,17 +341,35 @@ footer .footer-content .contact-form textarea{
 }
 
 /* footer bottom/copyright */
-footer .footer-bottom{
+ footer div.footer-bottom{
     font-size: 0.7em;
-    height: 50px;
+    height: 40px;
     width: 100%;
     position: absolute;
+    top: 350px;
     bottom: 0;
-    left: 0;
-    padding-left: 10px;
+    left: -25px;
+    background-color: #E2E2E2;
+    /* padding-left: 10px; */
     padding-top: 30px;
     /* margin: 50px; */
     margin-left: 25px;
+    border-top: 1px solid lightgray;
     /* border-top: 1px solid #919191; */
+    /* border: 1px solid green; */
 }
 
+footer p#copy{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    /* border: 1px solid red; */
+    margin-right: 0.35em;
+}
+
+footer p#template{
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    margin-left: 0.35em;
+}
