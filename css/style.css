@@ -187,22 +187,44 @@ padding: 0rem 0rem;
     width: 100%;
     padding: 0 5em;
 } */
-.serveices div{
+.services div{
     display: inline-block;
-    margin-left: 5%;
+    /*border: 1px solid;*/
+    width: 320px;
+    height: 200px;
+    /*padding:2%;*/
+    margin: 30px 0px 5px 15px;
+}
+
+.services div img {
+float: left;
+padding: 15px 10px 15px 0px;
+
+}
+.services div h3{
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-style: regular;
+color: #505050;
+font-weight: lighter;
+}
+.services div p{
+    clear: both;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#666666;
 }
 
 .players figure{
     display: inline-block;
-    margin: 20px 2px;
+    margin: 30px 0px 5px 11px;
 }
 
 .work img{
     display: inline-block;
+    
     /* margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 7.5%; */
-    margin: 20px 45px;
+    margin: 30px 0px 35px 27px;
 }
 
 .redbox{
@@ -215,7 +237,7 @@ padding: 0rem 0rem;
     padding-top: 2px;
     font-weight: lighter;
     cursor: pointer;
-    width: 11%;
+    width: 14%;
     height: 22px;
     margin-left: 4px;
     position: relative;
@@ -229,6 +251,7 @@ padding: 0rem 0rem;
 
 /* FOOTER */
 footer{
+
     background-color: #E2E2E2 ;
     color: #9A9A9A;
     height: 400px;
