@@ -191,22 +191,44 @@ padding: 0rem 0rem;
     width: 100%;
     padding: 0 5em;
 } */
-.serveices div{
+.services div{
     display: inline-block;
-    margin-left: 5%;
+    /*border: 1px solid;*/
+    width: 320px;
+    height: 200px;
+    /*padding:2%;*/
+    margin: 30px 0px 5px 15px;
+}
+
+.services div img {
+float: left;
+padding: 15px 10px 15px 0px;
+
+}
+.services div h3{
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-style: regular;
+color: #505050;
+font-weight: lighter;
+}
+.services div p{
+    clear: both;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#666666;
 }
 
 .players figure{
     display: inline-block;
-    margin: 20px 2px;
+    margin: 30px 0px 5px 11px;
 }
 
 .work img{
     display: inline-block;
+    
     /* margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 7.5%; */
-    margin: 20px 45px;
+    margin: 30px 0px 35px 27px;
 }
 
 .redbox{
@@ -219,7 +241,7 @@ padding: 0rem 0rem;
     padding-top: 2px;
     font-weight: lighter;
     cursor: pointer;
-    width: 11%;
+    width: 14%;
     height: 22px;
     margin-left: 4px;
     position: relative;
@@ -233,10 +255,12 @@ padding: 0rem 0rem;
 
 /* FOOTER */
 footer{
+
     background-color: #E2E2E2 ;
     color: #9A9A9A;
     height: 400px;
     position: relative;
+    width: 100%;
     /* padding: 0 5em; */
     /* margin: 0 50px 0 50px; */
 }
@@ -244,6 +268,7 @@ footer .footer-content{
     height: 350px;
     display: grid;
     grid-template-columns: 50% 25% 25%;
+    /* border: 1px solid blue; */
 }
 
 footer .footer-content h2{
@@ -343,18 +368,22 @@ footer .footer-content .contact-form textarea{
 }
 
 /* footer bottom/copyright */
-footer .footer-bottom{
+ footer div.footer-bottom{
     font-size: 0.7em;
-    height: 50px;
+    height: 40px;
     width: 100%;
     position: absolute;
+    top: 350px;
     bottom: 0;
-    left: 0;
-    padding-left: 10px;
+    left: -25px;
+    background-color: #E2E2E2;
+    /* padding-left: 10px; */
     padding-top: 30px;
     /* margin: 50px; */
     margin-left: 25px;
+    border-top: 1px solid lightgray;
     /* border-top: 1px solid #919191; */
+    /* border: 1px solid green; */
 }
 
 
@@ -393,3 +422,17 @@ footer .footer-bottom{
     }
 }
 
+footer p#copy{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    /* border: 1px solid red; */
+    margin-right: 0.35em;
+}
+
+footer p#template{
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    margin-left: 0.35em;
+}
