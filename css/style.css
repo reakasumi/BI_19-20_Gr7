@@ -267,7 +267,9 @@ padding: 0rem 0rem;
     padding: 0 5em;
 } */
 
-
+article{
+    margin: 0 9em;
+}
 
 .services div{
     display: inline-block;
@@ -275,7 +277,7 @@ padding: 0rem 0rem;
     width: 300px;
     height: 200px;
     /*padding:2%;*/
-    margin: 70px 0px 5px 35px;
+    margin: 70px 0px 5px 20px;
     position:relative;
     left: 150px; 
 }
@@ -307,7 +309,7 @@ padding: 0rem 0rem;
     display: inline-block;
     margin: 70px 0px 35px 19px;
     position: relative;
-    left:166px;
+    left:120px;
 }
 
 .players figure figcaption{
@@ -336,7 +338,7 @@ padding: 0rem 0rem;
     margin-left: 7.5%; */
     margin: 70px 0px 50px 39px;
     position: relative;
-    left:147px;
+    left:100px;
 }
 
 .redbox{
@@ -693,6 +695,11 @@ footer p#template{
               -webkit-transform: rotate(360deg);
               transform: rotate(360deg);
           }
+      }
+
+
+      .myimg{
+          background-image: url(../images/places/italy.jpg);
       }
 
       .footer.blog-footer{
