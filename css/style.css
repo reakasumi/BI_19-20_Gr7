@@ -267,22 +267,23 @@ padding: 0rem 0rem;
     padding: 0 5em;
 } */
 
-article {
-    margin: 0em 9em;
-}
+
 
 .services div{
     display: inline-block;
     /*border: 1px solid;*/
-    width: 320px;
+    width: 300px;
     height: 200px;
     /*padding:2%;*/
-    margin: 30px 0px 5px 15px;
+    margin: 70px 0px 5px 35px;
+    position:relative;
+    left: 150px; 
 }
 
 .services div img {
     float: left;
-    padding: 15px 10px 15px 0px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 .services div h3{
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -290,15 +291,41 @@ article {
     color: #505050;
     font-weight: lighter;
 }
-.services div p{
+.services div p {
     clear: both;
     font-family:Georgia, 'Times New Roman', Times, serif;
     color:#666666;
 }
 
+.reddetails{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#E2494C;
+    margin-top: 5px;
+}
+
 .players figure{
     display: inline-block;
-    margin: 30px 0px 5px 11px;
+    margin: 70px 0px 35px 19px;
+    position: relative;
+    left:166px;
+}
+
+.players figure figcaption{
+    margin-top: 20px;
+}
+
+
+.players figure figcaption p {
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     margin-top: 5px;
+    color:#666666;
+
+}
+
+.players figure figcaption h5 {
+     font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#666666;
+
 }
 
 .work img{
@@ -307,7 +334,9 @@ article {
     /* margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 7.5%; */
-    margin: 30px 0px 35px 27px;
+    margin: 70px 0px 50px 39px;
+    position: relative;
+    left:147px;
 }
 
 .redbox{
@@ -321,11 +350,11 @@ article {
     font-weight: lighter;
     cursor: pointer;
     width: 14%;
-    height: 22px;
+    height: 24px;
     margin-left: 4px;
     position: relative;
-    top:34px;
-    left:43%
+    top:12px;
+    left:42.7%
 
 }
 
