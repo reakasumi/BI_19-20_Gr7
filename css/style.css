@@ -267,9 +267,9 @@ padding: 0rem 0rem;
     padding: 0 5em;
 } */
 
-article{
+/*article{
     margin: 0 9em;
-}
+}*/
 
 .services div{
     display: inline-block;
@@ -279,7 +279,7 @@ article{
     /*padding:2%;*/
     margin: 70px 0px 5px 20px;
     position:relative;
-    left: 150px; 
+    left: 180px; 
 }
 
 .services div img {
@@ -309,7 +309,7 @@ article{
     display: inline-block;
     margin: 70px 0px 35px 19px;
     position: relative;
-    left:120px;
+    left:170px;
 }
 
 .players figure figcaption{
@@ -338,7 +338,7 @@ article{
     margin-left: 7.5%; */
     margin: 70px 0px 50px 39px;
     position: relative;
-    left:100px;
+    left:150px;
 }
 
 .redbox{
