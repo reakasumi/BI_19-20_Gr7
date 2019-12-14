@@ -610,233 +610,78 @@ footer p#template{
 
 
 /* BLOG PAGE */
-
-.blog{
+.blog {
     margin: 0 9em;
-}
+  }
 
 .mostVisited{
-    padding: 8em 0 0 2em;
+    padding: 8em 0 0 0.5em;
     margin-bottom: 2em;
+    font-size: large;
+    color: #E2494C;
 }
-
-.cities{
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-    margin: 0.5em;
-}
-
-div > .city1{
+    
+.blog .container-all{
+    width: fit-content;
+    margin: 20px auto;
+    height: auto;
+  }
+ .container-all .container{
+    width: calc(33% - 6px);
+    overflow:hidden;
+    height: fit-content;
+    margin:3px;
+    padding: 0;
+    display:block;
+    position:relative;
+    float:left;
+  }
+ .blog img{
+    /* width: 100%; */
     height: 400px;
-    background-image: url(../images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg) ;
-    background-position: center ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    margin: 0.5em;
-}
-
-div > .city2{
-    height: 400px;
-    background-image: url(../images/cities/32-324800_get-free-top-quality-paris-hd-images-for.jpg);
-    background-position: center ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    margin: 0.5em;
-}
-
-div > .city3{
-    height: 400px;
-    background-image: url(../images/cities/photo-1505761671935-60b3a7427bad.jpg);
-    background-position: center ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    margin: 0.5em;
-}
-
-div > .city4{
-    height: 400px;
-    background-image: url(../images/cities/Dubai_uae_buildings_skyscrapers_night_hd-wallpaper-93494-915x515.jpg);
-    background-position: center ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    margin: 0.5em;
-}
-
-div > .city5{
-    background-image: url(../images/cities/singapore-city-evening-dusk-lights-buildings-water-1080P-wallpaper-middle-size.jpg);
-    background-position: center ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    margin: 0.5em;
-}
-
-div > .city6{
-    background-image: url(../images/cities/5bd36e4ddb01a-wallpaper-preview.jpg);
-    filter: blur(5px);
-    -webkit-filter: blur(5px);
-    background-position: center ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0.5em;
-}
-
-.h2{
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0, 0.4); 
-    color: white;
-    font-weight: bold;
-    border: 3px solid #f1f1f1;
-    position: absolute;
+    transition-duration: .3s;
+    /* max-width: 100%; */
+    display:block;
+    overflow:hidden;
+    cursor:pointer;
+  }
+.title{
+    position:absolute;
+    display:block;
+    cursor:pointer;
     top: 50%;
+    display: none;
     left: 50%;
+    margin-right: -50%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%,-50%);
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-    z-index: 2;
-    width: 50%;
-    padding: 20px;
-    text-align: center;
-    /* display: grid;
-    grid-template-columns: 33.33% ; */
-}
+    font-weight: bold;
+    font-size: 1.6em;
+    text-shadow: 1px 5px 10px black;
+    transition-duration: .3s;
+  }
 
-.city1:hover{
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-    transition: 0.7s;
-    -webkit-transition: 0.7s;  
-}
-
-.city2:hover{
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-    transition: 0.7s;
-    -webkit-transition: 0.7s; 
-}
-
-.city3:hover{
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-    transition: 0.7s;
-    -webkit-transition: 0.7s;  
-}
-
-
-    /* .wrapper{
-        background-image: url(../images/places/thai-landscape.jpg);
-        filter: blur(8px);
-        -webkit-filter: blur(8px);
-
-        height: 100%; 
-        width: 100%;
-
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        
-    } */
-/*
-    .desc{
-        background-color: rgb(0,0,0); 
-        background-color: rgba(0,0,0, 0.4); 
-        color: white;
-        font-weight: bold;
-        border: 3px solid #f1f1f1;
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        width: 50%;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .cm-spinner {
-        height: 150px;
-        width: 150px;
-        border: 3px solid transparent;
-        border-radius: 50%;
-        border-top: 4px solid #f15e41;
-        -webkit-animation: spin 4s linear infinite;
-        animation: spin 4s linear infinite;
-        position: relative;
+  .container:hover img{
+    transform: scale(1.2);
+    transition-duration: .3s;
+    filter: grayscale(50%);
+    opacity: .7;
+  }
+  .container:hover span{
+    color:white;
+    display: block;
+    transition-duration: .3s;
+  }
+  @media only screen and (max-width: 900px) {
+      .blog .container {
+          width: calc(50% - 6px);
       }
-      
-      .cm-spinner::before,.cm-spinner::after {
-        content: "";
-        position: absolute;
-        top: 6px;
-        bottom: 6px;
-        left: 6px;
-        right: 6px;
-        border-radius: 50%;
-        border: 4px solid transparent;
+  }
+  @media only screen and (max-width: 400px) {
+      .blog .container {
+          width: 100%;
       }
-      
-      .cm-spinner::before {
-        border-top-color: #bad375;
-        -webkit-animation: 3s spin linear infinite;
-        animation: 3s spin linear infinite;
-      }
-      
-      .cm-spinner::after {
-        border-top-color: #26a9e0;
-        -webkit-animation: spin 1.5s linear infinite;
-        animation: spin 1.5s linear infinite;
-      }   
-                   
-      @-webkit-keyframes spin {
-          from {
-              -webkit-transform: rotate(0deg);
-               transform: rotate(0deg);
-          }
-          to {
-              -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-          }
-      }   
-              
-      @keyframes spin {
-          from {
-              -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-          }
-          to {
-              -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-          }
-      }
+  }
 
-
-      .myimg{
-          background-image: url(../images/places/italy.jpg);
-      }
-
-      .footer.blog-footer{
-          margin-bottom: 0;
-      }
-      */
 
 
 
