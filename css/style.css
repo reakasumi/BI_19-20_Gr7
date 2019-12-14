@@ -610,6 +610,138 @@ footer p#template{
 
 
 /* BLOG PAGE */
+
+.blog{
+    margin: 0 9em;
+}
+
+.mostVisited{
+    padding: 8em 0 0 2em;
+    margin-bottom: 2em;
+}
+
+.cities{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    margin: 0.5em;
+}
+
+div > .city1{
+    height: 400px;
+    background-image: url(../images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg) ;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    margin: 0.5em;
+}
+
+div > .city2{
+    height: 400px;
+    background-image: url(../images/cities/32-324800_get-free-top-quality-paris-hd-images-for.jpg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    margin: 0.5em;
+}
+
+div > .city3{
+    height: 400px;
+    background-image: url(../images/cities/photo-1505761671935-60b3a7427bad.jpg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    margin: 0.5em;
+}
+
+div > .city4{
+    height: 400px;
+    background-image: url(../images/cities/Dubai_uae_buildings_skyscrapers_night_hd-wallpaper-93494-915x515.jpg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    margin: 0.5em;
+}
+
+div > .city5{
+    background-image: url(../images/cities/singapore-city-evening-dusk-lights-buildings-water-1080P-wallpaper-middle-size.jpg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    margin: 0.5em;
+}
+
+div > .city6{
+    background-image: url(../images/cities/5bd36e4ddb01a-wallpaper-preview.jpg);
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0.5em;
+}
+
+.h2{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%,-50%);
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    z-index: 2;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    /* display: grid;
+    grid-template-columns: 33.33% ; */
+}
+
+.city1:hover{
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    transition: 0.7s;
+    -webkit-transition: 0.7s;  
+}
+
+.city2:hover{
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    transition: 0.7s;
+    -webkit-transition: 0.7s; 
+}
+
+.city3:hover{
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    transition: 0.7s;
+    -webkit-transition: 0.7s;  
+}
+
+
     /* .wrapper{
         background-image: url(../images/places/thai-landscape.jpg);
         filter: blur(8px);
@@ -623,10 +755,10 @@ footer p#template{
         background-size: cover;
         
     } */
-
+/*
     .desc{
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0, 0.4); 
         color: white;
         font-weight: bold;
         border: 3px solid #f1f1f1;
@@ -649,7 +781,6 @@ footer p#template{
         -webkit-animation: spin 4s linear infinite;
         animation: spin 4s linear infinite;
         position: relative;
-        /* left: 50%; */
       }
       
       .cm-spinner::before,.cm-spinner::after {
@@ -705,5 +836,8 @@ footer p#template{
       .footer.blog-footer{
           margin-bottom: 0;
       }
+      */
+
+
 
 
