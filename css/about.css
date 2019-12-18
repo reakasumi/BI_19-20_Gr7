@@ -82,15 +82,15 @@ tbody tr td:first-child{
     padding: 1em;
 }
 
-table tr:nth-child(even){
+table tbody tr:nth-child(even){
     background-color: #f2f2f2;
 }
 
 
 table tbody tr:hover , td:first-child:hover{
     background-color:rgb(168, 42, 42);
-    z-index: 2;
 }
+
 /* 
 table tbody tr td:first-child:hover{
     background-color:rgb(168, 42, 42);
