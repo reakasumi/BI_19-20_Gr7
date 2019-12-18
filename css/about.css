@@ -1,0 +1,53 @@
+/* ABOUT page style */
+/* .aboutFooter ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.aboutFooter h1, h2 {
+  margin: 0;
+}
+
+.aboutFooter {
+  padding-top: 100px;
+  background-color: #222;
+  text-align: center;
+  color: #fff;
+}
+
+.aboutFooter h1 {
+  margin: 0;
+  letter-spacing: 3pt;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+.aboutFooter ul {
+  margin-top: 100px;
+}
+
+.aboutFooter li {
+  display: inline-block;
+  margin: 0 60px 100px;
+}
+
+.aboutFooter h2 {
+  margin-top: 35px;
+  font-size: 1.1em;
+  font-family: sans-serif;
+  font-weight: 300;
+  color: #888;
+} */
+
+ svg {
+  display: block;
+}
+
+picture img {
+  position: fixed;
+  will-change: transform;
+  width: 100%;
+  z-index: -1;
+} 
+ 

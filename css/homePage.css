@@ -1,0 +1,221 @@
+/*Body css*/
+.centered-text-style {
+    text-align: center;
+    display:inline-block;
+    /* position: absolute;
+    top: 150px; */
+    line-height: 35px;
+    font-size:18pt;
+    overflow-x: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-style:italic;
+    color: #333333;
+    padding: 1.5em 4em;
+    margin: 0 9em;
+}
+.slider-holder
+{
+    /* position: absolute; */
+    top: 150px;
+    width: 960px;
+    height: 426px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 2em; */
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-holder
+{
+    width: 4800px;
+    height: 426px;
+    clear: both;
+    position: relative;
+
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+
+.slider-image
+{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+#slider-image-1:target ~ .image-holder
+{
+    left: 0px;
+}
+
+#slider-image-2:target ~ .image-holder
+{
+    left: -960px;
+}
+
+#slider-image-3:target ~ .image-holder
+{
+    left: -1920px;
+}
+#slider-image-4:target ~ .image-holder
+{
+    left: -2880px;
+}
+#slider-image-5:target ~ .image-holder
+{
+    left: -3840px;
+}
+
+.button-holder
+{
+    position: relative;
+    bottom: 67px;
+}
+
+.slider-change
+{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color:grey;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 10px;
+width: 10px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+padding: 0rem 0rem;
+}
+
+.active, .dot:hover {
+cursor: pointer;
+height: 8px;
+width: 8px;
+margin: 0 2px;
+background-color: rgb(255, 255, 255);
+border-radius: 50%;
+display: inline-block;
+border: 2px solid black;
+/* background-color: black; */
+
+/* transition: background-color 0.6s ease; */
+padding: 0rem 0rem;
+}
+
+
+
+
+
+/* article{
+    position: absolute;
+    top: 550px;
+    max-width:100%;
+    margin: auto;
+    width: 100%;
+    padding: 0 5em;
+} */
+
+/*article{
+    margin: 0 9em;
+}*/
+
+.services div{
+    display: inline-block;
+    /*border: 1px solid;*/
+    width: 300px;
+    height: 200px;
+    /*padding:2%;*/
+    margin: 70px 0px 5px 20px;
+    position:relative;
+    left: 180px; 
+}
+
+.services div img {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.services div h3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: regular;
+    color: #505050;
+    font-weight: lighter;
+}
+.services div p {
+    clear: both;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#666666;
+}
+
+.reddetails{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#E2494C;
+    margin-top: 5px;
+}
+
+.players figure{
+    display: inline-block;
+    margin: 70px 0px 35px 19px;
+    position: relative;
+    left:170px;
+}
+
+.players figure figcaption{
+    margin-top: 20px;
+}
+
+
+.players figure figcaption p {
+     font-family:Georgia, 'Times New Roman', Times, serif;
+     margin-top: 5px;
+    color:#666666;
+
+}
+
+.players figure figcaption h5 {
+     font-family:Georgia, 'Times New Roman', Times, serif;
+    color:#666666;
+
+}
+
+.work img{
+    display: inline-block;
+    
+    /* margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 7.5%; */
+    margin: 70px 0px 50px 39px;
+    position: relative;
+    left:150px;
+}
+
+.redbox{
+    background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 2px;
+    font-weight: lighter;
+    cursor: pointer;
+    width: 14%;
+    height: 24px;
+    margin-left: 4px;
+    position: relative;
+    top:12px;
+    left:42.7%
+
+}
