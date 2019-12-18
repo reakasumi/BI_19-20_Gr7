@@ -1,53 +1,98 @@
 /* ABOUT page style */
-/* .aboutFooter ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+header{
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    fill-opacity: 0;
+    background-color: white;
 }
-
-.aboutFooter h1, h2 {
-  margin: 0;
-}
-
-.aboutFooter {
-  padding-top: 100px;
-  background-color: #222;
-  text-align: center;
-  color: #fff;
-}
-
-.aboutFooter h1 {
-  margin: 0;
-  letter-spacing: 3pt;
-  font-weight: 300;
-  font-size: 2em;
-}
-
-.aboutFooter ul {
-  margin-top: 100px;
-}
-
-.aboutFooter li {
-  display: inline-block;
-  margin: 0 60px 100px;
-}
-
-.aboutFooter h2 {
-  margin-top: 35px;
-  font-size: 1.1em;
-  font-family: sans-serif;
-  font-weight: 300;
-  color: #888;
-} */
 
  svg {
   display: block;
+  position: relative;
 }
 
 picture img {
   position: fixed;
+  top: 0;
   will-change: transform;
   width: 100%;
-  z-index: -1;
+  height: 1280px;
+  z-index: 0;
 } 
- 
+
+.content{
+    position: relative;
+    top: 0;
+    background-color: white;
+    padding: 2em 9em;
+}
+
+.content ul li{
+    list-style-image: url(../images/listType1.png);
+    
+}
+
+div ul li h3{
+    padding: 0 0 0 0.3em;
+    color: #ff1a1a;
+    font-size: 2.5em;
+    margin-top: 1em;
+}
+
+table{
+    margin: 1.5em 10em 0 3em;
+    /* margin-right: 5em; */
+    height: 350px;
+    width: 100%;
+    table-layout: fixed;
+    /* display: table; */
+    /* scroll not working bcs display block needed */
+    overflow-y: scroll;
+    border-collapse: collapse;
+}
+
+/* thead, tbody{
+    display: block;
+} */
+
+/* tbody{
+    display: block; 
+    overflow-y: scroll;
+    height: 100%;
+    overflow-x: auto;
+} */
+
+table thead th{
+    background-color: rgb(2, 24, 49);
+    color: white;
+    padding: 1em;/*same as cellspacing*/
+    /* border-spacing: 5em;  not working properly */
+    text-align: center;
+}
+
+tbody td{
+    text-align: center;
+}
+
+tbody tr td:first-child{
+    background-color: rgb(2, 24, 49);
+    text-align: left;
+    color: white;
+    padding: 1em;
+}
+
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+
+table tbody tr:hover , td:first-child:hover{
+    background-color:rgb(168, 42, 42);
+    z-index: 2;
+}
+/* 
+table tbody tr td:first-child:hover{
+    background-color:rgb(168, 42, 42);
+} */
+
