@@ -227,7 +227,7 @@ footer .footer-content .details ul li a{
 footer .footer-content .contact-form{
     padding: 20px 10px;
 }
-footer .footer-content .contact-form input[type=text], input[type=email] {
+footer .footer-content .contact-form input[name="inputType1"] {
     border: none;
     width: 85%;
     border-radius: 7px;
@@ -235,6 +235,9 @@ footer .footer-content .contact-form input[type=text], input[type=email] {
     padding-left: 0.7em;
     margin: 0.35em;
 }
+
+
+ 
 footer .footer-content .contact-form input[type=submit]{
     background-color: #E2494C;
     border: none;
