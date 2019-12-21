@@ -25,7 +25,8 @@ picture img {
     position: relative;
     top: 0;
     background-color: white;
-    padding: 2em 9em;
+    padding: 2em 9em 2em 14em;
+    margin-bottom: -10px;
 }
 
 .content ul li{
@@ -96,8 +97,11 @@ table tbody tr td:first-child:hover{
     background-color:rgb(168, 42, 42);
 } */
 .table{
-	 height: 350px;
-	 margin: 1.5em 10em 0 3em;
+	 height: 400px;
+     margin: auto;
+     margin-top: 2em;
 	 display: block;
 	 overflow-y: scroll;
 }
+
+

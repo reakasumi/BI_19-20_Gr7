@@ -2,11 +2,41 @@
 <html lang="en">
 
 <head>
-    <title>Log In</title>
+    <title>Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/signUp.css">
+    <script type="text/javascript" src="js/signUp.js"></script>
+    <script> 
+          
+        // Function to check Whether both passwords 
+        // is same or not. 
+        function checkPassword(form) { 
+            password1 = form.password1.value; 
+            password2 = form.password2.value; 
+
+            // If password not entered 
+            if (password1 == '') 
+                alert ("Please enter Password"); 
+                  
+            // If confirm password not entered 
+            else if (password2 == '') 
+                alert ("Please enter confirm password"); 
+                  
+            // If Not same return False.     
+            else if (password1 != password2) { 
+                alert ("\nPassword did not match: Please try again...") 
+                return false; 
+            } 
+
+            // If same return True. 
+            else{ 
+                return true; 
+            } 
+        } 
+
+    </script>
 
 </head>
 
@@ -39,7 +69,7 @@
                             <li><a href="">TAIWAN</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">LOG IN</a></li>
+                    <li><a href="logIn.html">LOG IN</a></li>
                 </ul>
             </nav>
         </div>
@@ -47,38 +77,50 @@
     <!-- //HEADER -->
 
     <!-- CONTENT -->
-        <div class="content-form">
-            <form action="logIn.html" method="post">
-                <h2 class="form-title">Sign Up</h2>
-                
-                <div>
-                    <label>Email:</label>
-                <input type="text" name="email">       
-                </div>
-                <div>
-                    <label>Username:</label>
-                    <input type="text" name="username">
-                </div>
-                <div>
-                    <label>New Password:</label>
-                    <input type="password" name="password">
-                </div>
-                 <div>
-                     <label>Gender:</label>
-                     <label>M</label>
-                    <input type="radio" name="gender">
-                     <label>F</label>
-                    <input type="radio" name="gender">
-                </div>
-                
+    <div class="content-form">
+        <form action="singUp.php" method="post" onsubmit="return checkPassword(this)" id="myForm">
+            <h2 class="form-title">Sign Up</h2>
+
+            <div>
+                <label>Email:</label>
+                <input type="email" name="email" class="required" required>
+            </div>
+            <div>
+                <label>Username:</label>
+                <input type="text" name="username" class="required" required>
+            </div>
+            <div>
+                <!-- Use regex for password validation -->
+                <label>Password:</label>
+                <input type="password" id="password" name="password1" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" class="required" required>
+                <span toggle="#password" class="fa fa=fw fa eye field-icon toggle-password"></span>
+                <p style="font-size: 12px; text-align: left; padding-left: 1em; color: #ff442a;">Your password must
+                    contain minimum eight characters (at least one letter, one number and one special character).</p>
+            </div>
+            <div>
+                <label>Confirm Password:</label>
+                <input type="password" name="password2" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" class="required" required>
+            </div>
+            <div>
+                <label>Gender:</label>
+                <div class="gender">
+                <label>M</label>
+                <input type="radio" name="gender">
+                <label>F</label>
+                <input type="radio" name="gender">
+                <label> Other</label>
+                <input type="radio" name="gender">
+            </div>
+            </div>
 
 
-                <div>
-                    <button type="submit" name="logIn-btn" class="logIn-btn">Sign Up</button>
-                </div>
-                
-            </form>
-        </div>
+
+            <div>
+                <button type="submit" name="logIn-btn" class="logIn-btn">Sign Up</button>
+            </div>
+            <p>Already have an account, <a href="logIn.html">Log In</a> </p>
+        </form>
+    </div>
 
 </body>
 
