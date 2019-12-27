@@ -119,3 +119,11 @@
 }
 
 
+#myCanvas{
+  margin:2em 0 2em 9em;
+}
+
+#canvas{
+  height: 400px;
+  width: 750px;
+}
