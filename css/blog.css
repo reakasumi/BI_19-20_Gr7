@@ -109,6 +109,10 @@
   }
 }
 
+
+
+/* LineThrough animation// */
+/* 
 @keyframes lineThrough{
   0%{}
   100%{text-decoration: line-through;}
@@ -116,7 +120,7 @@
 @-webkit-keyframes lineThrough{
   0%{}
   100%{text-decoration: line-through;}
-}
+} */
 
 
 #myCanvas{
@@ -125,5 +129,7 @@
 
 #canvas{
   height: 400px;
-  width: 750px;
+  width: 800px;
+  margin-left:2em;
 }
+
