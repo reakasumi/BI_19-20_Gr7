@@ -39,15 +39,20 @@ header ul{
     margin-left: 200px;
     border-radius:12px;
 }
-  header ul li {
-    display: inline;
-    padding: 0 1em;
-    position: relative;
+
+
+header ul li {
+  float: left;
+  display: inline;
+  padding: 0 1em;
+
 }
+
 
 header .menu-toggle{
     display: none;
 }
+
 
 header a{
     text-decoration: none;
@@ -122,36 +127,52 @@ header a:hover{
   }*/
 
 /*------------------------------------------*/
-.dropdown {
-  float: right;
+.dropdown{
+  overflow: 
 }
 
 .dropdown-content {
+
   display: none;
   position: absolute;
+
   background-color: #f9f9f9;
-  width: 100%;
-  left: 0;
+  width: 25%;
+  height: 350px;
+  border-radius: 12px;
+  right: 105px;
+ /* top: 98px;*/
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-.dropdown-content .header-menu {
+/*.dropdown-content .header-menu {
+  
   background: red;
   padding: 16px;
   color: white;
-}
+}*/
 
 .dropdown:hover .dropdown-content {
+ 
   display: block;
+}
+.row{
+   
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 12px;
+
 }
 
 .column {
   float: left;
-  width: 33.33%;
+ 
   padding: 10px;
-  background-color: #ccc;
-  height: 250px;
+ 
+  height: 240px;
 }
 
 .column a {
@@ -167,10 +188,44 @@ header a:hover{
   background-color: #ddd;
 }
 
-.row:after {
+/*.row:after {
   content: "";
   display: table;
   clear: both;
+}*/
+
+
+
+#myInput {
+  box-sizing: border-box;
+  background-position: 10px 10px;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+#myInput2 {
+  box-sizing: border-box;
+  font-size: 12.4px;
+  color: #666666;
+  width: 81%;
+  padding: 14px 0px 12px 10px;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+#myInput2:focus {outline: 3px solid #ddd;}
+
+.column p{
+  display: inline-block;
+
+  margin-top: 10px; 
+ 
 }
 
 
@@ -195,6 +250,13 @@ header a:hover{
   .left-text{
     font-size:12pt;
     color:#666666;
+}
+
+.just-text{
+   font-style: regular;
+    color: #505050;
+    font-size: 15pt;
+
 }
 
 /* // HEADER*/

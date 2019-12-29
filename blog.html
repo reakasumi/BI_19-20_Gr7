@@ -27,7 +27,7 @@
 
 <body>
     <!-- HEADER -->
-  <header>
+ <header>
         <!-- NAVIGATION -->
         <div class="navigation">
             <nav>
@@ -45,41 +45,42 @@
                     <li><a href="#">HOME</a></li>
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
-                    
-                    <div class="dropdown">
-                    <a href="places.html" target="_self">PLACES</a>
+                    <li  class="dropdown" >              
+                    <a href="places.html" target="_self" >PLACES</a>
                     <div class="dropdown-content">
-                        <div class="header-menu">
+                        <!--<div class="header-menu">
                         <h2>Mega Menu</h2>
-                        </div> 
+                        </div>--> 
 
                         <div class="row">
                             <div class="column">
-                                   <h3>Category 1</h3>
-                                   <a href="#">Link 1</a>
-                                   <a href="#">Link 2</a>
-                                   <a href="#">Link 3</a>     
+                                   <p>
+                                   <label class="just-text">Where do you want to go?</label>
+                                   <br>
+                                   <input type="text" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
+                                    </p>
+                                    <p>
+                                    <label class="just-text">Check in</label><br>
+                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                    </p>
+                                    <p>
+                                    <label class="just-text">Check out</label><br>
+                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                    </p>
+                                    <p>
+                                    <label class="just-text">Guests</label><br>
+                                    <input type="number" placeholder="How many.." id="myInput">
+                                    </p>
+
+
                             </div>
-                            <div class="column">
-                                   <h3>Category 2</h3>
-                                    <a href="#">Link 1</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                            </div>
-                            <div class="column">
-                                   <h3>Category 3</h3>
-                                    <a href="#">Link 1</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
-                            </div>
+
+
 
                         </div>
 
-                        
+                   </li>
 
-                    </div>   
-
-                    
                    <!-- <div id="dropdown">
                         <a href="places.html" target="_self">PLACES</a>
                         <ul id="dropdown-content">
@@ -92,6 +93,7 @@
                     <div>-->
                     
                     <li><a href="logIn.html" target="_self">LOG IN</a></li>
+
                 </ul>
             </nav>
         </div>
@@ -192,8 +194,8 @@
                     <div class="footer-section contact-form">
                         <h2>Contact Us</h2>
                         <form action="" method="post" id="contact">
-                            <input type="text" placeholder="Name"><br>
-                            <input type="email" placeholder="Email" required><br>
+                            <input type="text" placeholder="Name" name="inputType1"><br>
+                            <input type="email" placeholder="Email" name="inputType1" required><br>
                             <textarea placeholder="Message"></textarea><br>
                             <input type="submit" form="contact" value="SUBMIT">
                         </form>
