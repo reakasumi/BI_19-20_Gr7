@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Log In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/logIn.css">
+
+</head>
+
+<body>
+    <!-- HEADER -->
+   <header>
+        <!-- NAVIGATION -->
+        <div class="navigation">
+            <nav>
+                <div class="header-text">
+                    <span class="composition-text">
+                        Travel
+                    </span>
+
+                    <span class="left-text">
+                        Free PSD Website Template
+                    </span>
+                </div>
+                <i class="fa fa-bars menu-toggle"></i>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="about.html" target="_self">ABOUT</a></li>
+                    <li><a href="blog.html" target="_self">BLOG</a></li>
+                    <li  class="dropdown" >              
+                    <a href="places.html" target="_self" >PLACES</a>
+                    <div class="dropdown-content">
+                        <!--<div class="header-menu">
+                        <h2>Mega Menu</h2>
+                        </div>--> 
+
+                        <div class="row">
+                            <div class="column">
+                                   <p>
+                                   <label class="just-text">Where do you want to go?</label>
+                                   <br>
+                                   <input type="text" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
+                                    </p>
+                                    <p>
+                                    <label class="just-text">Check in</label><br>
+                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                    </p>
+                                    <p>
+                                    <label class="just-text">Check out</label><br>
+                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                    </p>
+                                    <p>
+                                    <label class="just-text">Guests</label><br>
+                                    <input type="number" placeholder="How many.." id="myInput">
+                                    </p>
+
+
+                            </div>
+
+
+
+                        </div>
+
+                   </li>
+
+                   <!-- <div id="dropdown">
+                        <a href="places.html" target="_self">PLACES</a>
+                        <ul id="dropdown-content">
+                            <li><a href="" target="_self">NEW YORK</a></li>
+                            <li><a href="" target="_self">LOS ANGELES</a></li>
+                            <li><a href="" target="_self">ITALY</a></li>
+                            <li><a href="" target="_self">SPAIN</a></li>
+                            <li><a href="" target="_self">THAILAND</a></li>
+                        </ul>
+                    <div>-->
+                    
+                    <li><a href="logIn.html" target="_self">LOG IN</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //HEADER -->
+
+    <!-- CONTENT -->
+        <div class="content-form">
+            <form action="logIn.php" method="post">
+                <h2 class="form-title">Log In</h2>
+                <div>
+                    <label>Username:</label>
+                    <input type="text" name="username" class="inputType" required autofocus>
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" name="password" class="inputType" required>
+                </div>
+                <div>
+                    <button type="submit" name="logIn-btn" class="logIn-btn">Log In</button>
+                </div>
+                <p>If you don't have an account, you can <a href="signUp.html">Sign Up</a> </p>
+            </form>
+        </div>
+
+</body>
+
+</html>

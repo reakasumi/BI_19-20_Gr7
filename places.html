@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/places.css">
+    <script src="js/geolocation.js"></script>
+    <title>Places</title>
+</head>
+<body>
+     <!-- HEADER -->
+    <header>
+        <!-- NAVIGATION -->
+        <div class="navigation">
+            <nav>
+                <div class="header-text">
+                    <span class="composition-text">
+                        Travel
+                    </span>
+
+                    <span class="left-text">
+                        Free PSD Website Template
+                    </span>
+                </div>
+                <i class="fa fa-bars menu-toggle"></i>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="about.html" target="_self">ABOUT</a></li>
+                    <li><a href="blog.html" target="_self">BLOG</a></li>
+                    <li  class="dropdown" >              
+                    <a href="places.html" target="_self" >PLACES</a>
+                    <div class="dropdown-content">
+                        <!--<div class="header-menu">
+                        <h2>Mega Menu</h2>
+                        </div>--> 
+
+                        <div class="row">
+                            <div class="column">
+                                   <p>
+                                   <label class="just-text">Where do you want to go?</label>
+                                   <br>
+                                   <input type="text" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
+                                    </p>
+                                    <p>
+                                    <label class="just-text">Check in</label><br>
+                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                    </p>
+                                    <p>
+                                    <label class="just-text">Check out</label><br>
+                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                    </p>
+                                    <p>
+                                    <label class="just-text">Guests</label><br>
+                                    <input type="number" placeholder="How many.." id="myInput">
+                                    </p>
+
+
+                            </div>
+
+
+
+                        </div>
+
+                   </li>
+
+                   <!-- <div id="dropdown">
+                        <a href="places.html" target="_self">PLACES</a>
+                        <ul id="dropdown-content">
+                            <li><a href="" target="_self">NEW YORK</a></li>
+                            <li><a href="" target="_self">LOS ANGELES</a></li>
+                            <li><a href="" target="_self">ITALY</a></li>
+                            <li><a href="" target="_self">SPAIN</a></li>
+                            <li><a href="" target="_self">THAILAND</a></li>
+                        </ul>
+                    <div>-->
+                    
+                    <li><a href="logIn.html" target="_self">LOG IN</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- //HEADER -->
+
+    <!-- CONTENT -->
+    <div id="map" style="height:400px; width: 700px; margin: auto;"></div>
+
+    <!-- <img src="images/map.png" alt="" id="myMap" style="height:400px; width: 700px; margin: auto;"> -->
+
+    <!-- //CONTENT -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer blog-footer">
+            <div class="footer-content">
+                <div class="footer-section blog">
+                    <h2>Latest From The Blog</h2>
+                    <a href="#">
+                        <img src="images/Capture.png" alt="lorem">
+                        <h4>lorem ipsum</h4>
+                        <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Porro
+                                explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime
+                                numquam
+                                natus consectetur.</span></p>
+                    </a>
+
+                    <a href="#" style="float: left; margin-top: 25px;"><img src="images/Capture2.png" alt="lorem">
+
+                        <h4>lorem ipsum</h4>
+                        <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Porro
+                                explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime
+                                numquam
+                                natus consectetur.</span></p>
+                    </a>
+                </div>
+
+                <div class="footer-section details">
+                    <h2>Company Details</h2>
+                    <ul>
+                        <li>Company Name</li>
+                        <li>
+                            <address>Street Name & Number</address>
+                        </li>
+                        <li>Town</li>
+                        <li>Post Code/Zip</li>
+                        <br>
+                        <li>Tel:xxxxxxxxxxxxxxxx</li>
+                        <li>Fax: xxxxxxxxx xxxx</li>
+                        <li>Email: <a href="mailto:contact@mydomain.com">contact@mydomain.com</a></li>
+                        <br>
+                        <li>Office hours</li>
+                        <li>Monday xxxxxxxxx</li>
+                        <li>Saturday xxxxxxx</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact-form">
+                    <h2>Contact Us</h2>
+                    <form action="" method="post" id="contact">
+                        <input type="text" placeholder="Name" name="inputType1"><br>
+                        <input type="email" placeholder="Email" name="inputType1" required><br>
+                        <textarea placeholder="Message"></textarea><br>
+                        <input type="submit" form="contact" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="copy">Copyright &copy; 2019 - All rights reserved - Name</p>
+                <p id="template">Template by Template OS</p>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- geolocation api key -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+
+</body>
+</html>
