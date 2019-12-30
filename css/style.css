@@ -72,6 +72,30 @@ header ul li a:hover{
     color:#666666;
 }
 
+/* POST SLIDER */
+.post-slider {
+    border : 1px solid red;
+}
+
+.post-slider.post-wrapper {
+    width: 84%;
+    height: 350px; 
+    margin: 0px auto; 
+    /* auto for horizontally centralized */
+    border : 1px solid red;
+    overflow: hidden;
+}
+
+.post-slider .post-wrapper .post {
+    height: 350px;
+    width: 300px;
+    /*inline block for making it horizontally and 
+    when it reaches the end to go into the next line*/
+    margin: 0px 10px;
+    display: inline-block;
+    background-color: red;
+}
+
 
 .centered-text-style {
 height:133px;
