@@ -37,29 +37,34 @@ header nav{
 }
 
 header ul{
-    float:right;
-    margin:0px;
+    float: right;
+    margin-left:180px;
+
     padding: 0px;
     list-style: none;
+    width: 58%;
+    height: 50px;
+
     /* border: 1px solid red; */
     background-color:#E2494B;
     /* padding: 1rem 1rem; */
     border-radius:12px;
 }
 
-header ul li{
+/*header ul li{
 float: left;
-}
+}*/
 
 header ul li a {
-    display: block;
-    padding: 21px;
+   /* display: block;*/
+
+    padding: 11px;
     font-size:1.1rem;
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:white;
-    padding: 1rem 1rem;
-    margin-left: 200px;
+   /* padding: 1rem 1rem;*/
+   /* margin-left: 200px;*/
     border-radius:12px;
 }
 
@@ -68,7 +73,7 @@ header ul li {
   float: left;
   display: inline;
   padding: 0 1em;
-
+  padding-top: 14px; 
 }
 
 
@@ -80,7 +85,7 @@ header .menu-toggle{
 header a{
     text-decoration: none;
     color:white;
-    padding: 0em 1em;
+    /*padding: 0em 1em;*/
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: small;
 }
@@ -480,11 +485,11 @@ footer .footer-content .contact-form textarea{
 /* media queries */
 @media only screen and (max-width:750px){
     header ul{
-        /* float:right;
+         float:right;
         margin:0px;
         padding: 0px;
         list-style: none;
-        /* border: 1px solid red; */
+        /* border: 1px solid red; 
         /* padding: 1rem 1rem; */
         /* border-radius:12px; */ 
         width: 100%;
@@ -511,6 +516,9 @@ footer .footer-content .contact-form textarea{
         margin-top:20px;
     }
 }
+
+
+
 
 footer p#copy{
     position: absolute;
