@@ -485,13 +485,13 @@ footer .footer-content .contact-form textarea{
 /* media queries */
 @media only screen and (max-width:750px){
     header ul{
-         float:right;
+         /* float:right; */
         margin:0px;
         padding: 0px;
         list-style: none;
-        /* border: 1px solid red; 
-        /* padding: 1rem 1rem; */
-        /* border-radius:12px; */ 
+         border: 1px solid red;  
+        padding: 1rem 1rem;
+        border-radius:12px; 
         width: 100%;
         background-color:#E2494B;
 
@@ -504,9 +504,9 @@ footer .footer-content .contact-form textarea{
 
     header .logo{
         float:left;
-        /* margin-bottom: 9px; */
-        /* border:1px solid red; */
-        /* height:inherit; */
+        margin-bottom: 9px; 
+        border:1px solid red;
+         height:inherit; 
     }
 
 }
