@@ -277,8 +277,9 @@ padding: 0 4.7em;
 
 
 
-#myInput {
-  box-sizing: border-box;
+.inputStyle_1{
+/*box-sizing: border-box;*/
+  width: 100%;
   background-position: 10px 10px;
   background-size: 30px;
   background-repeat: no-repeat;
@@ -286,34 +287,24 @@ padding: 0 4.7em;
   padding: 14px 20px 12px 45px;
   border: 1px solid #ddd;
   margin-top: 10px;
+
 }
 
-#myInput3{
-  box-sizing: border-box;
-  background-position: 10px 10px;
-  background-size: 30px;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  padding: 14px 20px 12px 45px;
-  border: 1px solid #ddd;
-  margin-top: 10px;
-}
 
-#myInput2{
+.inputStyle_2{
   box-sizing: border-box;
   font-size: 12.4px;
-  color: transparent;
-  width: 81%;
+  color: #666666;
+  width: 100%;
   padding: 14px 0px 12px 10px;
   border: 1px solid #ddd;
   margin-top: 10px;
 }
 
-#myInput:focus {outline: 3px solid #ddd;}
+.inputStyle_1:focus {outline: 3px solid #ddd;}
+.inputStyle_2:focus {outline: 3px solid #ddd;}
 
-#myInput2:focus {outline: 3px solid #ddd;}
-
-.column p{
+.inline{
   display: inline-block;
 
   margin-top: 10px; 
@@ -344,11 +335,10 @@ padding: 0 4.7em;
     color:#666666;
 }
 
-.just-text{
+  .just-text{
    font-style: regular;
     color: #505050;
     font-size: 15pt;
-
 }
 
 /* // HEADER*/

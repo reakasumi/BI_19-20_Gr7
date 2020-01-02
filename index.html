@@ -40,27 +40,28 @@
 
                         <div class="row">
                             <div class="column">
+                                  <form method="link" action="newyork.html">
                                    <p>
                                    <label class="just-text">Where do you want to go?</label>
                                    <br>
-                                   <input type="text" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
+                                   <input type="text" class="inputStyle_1" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
                                     </p>
-                                    <p>
+                                    <p class="inline">
                                     <label class="just-text">Check in</label><br>
-                                    <input type="date"  id="myInput2">
+                                    <input class="inputStyle_2" type="date"  id="myDate1" >
                                     </p>
-                                    <p>
+                                    <p class="inline">
                                     <label class="just-text">Check out</label><br>
-                                    <input type="date" id="myInput2">
+                                    <input class="inputStyle_2" type="date" id="myDate2" >
                                     </p>
                                     <p>
                                     <label class="just-text">Guests</label><br>
-                                    <input type="number" placeholder="How many.." id="myInput3">
+                                    <input type="number" class="inputStyle_1" placeholder="How many.." id="myInput2">
                                     </p>
 
                                     <input type="button" id="button1" value="enter">
 
-
+                                    </form>
 
 
                             </div>
@@ -159,7 +160,7 @@
     </div>
     <img src="images/BGColour.png" width="15px" height="15px" />
 
-
+    <h1 id="demo"></h1>
 
     <article>
         <section class="services">
@@ -334,42 +335,11 @@
 
 
 
+     <script src="js/header.js"></script>
+     <script src="js/newyork.js"></script>
      <script>
-
-// var  search_value="helloworld";
-var place = ["blog", "berlin", "paris"];
-
-    
-   
-
-    function start(){
-     var enterButton=document.getElementById("button1");
-     enterButton.addEventListener("click", load, false ); 
-    
-     
-
-
-    }
-
-    function load(){
-         search_value= document.getElementById("myInput").value;
-         for (var i in place) {
-            if(place[i]==search_value){
-                window.location.href=search_value+".html";
-            }
-         }
-
-        // document.getElementById("demo").innerHTML = search_value;
-         
-        //window.location.href="ushtrime2.html";
-    }
-   
-
-   window.addEventListener("load",start, false);
-
-    
-
-</script>
+         loadWindow();
+     </script>
 
 
 
