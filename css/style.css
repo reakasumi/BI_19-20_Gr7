@@ -155,6 +155,7 @@ padding: 0 4.7em;
     float:left;
     height: 133px;
     border-bottom: 1px solid #e2e2e2;
+    
     /* margin-bottom: 133px; */
   }
 
@@ -294,9 +295,9 @@ padding: 0 4.7em;
 .inputStyle_2{
   box-sizing: border-box;
   font-size: 12.4px;
-  color: #666666;
+  color: #666666 ;
   width: 100%;
-  padding: 14px 0px 12px 10px;
+  padding: 14px 0px 12px 11px;
   border: 1px solid #ddd;
   margin-top: 10px;
 }
@@ -310,6 +311,35 @@ padding: 0 4.7em;
   margin-top: 10px; 
  
 }
+
+input[name=search]{
+    background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.7em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 33.3%;
+    height: 35px;
+    position: relative;
+    left: 68%;
+    top: 20px;
+}
+input[name=search]:hover{
+    background-color: rgb(228, 116, 118);
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

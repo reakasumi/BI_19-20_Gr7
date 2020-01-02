@@ -131,6 +131,12 @@ padding: 0rem 0rem;
     margin: 0 9em;
 }*/
 
+.services{
+     border-bottom: 1px solid #e2e2e2;
+     border-top: 1px solid #e2e2e2;
+}
+
+
 .services div{
     display: inline-block;
     /*border: 1px solid;*/
@@ -140,6 +146,8 @@ padding: 0rem 0rem;
     margin: 70px 0px 5px 20px;
     position:relative;
     left: 180px; 
+
+
 }
 
 .services div img {
@@ -163,6 +171,11 @@ padding: 0rem 0rem;
     font-family:Georgia, 'Times New Roman', Times, serif;
     color:#E2494C;
     margin-top: 5px;
+
+}
+
+.players{
+    border-bottom: 1px solid #e2e2e2;
 }
 
 .players figure{
@@ -215,7 +228,7 @@ padding: 0rem 0rem;
     height: 24px;
     margin-left: 4px;
     position: relative;
-    top:12px;
+    top:-10px;
     left:42.7%
 
 }

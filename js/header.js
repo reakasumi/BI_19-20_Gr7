@@ -3,6 +3,7 @@
 var place = ["newyork", "berlin", "paris"];
 var startDate;
 var endDate;
+var guests;
 
     
    
@@ -21,7 +22,11 @@ var endDate;
 
          search_value= document.getElementById("myInput").value;
          startDate = document.getElementById("myDate1").value;
+         sessionStorage.setItem("startDatetext",startDate);
          endDate = document.getElementById("myDate2").value;
+         sessionStorage.setItem("endDatetext",endDate);
+         guests= document.getElementById("myInput2").value;
+         sessionStorage.setItem("guestsText", guests);
          //var obj=new SDate();
 
          //document.getElementById("demo").innerHTML = obj.getStartDate();
@@ -73,16 +78,10 @@ var endDate;
         }
 
 
-       class SDate{
 
-        getStart(){
+
             window.addEventListener("load",start, false);
-                }
-       }
        
-       function loadWindow(){
-            window.addEventListener("load",start, false);
-       }
 
 
 

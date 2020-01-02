@@ -2,8 +2,11 @@
 <html>
 <head>
 	<title>New York</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newyork.css">
+    <link rel="stylesheet" href="css/homePage.css">
    
     
 
@@ -26,7 +29,7 @@
                 </div>
                 <i class="fa fa-bars menu-toggle"></i>
                 <ul>
-                    <li><a href="#">HOME</a></li>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
                     <li  class="dropdown" >              
@@ -53,7 +56,7 @@
                                     <input type="number" class="inputStyle_1" placeholder="How many.." id="myInput2">
                                     </p>
 
-                                    <input type="button" id="button1" value="enter">
+                                    <input type="button" name="search" id="button1" value="SEARCH">
 
 
 
@@ -75,24 +78,45 @@
 
 
 
-<div class="content">
-	
-<p id="date"></p>
-<p>Guests</p>
+
+<div class="place-content">
+
+<div class="place-row">	
+<p id="date">Date</p>
+<p id="guests">Guests</p>
+</div>
 
 
 
+  <section class="services" style="position: relative; top:50px;">
+            <h4 class="redbox">OUR SERVICES</h4>
+            
+            <div>
+                <img src="images/icon2.jpg" alt="icon" width="30" height="30">
+                <h3> Indonectetus facilis</h3>
+                <p>Hello world Hello world hello world hello world hello world
+                    Hello world Hello world Hello world Hello world Hello world
+                    Hello world Hello world </p>
+                <details class="reddetails"><summary>Read more</summary></details>
+            </div>
+            <div>
+                <img src="images/icon2.jpg" alt="icon" width="30" height="30">
+                <h3> Indonectetus facilis</h3>
+                <p>Hello world Hello world hello world hello world hello world
+                    Hello world Hello world Hello world Hello world Hello world
+                    Hello world Hello world </p>
+               <details class="reddetails"><summary>Read more</summary></details>
+            </div>
+            <div>
+                <img src="images/icon2.jpg" alt="icon" width="30" height="30">
+                <h3> Indonectetus facilis</h3>
+                <p>Hello world Hello world hello world hello world hello world
+                    Hello world Hello world Hello world Hello world Hello world
+                    Hello world Hello world </p>
+                <details class="reddetails"><summary>Read more</summary></details>
+            </div>
 
-
-
-
-
-
-
-
-
-
-
+        </section>
 
 
 </div>
@@ -106,90 +130,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- footer -->
-    <footer>
-        <div class="footer">
-            <div class="footer-content">
-                <div class="footer-section blog">
-                    <h2>Latest From The Blog</h2>
-                    <a href="#">
-                        <img src="images/Capture.png" alt="lorem">
-                        <h4>lorem ipsum</h4>
-                        <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Porro
-                                explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime
-                                numquam
-                                natus consectetur.</span></p>
-                    </a>
-
-                    <a href="#" style="float: left; margin-top: 25px;"><img src="images/Capture2.png" alt="lorem">
-
-                        <h4>lorem ipsum</h4>
-                        <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Porro
-                                explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime
-                                numquam
-                                natus consectetur.</span></p>
-                    </a>
-                </div>
-
-                <div class="footer-section details">
-                    <h2>Company Details</h2>
-                    <ul>
-                        <li>Company Name</li>
-                        <li>
-                            <address>Street Name & Number</address>
-                        </li>
-                        <li>Town</li>
-                        <li>Post Code/Zip</li>
-                        <br>
-                        <li>Tel:xxxxxxxxxxxxxxxx</li>
-                        <li>Fax: xxxxxxxxx xxxx</li>
-                        <li>Email: <a href="mailto:contact@mydomain.com">contact@mydomain.com</a></li>
-                        <br>
-                        <li>Office hours</li>
-                        <li>Monday xxxxxxxxx</li>
-                        <li>Saturday xxxxxxx</li>
-                    </ul>
-                </div>
-
-                <div class="footer-section contact-form">
-                    <h2>Contact Us</h2>
-                    <form action="" method="post" id="contact">
-                        <input type="text" placeholder="Name" name="inputType1"><br>
-                        <input type="email" placeholder="Email" name="inputType1" required><br>
-                        <textarea placeholder="Message"></textarea><br>
-                        <input type="submit" form="contact" value="SUBMIT">
-                    </form>
-                </div>
-            </div>
-            <!-- <hr> -->
-            <div class="footer-bottom">
-                <p id="copy">Copyright &copy; 2019 - All rights reserved - Name</p>
-                <p id="template">Template by Template OS</p>
-            </div>
-        </div>
-    </footer>
+  
 
 
 
