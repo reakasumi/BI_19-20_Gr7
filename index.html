@@ -55,8 +55,12 @@
                                     </p>
                                     <p>
                                     <label class="just-text">Guests</label><br>
-                                    <input type="number" placeholder="How many.." id="myInput">
+                                    <input type="number" placeholder="How many.." id="myInput3">
                                     </p>
+
+                                    <input type="button" id="button1" value="enter">
+
+
 
 
                             </div>
@@ -326,6 +330,63 @@
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+
+
+     <script>
+
+// var  search_value="helloworld";
+var place = ["blog", "berlin", "paris"];
+
+    
+   
+
+    function start(){
+     var enterButton=document.getElementById("button1");
+     enterButton.addEventListener("click", load, false ); 
+    
+     
+
+
+    }
+
+    function load(){
+         search_value= document.getElementById("myInput").value;
+         for (var i in place) {
+            if(place[i]==search_value){
+                window.location.href=search_value+".html";
+            }
+         }
+
+        // document.getElementById("demo").innerHTML = search_value;
+         
+        //window.location.href="ushtrime2.html";
+    }
+   
+
+   window.addEventListener("load",start, false);
+
+    
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 
