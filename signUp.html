@@ -8,35 +8,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/signUp.css">
     <script type="text/javascript" src="js/signUp.js"></script>
-    <script> 
-          
-        // Function to check Whether both passwords 
-        // is same or not. 
-        function checkPassword(form) { 
-            password1 = form.password1.value; 
-            password2 = form.password2.value; 
-
-            // If password not entered 
-            if (password1 == '') 
-                alert ("Please enter Password"); 
-                  
-            // If confirm password not entered 
-            else if (password2 == '') 
-                alert ("Please enter confirm password"); 
-                  
-            // If Not same return False.     
-            else if (password1 != password2) { 
-                alert ("\nPassword did not match: Please try again...") 
-                return false; 
-            } 
-
-            // If same return True. 
-            else{ 
-                return true; 
-            } 
-        } 
-
-    </script>
 
 </head>
 
@@ -60,43 +31,44 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
-                    <li  class="dropdown" >              
-                    <a href="places.html" target="_self" >PLACES</a>
-                    <div class="dropdown-content">
-                        <!--<div class="header-menu">
+                    <li class="dropdown">
+                        <a href="places.html" target="_self">PLACES</a>
+                        <div class="dropdown-content">
+                            <!--<div class="header-menu">
                         <h2>Mega Menu</h2>
-                        </div>--> 
+                        </div>-->
 
-                        <div class="row">
-                            <div class="column">
-                                   <p>
-                                   <label class="just-text">Where do you want to go?</label>
-                                   <br>
-                                   <input type="text" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
+                            <div class="row">
+                                <div class="column">
+                                    <p>
+                                        <label class="just-text">Where do you want to go?</label>
+                                        <br>
+                                        <input type="text" placeholder="Search.." id="myInput"
+                                            style=" background-image: url('images/search.png');">
                                     </p>
                                     <p>
-                                    <label class="just-text">Check in</label><br>
-                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                        <label class="just-text">Check in</label><br>
+                                        <input type="date" placeholder="dd-mm-yy" id="myInput2">
                                     </p>
                                     <p>
-                                    <label class="just-text">Check out</label><br>
-                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                        <label class="just-text">Check out</label><br>
+                                        <input type="date" placeholder="dd-mm-yy" id="myInput2">
                                     </p>
                                     <p>
-                                    <label class="just-text">Guests</label><br>
-                                    <input type="number" placeholder="How many.." id="myInput">
+                                        <label class="just-text">Guests</label><br>
+                                        <input type="number" placeholder="How many.." id="myInput">
                                     </p>
+
+
+                                </div>
+
 
 
                             </div>
 
+                    </li>
 
-
-                        </div>
-
-                   </li>
-
-                   <!-- <div id="dropdown">
+                    <!-- <div id="dropdown">
                         <a href="places.html" target="_self">PLACES</a>
                         <ul id="dropdown-content">
                             <li><a href="" target="_self">NEW YORK</a></li>
@@ -106,7 +78,7 @@
                             <li><a href="" target="_self">THAILAND</a></li>
                         </ul>
                     <div>-->
-                    
+
                     <li><a href="logIn.html" target="_self">LOG IN</a></li>
 
                 </ul>
@@ -117,7 +89,7 @@
 
     <!-- CONTENT -->
     <div class="content-form">
-        <form action="singUp.php" method="post" onsubmit="return checkPassword(this)" id="myForm">
+        <form action="index.html" method="post" onsubmit="return checkMatching(this)" id="myForm" name="myForm" >
             <h2 class="form-title">Sign Up</h2>
 
             <div>
@@ -131,28 +103,41 @@
             <div>
                 <!-- Use regex for password validation -->
                 <label>Password:</label>
-                <input type="password" id="password" name="password1" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" class="required" required>
+                <!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" -->
+                <input type="password" id="password" name="password1" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$"
+                    class="required" required>
                 <span toggle="#password" class="fa fa=fw fa eye field-icon toggle-password"></span>
                 <p style="font-size: 12px; text-align: left; padding-left: 1em; color: #ff442a;">Your password must
                     contain minimum eight characters (at least one letter, one number and one special character).</p>
             </div>
             <div>
                 <label>Confirm Password:</label>
-                <input type="password" name="password2" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" class="required" required>
+                <input type="password" name="password2" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$"
+                    class="required" required>
             </div>
             <div>
                 <label>Gender:</label>
                 <div class="gender">
-                <label>M</label>
-                <input type="radio" name="gender">
-                <label>F</label>
-                <input type="radio" name="gender">
-                <label> Other</label>
-                <input type="radio" name="gender">
-            </div>
+                    <label>M</label>
+                    <input type="radio" name="gender">
+                    <label>F</label>
+                    <input type="radio" name="gender">
+                    <label> Other</label>
+                    <input type="radio" name="gender">
+                </div>
             </div>
 
+            <div>
+                <p style="margin-top: 10px;">If you're not a robot, please drag the android into the box.</p>
+                <img src="images/872px-Android_robot.svg.png" alt="Andorid logo" draggable="true"
+                ondragstart="return drag(event)" height="60px" style="margin: 0px 15px 10px 15px;">
+                <div id="notRobot" ondragenter="return dragEnter(event)" ondrop="return drop(event)"
+                    ondragover="return moveAndroid(event)"></div>
+                
+            </div>
 
+            <input type="checkbox" name="terms" id="terms" style="margin: 0.35em 0 1.25em 0.35em; ">
+            <label style="font-size: small;">I Agree Terms &amp; Coditions!</label> 
 
             <div>
                 <button type="submit" name="logIn-btn" class="logIn-btn">Sign Up</button>
