@@ -1,56 +1,24 @@
-//check if a required filled is empty
-// function isEmpty(inputField) {
-//     if (inputField == "") {// || inputField == null
-//         return true;
-//     }
-//     return false;
-// }
+//drag and drop android
+function dragStart(ev) {
+    ev.dataTransfer.effectAllowed = 'move';
+    ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
+    ev.dataTransfer.setDragImage(ev.target, 0, 0);
+    return true;
+}
+function dragEnter(ev) {
+    event.preventDefault();
+    return true;
+}
+function dragOver(ev) {
+    return false;
+}
+function dragDrop(ev) {
+    var src = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(src));
+    ev.stopPropagation();
+    return false;
+}
 
-//clean error messages
-// function clean(element) {
-//     element.classList.remove("error");
-// }
-
-// //load HTML page before moving a DOM object
-// window.addEventListener("load", function () {
-
-//     var requiredFields = document.querySelectorAll(".required");
-//         for (var i = 0; i < requiredFields.length; i++) {
-//                 requiredFields[i].addEventListener("change", function(e) {
-//                 clean(e.target);
-//             });
-//         }
-
-
-//     //atfer submitting, check for empty fields
-//     var myForm = document.getElementById("myForm");
-//     myForm.addEventListener("sumbit", function (e) {
-//         var requiredFields = document.querySelectorAll(".required");
-//         for (var i = 0; i < requiredFields.length; i++) {
-//             if (isEmpty(requiredFields[i])) {
-//                 e.preventDefault();
-//                 requiredFields[i].classList.add("error");
-//             }
-//             else {
-//                 clean(requiredFields[i]);
-//             }
-//         }
-//     })
-
-// });
-
-//basically this is not working............................................................
-
-//jQUERY fa-eye icon for password visibility
-// $(".toggle-password").click(function () {
-//     $(this).toggleClass("fa-eye fa-eye-slash");
-//     var input = $($(this).attr("toggle"));
-//     if (input.attr("type") == "password") {
-//         input.attr("type", "text");
-//     } else {
-//         input.attr("type", "password");
-//     }
-// });
 
 function checkMatching(form) {
     var password1 = form.password1.value;
@@ -72,6 +40,14 @@ function checkMatching(form) {
 
     // If same return True. 
     else {
+
+        //check for robots
+        if($('#notRobot').find('#android').length != 1)
+        {
+            alert("Please prove that you are not a robot!");
+            return false;
+        } 
+        
         //check for terms and conditions
         var check = document.getElementById("terms").checked;
         if (!check) {
@@ -89,28 +65,4 @@ function checkMatching(form) {
 
 
 
-
-// drag and drop the android 
-function drag(e) {
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData("text", e.target.getAttribute('id'));
-    e.dataTransfer.setDragImage(e.target, 0, 0);
-    return true;
-}
-
-function dragEnter(e) {
-    e.preventDefault();
-}
-
-function moveAndroid(e) {
-    return false;
-}
-
-function drop(e) {
-    // e.preventDefault();
-    var data = e.dataTransfer.getData("text");
-    e.target.appendChild(document.getElementById(data));
-    e.stopPropagation();
-    return false;
-}
 
