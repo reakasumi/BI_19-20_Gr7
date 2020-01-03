@@ -20,16 +20,17 @@
           var i;
           
           var x = document.getElementsByClassName("mySlides");
-          
-          console.log("x get elemnt by id myslides" , arr)
-          for (i = 0; i < 3; i++) {
-            document.getElementById("img"+i).style.display = "none";  console.log("x[i]", x)
+          var arr =  Array.from(x)
+          console.log("x get elemnt by id myslides" , x)
+          for (i = 0; i < x.length; i++) {
+            x.item[i].style.display = "none";  
+            console.log("x[i]", x)
           }
           myIndex++;
-          if (myIndex > 3) {myIndex = 1}  
+          if (myIndex > x.length) {myIndex = 1}  
           console.log("my index", myIndex)  
           console.log("myIndex[0]",x[myIndex-1])
-          document.getElementById("img"+ (myIndex-1)).style.display = "block";  
+          x[myIndex-1].style.display = "block";  
           setTimeout(carousel, 2000); // Change image every 2 seconds
         }
         </script>
@@ -111,7 +112,7 @@
     <div style="max-width:500px">
         <img class="mySlides" id="img1" src="images/slideshow/people-men-women-friends.jpg" style="width:100%">
         <img class="mySlides" id="img2" src="images/slideshow/people-men-women-friends.jpg" style="width:100%">
-        <img class="mySlides" id="img3" src="images/slideshow/people-men-women-friends.jpg" style="width:100%">
+        <img class="mySlides" id="img3"src="images/slideshow/people-men-women-friends.jpg" style="width:100%">
       </div>
 
    
