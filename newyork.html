@@ -41,7 +41,12 @@
                                    <p>
                                    <label class="just-text">Where do you want to go?</label>
                                    <br>
-                                   <input type="text" class="inputStyle_1" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
+                                    <input list="browsers" class="inputStyle_1" name="browser" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
+                                       <datalist id="browsers" >
+                                        <option value="New York">
+                                        <option value="Berlin">
+                                        <option value="Paris">
+                                       </datalist>
                                     </p>
                                     <p class="inline">
                                     <label class="just-text">Check in</label><br>
@@ -89,30 +94,21 @@
 
 
   <section class="services" style="position: relative; top:50px;">
-            <h4 class="redbox">OUR SERVICES</h4>
+            <h4 id="place" class="redbox">PLACE</h4>
             
             <div>
-                <img src="images/icon2.jpg" alt="icon" width="30" height="30">
-                <h3> Indonectetus facilis</h3>
-                <p>Hello world Hello world hello world hello world hello world
-                    Hello world Hello world Hello world Hello world Hello world
-                    Hello world Hello world </p>
+                <img id="img1" src="images/icon2.jpg" alt="icon" width="300" height="200">
+                <p id="cost1"></p>
                 <details class="reddetails"><summary>Read more</summary></details>
             </div>
             <div>
-                <img src="images/icon2.jpg" alt="icon" width="30" height="30">
-                <h3> Indonectetus facilis</h3>
-                <p>Hello world Hello world hello world hello world hello world
-                    Hello world Hello world Hello world Hello world Hello world
-                    Hello world Hello world </p>
+               <img id="img2" src="images/icon2.jpg" alt="icon" width="300" height="200">
+               <p id="cost2"></p>
                <details class="reddetails"><summary>Read more</summary></details>
             </div>
             <div>
-                <img src="images/icon2.jpg" alt="icon" width="30" height="30">
-                <h3> Indonectetus facilis</h3>
-                <p>Hello world Hello world hello world hello world hello world
-                    Hello world Hello world Hello world Hello world Hello world
-                    Hello world Hello world </p>
+                <img id="img3" src="images/icon2.jpg" alt="icon" width="300" height="200">
+               <p id="cost3"></p>
                 <details class="reddetails"><summary>Read more</summary></details>
             </div>
 

@@ -1,6 +1,6 @@
 // var  search_value="helloworld";
 
-var place = ["newyork", "berlin", "paris"];
+// var place = ["newyork", "berlin", "paris"];
 var startDate;
 var endDate;
 var guests;
@@ -21,6 +21,7 @@ var guests;
 
 
          search_value= document.getElementById("myInput").value;
+         sessionStorage.setItem("placeText",search_value);
          startDate = document.getElementById("myDate1").value;
          sessionStorage.setItem("startDatetext",startDate);
          endDate = document.getElementById("myDate2").value;
@@ -34,11 +35,11 @@ var guests;
 
 
 
-         for (var i in place) {
-            if(place[i]==search_value){
-                window.location.href=search_value+".html";
-            }
-         }
+         // for (var i in place) {
+         //    if(place[i]==search_value){
+                window.location.href="newyork.html";
+         //    }
+         // }
 
         // document.getElementById("demo").innerHTML = search_value;
          
