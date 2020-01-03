@@ -89,7 +89,7 @@
 
     <!-- CONTENT -->
     <div class="content-form">
-        <form action="index.html" method="post" onsubmit="return checkMatching(this)" id="myForm" name="myForm">
+        <form action="index.html" method="post" onsubmit="return checkMatching(this)" id="myForm" name="myForm" >
             <h2 class="form-title">Sign Up</h2>
 
             <div>
@@ -128,13 +128,16 @@
             </div>
 
             <div>
-                <p>If you're not a robot, please drag the android into the box.</p>
-
+                <p style="margin-top: 10px;">If you're not a robot, please drag the android into the box.</p>
+                <img src="images/872px-Android_robot.svg.png" alt="Andorid logo" draggable="true"
+                ondragstart="return drag(event)" height="60px" style="margin: 0px 15px 10px 15px;">
                 <div id="notRobot" ondragenter="return dragEnter(event)" ondrop="return drop(event)"
                     ondragover="return moveAndroid(event)"></div>
-                <img src="images/872px-Android_robot.svg.png" alt="Andorid logo" draggable="true"
-                    ondragstart="return drag(event)" height="60px">
+                
             </div>
+
+            <input type="checkbox" name="terms" id="terms" style="margin: 0.35em 0 1.25em 0.35em; ">
+            <label style="font-size: small;">I Agree Terms &amp; Coditions!</label> 
 
             <div>
                 <button type="submit" name="logIn-btn" class="logIn-btn">Sign Up</button>

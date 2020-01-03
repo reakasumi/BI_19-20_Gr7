@@ -20,7 +20,7 @@
 //                 clean(e.target);
 //             });
 //         }
-    
+
 
 //     //atfer submitting, check for empty fields
 //     var myForm = document.getElementById("myForm");
@@ -52,53 +52,65 @@
 //     }
 // });
 
-function checkMatching(form) { 
-    var password1 = form.password1.value; 
-    var password2 = form.password2.value; 
+function checkMatching(form) {
+    var password1 = form.password1.value;
+    var password2 = form.password2.value;
 
     // If password not entered 
-    if (password1 == '') 
-        alert ("Please enter Password"); 
-          
+    if (password1 == '')
+        alert("Please enter Password");
+
     // If confirm password not entered 
-    else if (password2 == '') 
-        alert ("Please enter confirm password"); 
-          
+    else if (password2 == '')
+        alert("Please enter confirm password");
+
     // If Not same return False.     
-    else if (password1 != password2) { 
-        alert ("\nPassword did not match: Please try again...");
-        return false; 
-    } 
+    else if (password1 != password2) {
+        alert("\nPassword did not match: Please try again...");
+        return false;
+    }
 
     // If same return True. 
-    else{ 
+    else {
+        //check for terms and conditions
+        var check = document.getElementById("terms").checked;
+        if (!check) {
+            alert('You must agree to the terms first.');
+            return false;
+        }
+        //after check return true
         alert("Welcome!");
-          window.location.href = 'index.html';
-        
-        return true; 
-    } 
+        window.location.href = 'index.html';
+
+        return true;
+    }
+
 }
 
+
+
+
 // drag and drop the android 
-function drag(e){
-    e.dataTransfer.effectAllowed='move';
-    e.dataTransfer.setData("text",e.target.getAttribute('id'));
-    e.dataTransfer.setDragImage(e.target,0,0);
+function drag(e) {
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData("text", e.target.getAttribute('id'));
+    e.dataTransfer.setDragImage(e.target, 0, 0);
     return true;
 }
 
-function dragEnter(e){
+function dragEnter(e) {
     e.preventDefault();
 }
 
-function moveAndroid(e){
+function moveAndroid(e) {
     return false;
 }
 
-function drop(e){
+function drop(e) {
     // e.preventDefault();
-    var data=e.dataTransfer.getData("text");
+    var data = e.dataTransfer.getData("text");
     e.target.appendChild(document.getElementById(data));
     e.stopPropagation();
     return false;
 }
+
