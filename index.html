@@ -11,8 +11,32 @@
     <script src="https://kit.fontawesome.com/208b2483de.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/homePage.css">
+
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          
+          var x = document.getElementsByClassName("mySlides");
+          
+          console.log("x get elemnt by id myslides" , arr)
+          for (i = 0; i < 3; i++) {
+            document.getElementById("img"+i).style.display = "none";  console.log("x[i]", x)
+          }
+          myIndex++;
+          if (myIndex > 3) {myIndex = 1}  
+          console.log("my index", myIndex)  
+          console.log("myIndex[0]",x[myIndex-1])
+          document.getElementById("img"+ (myIndex-1)).style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/8d3db0c4dd.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/8d3db0c4dd.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -82,82 +106,15 @@
 
     <!-- BODY -->
 
-    <!-- <div style="height:133px; text-align: center; display:inline-block"> -->
-        
-        <!-- </div> -->
-
-        <!-- slider -->
-        <!-- <div class="slider-holder">
-            <span id="slider-image-1"></span>
-            <span id="slider-image-2"></span>
-            <span id="slider-image-3"></span>
-            <span id="slider-image-4"></span>
-            <span id="slider-image-5"></span>
-            <div class="image-holder">
-                <img src="images/bridge.jpg" width="960px" height="350px" class="slider-image" />
-                <img src="images/picture.jpg" width="960px" height="350px" class="slider-image" />
-                <img src="images/Bombillos.png" width="960px" height="350px" class="slider-image" />
-                <img src="images/Bombillos.png" width="960px" height="350px" class="slider-image" />
-                <img src="images/Bombillos.png" width="960px" height="350px" class="slider-image" />
-            </div>
-            <div class="button-holder">
-                <a href="#slider-image-1" class="dot"></a>
-                <a href="#slider-image-2" class="dot"></a>
-                <a href="#slider-image-3" class="dot"></a>
-                <a href="#slider-image-4" class="dot"></a>
-                <a href="#slider-image-5" class="dot"></a>
-            </div>
-        </div>
-    <img src="images/BGColour.png" width="15px" height="15px" /> -->
-<!--  <p class="centered-text-style">
-                “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam
-                erat. In fringilla massa ut nisi ullamcorper pellentesque „
-            </p>
- -->
-    <!-- <article> -->
-        
-             <!-- Page Wrapper -->
-        <!-- <div class="slider-holder"> -->
-            <!-- Carousel -->
-            <!-- <div class="post-slider">
-                <i class="far fa-chevron-left prev"></i>
-                <i class="far fa-chevron-right next"></i>
-                <div class="post-wrapper">
-                    <div class="post">1</div>
-                    <div class="post">2</div>
-                    <div class="post">3</div>
-                    <div class="post">4</div>
-                    <div class="post">5</div>
-                </div>
-            </div> -->
-        <!-- </div> -->
-<!-- </article> -->
-    <p class="centered-text-style">
-    </p>
-    <!-- </div> -->
-
     <!-- slider -->
-    <div class="slider-holder">
-        <span id="slider-image-1"></span>
-        <span id="slider-image-2"></span>
-        <span id="slider-image-3"></span>
-        <span id="slider-image-4"></span>
-        <span id="slider-image-5"></span>
-        <div class="image-holder">
-            <img src="images/bridge.jpg" width="960px" height="350px" class="slider-image" />
-            <img src="images/picture.jpg" width="960px" height="350px" class="slider-image" />
-            <img src="images/Bombillos.png" width="960px" height="350px" class="slider-image" />
-            <img src="images/Bombillos.png" width="960px" height="350px" class="slider-image" />
-            <img src="images/Bombillos.png" width="960px" height="350px" class="slider-image" />
-        </div>
-        <div class="button-holder">
-            <a href="#slider-image-1" class="dot"></a>
-            <a href="#slider-image-2" class="dot"></a>
-            <a href="#slider-image-3" class="dot"></a>
-            <a href="#slider-image-4" class="dot"></a>
-            <a href="#slider-image-5" class="dot"></a>
-        </div>
-    </div>
+
+    <div style="max-width:500px">
+        <img class="mySlides" id="img1" src="images/slideshow/people-men-women-friends.jpg" style="width:100%">
+        <img class="mySlides" id="img2" src="images/slideshow/people-men-women-friends.jpg" style="width:100%">
+        <img class="mySlides" id="img3" src="images/slideshow/people-men-women-friends.jpg" style="width:100%">
+      </div>
+
+   
     <img src="images/BGColour.png" width="15px" height="15px" />
 
     <h1 id="demo"></h1>

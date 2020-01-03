@@ -40,6 +40,10 @@
     transition: left 2s;
 }
 
+.mySlides{
+    display: none;
+}
+
 .slider-image
 {
     float: left;
