@@ -58,7 +58,5 @@ window.addEventListener("load", () => {
     ctx.fillText("Since 1903", 40, 20);  
 
     var img=document.getElementById("canImg");
-    var img2=document.getElementById("canImg2");
     ctx.drawImage(img,300,20);
-    ctx.drawImage(img2,0,20);
 });

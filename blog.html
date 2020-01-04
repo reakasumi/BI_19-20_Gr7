@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/blog.css">
     <!-- Font Awesome -->
     <script src="js/canvas.js"></script>
-    <script src="https://kit.fontawesome.com/8d3db0c4dd.js" crossorigin="anonymous"></script>
 
     <style>
         @font-face {
@@ -21,6 +20,18 @@
             font-family: myFont;
         }
     </style>
+
+    <script>
+        var worker = new Worker('js/webWorker.js');
+
+        worker.onmessage = function (event) {
+            alert("Completed " + event.data + "iterations");
+        };
+        function showTime() {
+            var date = new Date();
+            alert("Current time is: " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()+"\nHave a nice day!");
+        }
+    </script>
 
 </head>
 
@@ -105,9 +116,11 @@
         <p>WANDERLUST</p>
     </div>
 
-
     <article class="blog">
         <h3 class="mostVisited">Most Visited Cities In 2019</h3>
+        <input type="button" onclick="showTime();" value="Show time"
+            style="color: #E2494C; font-size: 18px; border-radius: 7px;width: 100px;height: 45px; margin-bottom: 15px;position:absolute;right: 13em;" />
+
         <div class="container-all">
             <div class="container">
                 <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"

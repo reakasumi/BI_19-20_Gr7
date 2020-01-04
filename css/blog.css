@@ -11,6 +11,7 @@
     width: fit-content;
     color: #E2494C;
     background-color: #efe6e6;
+    display: inline-block;
 }
     
 .blog .container-all{
