@@ -1,0 +1,9 @@
+#modes{
+    /* border: 1px solid gray; */
+    box-sizing: border-box;
+    border-radius: 7px;
+    height: 30px;
+    padding: 3px 6px;
+    margin: 1.5em 0 0 16.5em;
+    box-shadow: 2px 1px gray;
+}
