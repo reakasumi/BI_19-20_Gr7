@@ -41,8 +41,24 @@ function maxMonth(){
     document.getElementById("max").innerHTML=table.rows[index].cells[0].innerHTML;
 }
 
+function avgRate(){
+    var stars=document.querySelectorAll(".prog");
+    var sum=0;
+    var avg=0;
+    var count=5;
+    for(var i=0; i<stars.length;i++){
+        sum += parseInt(stars[i].innerHTML);
+        avg += parseInt(stars[i].innerHTML)*count;
+        count--;
+    }
+    console.log(sum);
+    var average=(avg/sum).toFixed(2);
+    document.getElementById("average").innerHTML="Average based on reviews: "+average;
+}
+
 window.onload=function(){
     total();
     maxMonth();
+    avgRate();
 }
 
