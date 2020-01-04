@@ -17,8 +17,11 @@ document.getElementById("place").innerHTML= sessionStorage.getItem("placeText").
  var image2;
  var image3;
  var image4;
- var temp=1;
+ var temp=0;
  var cost=[50,100,210,30,450,230,60];
+ var d=sessionStorage.getItem("numdays");
+
+ var days=d.toString();
 
 
  // register button listener and get the img elements
@@ -32,26 +35,33 @@ document.getElementById("place").innerHTML= sessionStorage.getItem("placeText").
     cost_1 = document.getElementById( "cost1" );
     cost_2 = document.getElementById( "cost2" );
     cost_3 = document.getElementById( "cost3" );
+    totalcost_1 = document.getElementById( "total_cost1" );
+    totalcost_2 = document.getElementById( "total_cost2" );
+    totalcost_3 = document.getElementById( "total_cost3" );
     
 
-    setImage( image1, cost1 );
-    setImage( image2, cost2 );
-    setImage( image3, cost3 );
+    setImage( image1, cost1, totalcost_1 );
+    setImage( image2, cost2, totalcost_2 );
+    setImage( image3, cost3, totalcost_3 );
    
  }
 
 
- function setImage( apImg, costDoc )
+ function setImage( apImg, costDoc, totcos )
 {
 
 	var value =Math.floor( 1 + Math.random() * 6 );
+	
     while(temp==value){
 	value = Math.floor( 1 + Math.random() * 6 );
+
     }
     temp=value;
 	apImg.setAttribute( "src", "images/apartment" + value + ".jpg" );
     apImg.setAttribute( "alt","die image with " + value + " spot(s)" );
     costDoc.innerHTML=cost[value]+" \u20ac  /night";
+    totcos.innerHTML="The total cost for "+ days + " is " + (cost[value]*days)+" \u20ac";
+
   
     
 }
