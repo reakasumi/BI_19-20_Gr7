@@ -15,8 +15,8 @@
 
     <link rel="stylesheet" href="css/homePage.css">
 
-   <script src="js/script.js"></script>
-    
+    <script src="js/script.js"></script>
+
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <!-- Font Awesome -->
     <!-- <script src="https://kit.fontawesome.com/8d3db0c4dd.js" crossorigin="anonymous"></script> -->
@@ -33,7 +33,7 @@
                     </span>
 
                     <span class="left-text">
-                        Free PSD Website Template
+                        Dare to live outside your box!
                     </span>
                 </div>
                 <i class="fa fa-bars menu-toggle"></i>
@@ -41,49 +41,52 @@
                     <li><a href="#">HOME</a></li>
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
-                    <li  class="dropdown" >              
-                    <a href="places.html" target="_self" >PLACES</a>
-                    <div class="dropdown-content">
+                    <li class="dropdown">
+                        <a href="places.html" target="_self">PLACES</a>
+                        <div class="dropdown-content">
 
-                        <div class="row">
-                            <div class="column">
-                                  <form action="newyork.html">
-                                   <p>
-                                   <label class="just-text">Where do you want to go?</label>
-                                   <br>
-                                     <input list="browsers" class="inputStyle_1" name="browser" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
-                                       <datalist id="browsers" >
-                                        <option value="New York">
-                                        <option value="Berlin">
-                                        <option value="Paris">
-                                       </datalist>
-                                    </p>
-                                    <p class="inline">
-                                    <label class="just-text">Check in</label><br>
-                                    <input class="inputStyle_2" type="date"  id="myDate1" >
-                                    </p>
-                                    <p class="inline">
-                                    <label class="just-text">Check out</label><br>
-                                    <input class="inputStyle_2" type="date" id="myDate2" >
-                                    </p>
-                                    <p>
-                                    <label class="just-text">Guests</label><br>
-                                    <input type="number" class="inputStyle_1" placeholder="How many.."  min="1" max="30" step="1" id="myInput2">
-                                    </p>
+                            <div class="row">
+                                <div class="column">
+                                    <form action="newyork.html">
+                                        <p>
+                                            <label class="just-text">Where do you want to go?</label>
+                                            <br>
+                                            <input list="browsers" class="inputStyle_1" name="browser"
+                                                placeholder="Search.." id="myInput"
+                                                style=" background-image: url('images/search.png');">
+                                            <datalist id="browsers">
+                                                <option value="New York">
+                                                <option value="Berlin">
+                                                <option value="Paris">
+                                            </datalist>
+                                        </p>
+                                        <p class="inline">
+                                            <label class="just-text">Check in</label><br>
+                                            <input class="inputStyle_2" type="date" id="myDate1">
+                                        </p>
+                                        <p class="inline">
+                                            <label class="just-text">Check out</label><br>
+                                            <input class="inputStyle_2" type="date" id="myDate2">
+                                        </p>
+                                        <p>
+                                            <label class="just-text">Guests</label><br>
+                                            <input type="number" class="inputStyle_1" placeholder="How many.." min="1"
+                                                max="30" step="1" id="myInput2">
+                                        </p>
 
-                                    <input type="button" name="search" id="button1" value="SEARCH">
+                                        <input type="button" name="search" id="button1" value="SEARCH">
 
                                     </form>
 
 
+                                </div>
+
+
+
                             </div>
 
+                    </li>
 
-
-                        </div>
-
-                   </li>
-                    
                     <li><a href="logIn.html" target="_self">LOG IN</a></li>
 
                 </ul>
@@ -98,11 +101,11 @@
         “ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non diam
         erat. In fringilla massa ut nisi ullamcorper pellentesque „
     </p>
-<!-- Slider 1 -->
-<!-- <section id="slider"> -->
+    <!-- Slider 1 -->
+    <!-- <section id="slider"> -->
     <div class="slider" style="position: relative; margin: auto; width: 75%;" id="slider">
-    <!-- Slideshow container -->
-    <!-- <div class="slideshow-container"> -->
+        <!-- Slideshow container -->
+        <!-- <div class="slideshow-container"> -->
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
@@ -125,7 +128,8 @@
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="images/slideshow/Sunset_in_the_Old_Town_-_Bucharest,_Romania_-_Travel_photography_(35031271856).jpg" alt="Sunset in Bucharest!!" style="width:100%">
+            <img src="images/slideshow/Sunset_in_the_Old_Town_-_Bucharest,_Romania_-_Travel_photography_(35031271856).jpg"
+                alt="Sunset in Bucharest!!" style="width:100%">
             <!-- <div class="text">hoe</div> -->
         </div>
 
@@ -155,29 +159,29 @@
         <span class="dot" onclick="currentSlide(4)"></span>
         <span class="dot" onclick="currentSlide(5)"></span>
         <span class="dot" onclick="currentSlide(6)"></span>
-    <!-- </div> -->
-</div>
+        <!-- </div> -->
+    </div>
 
-<script>
-    var slideIndex = 0;
-    showSlides();
-    
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 4000); // Change image every 2 seconds
-    }
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 4000); // Change image every 2 seconds
+        }
     </script>
 
    
@@ -191,7 +195,7 @@
     <article>
         <section class="services">
             <h4 class="redbox">OUR SERVICES</h4>
-            
+
 
             <div>
                 <img src="images/icon2.jpg" alt="icon" width="30" height="30">
@@ -199,7 +203,9 @@
                 <p>Hello world Hello world hello world hello world hello world
                     Hello world Hello world Hello world Hello world Hello world
                     Hello world Hello world </p>
-                <details class="reddetails"><summary>Read more</summary></details>
+                <details class="reddetails">
+                    <summary>Read more</summary>
+                </details>
             </div>
             <div>
                 <img src="images/icon2.jpg" alt="icon" width="30" height="30">
@@ -207,7 +213,9 @@
                 <p>Hello world Hello world hello world hello world hello world
                     Hello world Hello world Hello world Hello world Hello world
                     Hello world Hello world </p>
-               <details class="reddetails"><summary>Read more</summary></details>
+                <details class="reddetails">
+                    <summary>Read more</summary>
+                </details>
             </div>
             <div>
                 <img src="images/icon2.jpg" alt="icon" width="30" height="30">
@@ -215,7 +223,9 @@
                 <p>Hello world Hello world hello world hello world hello world
                     Hello world Hello world Hello world Hello world Hello world
                     Hello world Hello world </p>
-                <details class="reddetails"><summary>Read more</summary></details>
+                <details class="reddetails">
+                    <summary>Read more</summary>
+                </details>
             </div>
 
         </section>
@@ -223,13 +233,15 @@
 
         <section class="players">
             <h4 class="redbox">OUR PLAYERS</h4>
-            
+
             <figure>
                 <img src="images/icon.jpg" alt="photo">
                 <figcaption>
                     <h5><strong>Name: </strong>Jhon Doe</h5>
                     <p>hsadgasdjhsgdjgha</p>
-                    <details class="reddetails"><summary>View more</summary></details>
+                    <details class="reddetails">
+                        <summary>View more</summary>
+                    </details>
                 </figcaption>
             </figure>
 
@@ -238,7 +250,9 @@
                 <figcaption>
                     <h5><strong>Name: </strong>Jhon Doe</h5>
                     <p>hsadgasdjhsgdjgha</p>
-                   <details class="reddetails"><summary>View more</summary></details>
+                    <details class="reddetails">
+                        <summary>View more</summary>
+                    </details>
                 </figcaption>
             </figure>
 
@@ -247,7 +261,9 @@
                 <figcaption>
                     <h5><strong>Name: </strong>Jhon Doe</h5>
                     <p>hsadgasdjhsgdjgha</p>
-                   <details class="reddetails"><summary>View more</summary></details>
+                    <details class="reddetails">
+                        <summary>View more</summary>
+                    </details>
                 </figcaption>
             </figure>
 
@@ -256,7 +272,9 @@
                 <figcaption>
                     <h5><strong>Name: </strong>Jhon Doe</h5>
                     <p>hsadgasdjhsgdjgha</p>
-                    <details class="reddetails"><summary>View more</summary></details>
+                    <details class="reddetails">
+                        <summary>View more</summary>
+                    </details>
                 </figcaption>
             </figure>
 
@@ -265,7 +283,9 @@
                 <figcaption>
                     <h5><strong>Name: </strong>Jhon Doe</h5>
                     <p>hsadgasdjhsgdjgha</p>
-                    <details class="reddetails"><summary>View more</summary></details>
+                    <details class="reddetails">
+                        <summary>View more</summary>
+                    </details>
                 </figcaption>
             </figure>
 
@@ -274,7 +294,7 @@
 
         <section class="work">
             <h4 class="redbox">LATEST WORK</h4>
-            
+
             <img src="images/icon2.jpg" alt="image" width="300px" height="160px">
             <img src="images/icon2.jpg" alt="image" width="300px" height="160px">
             <img src="images/icon2.jpg" alt="image" width="300px" height="160px">
@@ -288,44 +308,43 @@
             <div class="footer-content">
                 <div class="footer-section blog">
                     <h2>Latest From The Blog</h2>
-                    <a href="#">
-                        <img src="images/Capture.png" alt="lorem">
-                        <h4>lorem ipsum</h4>
-                        <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Porro
-                                explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime
-                                numquam
-                                natus consectetur.</span></p>
+                    <a href="blog.html" target="_blank">
+                        <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"
+                            alt="Thailand landscape" width="110px" height="110px">
+                        <h4>Thailand - the most visited country</h4>
+                        <p><span style="overflow-x: auto;">Due to researches made by statistical results Bangkok,
+                                Thailand is one of the most visited cities of 2019. People chose to go there because of
+                                its beautiful...</span></p>
                     </a>
 
-                    <a href="#" style="float: left; margin-top: 25px;"><img src="images/Capture2.png" alt="lorem">
+                    <a href="blog.html" style="float: left; margin-top: 25px;" target="_blank">
+                        <img src="images/vanGogh/Vincent_van_Gogh_-_Self-portrait_with_grey_felt_hat_-_Google_Art_Project.jpg"
+                            alt="Van Gogh" width="110px" height="110px">
 
-                        <h4>lorem ipsum</h4>
-                        <p><span style="overflow-x: auto;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Porro
-                                explicabo dolorum dignissimos iste repellendus, possimus perferendis modi maxime
-                                numquam
-                                natus consectetur.</span></p>
+                        <h4>The art of Vincent van Gogh</h4>
+                        <p><span style="overflow-x: auto;">Vincent Willem van Gogh the Dutch post-impressionist painter
+                                who is among the most famous and influential figures in the history of Western art. The
+                                Starry Night by him is one of the most known picture...</span></p>
                     </a>
                 </div>
 
                 <div class="footer-section details">
                     <h2>Company Details</h2>
                     <ul>
-                        <li>Company Name</li>
+                        <li>Travel</li>
                         <li>
-                            <address>Street Name & Number</address>
+                            <address>N&#xeb;n&#xeb; Tereza, 105</address>
                         </li>
-                        <li>Town</li>
-                        <li>Post Code/Zip</li>
+                        <li>Prishtin&#xeb;</li>
+                        <li>10000</li>
                         <br>
-                        <li>Tel:xxxxxxxxxxxxxxxx</li>
-                        <li>Fax: xxxxxxxxx xxxx</li>
-                        <li>Email: <a href="mailto:contact@mydomain.com">contact@mydomain.com</a></li>
+                        <li>Tel:+383 44 129512</li>
+                        <li>Fax: 029 3458487617</li>
+                        <li>Email: <a href="mailto:contact@mydomain.com">travel@tr-pr.com</a></li>
                         <br>
                         <li>Office hours</li>
-                        <li>Monday xxxxxxxxx</li>
-                        <li>Saturday xxxxxxx</li>
+                        <li>Monday 08:00~16:00</li>
+                        <li>Saturday 10:00~16:00</li>
                     </ul>
                 </div>
 
@@ -341,8 +360,8 @@
             </div>
             <!-- <hr> -->
             <div class="footer-bottom">
-                <p id="copy">Copyright &copy; 2019 - All rights reserved - Name</p>
-                <p id="template">Template by Template OS</p>
+                <p id="copy">Copyright &copy; 2019 - All rights reserved</p>
+                <p id="template">Travel Company</p>
             </div>
         </div>
     </footer>
@@ -351,15 +370,15 @@
 
     <!-- Carousel -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-                
+
     <!-- Script -->
     <script src="js/script.js"></script>
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-     <script src="js/header.js"></script>
-     <script src="js/newyork.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/newyork.js"></script>
 
 </body>
 

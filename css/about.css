@@ -108,4 +108,43 @@ table tbody tr td:first-child:hover{
 	 overflow-y: scroll;
 }
 
+#work{
+    margin-top: 1em;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
 
+#work tr td{
+    background-color: white;
+    border: 1px solid gray;
+    width: 300px;
+    color: black;
+    text-align: center;
+}
+
+#rating{
+    width: 500px;
+    margin-top: 1em;
+}
+
+#rating tr td{
+    background-color: white;
+    color: black;
+    padding: 0.2em;
+    text-align: right;
+}
+
+#rating tr td:nth-child(2){
+    text-align: left;
+}
+
+progress::-webkit-progress-value{
+    background: yellow;
+    border-radius: 7px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: yellow;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
