@@ -1,5 +1,6 @@
 
 var d=sessionStorage.getItem("guestsText");
+try{
 document.getElementById("date").innerHTML = convertDateToString(sessionStorage.getItem("startDatetext"))
  +"-"+ convertDateToString(sessionStorage.getItem("endDatetext"));
 
@@ -10,7 +11,9 @@ else{
 document.getElementById("guests").innerHTML= d+" guests";
 }
 
-document.getElementById("place").innerHTML= sessionStorage.getItem("placeText").toUpperCase();
+document.getElementById("place").innerHTML= sessionStorage.getItem("placeText").toUpperCase();}catch{
+     console.log("Error value undefined or null.")
+ }
 
 
  var image1;
@@ -21,6 +24,7 @@ document.getElementById("place").innerHTML= sessionStorage.getItem("placeText").
  var cost=[50,100,210,30,450,230,60];
  var d=sessionStorage.getItem("numdays");
 
+ try{
  var days=d.toString();
 
 
@@ -45,7 +49,9 @@ document.getElementById("place").innerHTML= sessionStorage.getItem("placeText").
     setImage( image3, cost3, totalcost_3 );
    
  }
-
+ }catch(e){
+     console.log("Value undefined or null!")
+ }
 
  function setImage( apImg, costDoc, totcos )
 {
