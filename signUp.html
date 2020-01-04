@@ -9,31 +9,8 @@
     <link rel="stylesheet" href="css/signUp.css">
     <script type="text/javascript" src="js/signUp.js"></script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     
-    <script>
-        function dragStart(ev) {
-            ev.dataTransfer.effectAllowed = 'move';
-            ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
-            ev.dataTransfer.setDragImage(ev.target, 0, 0);
-            return true;
-        }
-        function dragEnter(ev) {
-            event.preventDefault();
-            return true;
-        }
-        function dragOver(ev) {
-            return false;
-        }
-        function dragDrop(ev) {
-            var src = ev.dataTransfer.getData("Text");
-            ev.target.appendChild(document.getElementById(src));
-            ev.stopPropagation();
-            return false;
-        }
-    </script>
-
-
-
 </head>
 
 <body>
@@ -114,9 +91,8 @@
 
     <!-- CONTENT -->
     <div class="content-form">
-        <!-- <form style="padding: 2rem 0rem" action="index.html" method="post" onsubmit="return checkMatching(this)"
-            id="myForm" name="myForm"> -->
-        <form style="padding: 2rem 0rem" action="index.html" method="post" onsubmit="return checkMatching(this)" id="myForm" name="myForm" >
+        <form action="index.html" method="post" onsubmit="return checkMatching(this)"
+            id="myForm" name="myForm">
             <h2 class="form-title">Sign Up</h2>
 
             <div>
@@ -130,12 +106,11 @@
             <div>
                 <!-- Use regex for password validation -->
                 <label>Password:</label>
-                <!-- pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,20}$" -->
                 <input type="password" id="password" name="password1" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$"
                     class="required" required>
                 <span toggle="#password" class="fa fa=fw fa eye field-icon toggle-password"></span>
                 <p style="font-size: 12px; text-align: left; padding-left: 1em; color: #ff442a;">Your password must
-                    contain minimum eight characters (at least one letter, one number and one special character).</p>
+                    contain 8-20 characters (at least one upper case letter, one lower case letter and one number).</p>
             </div>
             <div>
                 <label>Confirm Password:</label>
@@ -146,7 +121,7 @@
                 <label>Gender:</label>
                 <div class="gender">
                     <label>M</label>
-                    <input type="radio" name="gender">
+                    <input type="radio" name="gender" required>
                     <label>F</label>
                     <input type="radio" name="gender">
                     <label> Other</label>
@@ -155,21 +130,23 @@
             </div>
 
             <div>
-                <p>If you're not a robot, please drag the android into the box.</p>
+                <h6 style="margin-left: 0.8em; color: #A5C736;">If you're not a robot, please drag the android into the box.</h6>
+
+                <div id="notRobot" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)"
+                ondragover="return dragOver(event)"></div>
 
                 <img src="images/872px-Android_robot.svg.png" alt="Andorid logo" id="android" draggable="true"
-                    ondragstart="return dragStart(event)" />
-                <p></p>
-
-                <div id="box" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)"
-                    ondragover="return dragOver(event)"></div>
+                    ondragstart="return dragStart(event)" height="60px"/>
 
             </div>
 
-            <div style="padding: 0rem 4rem 0rem 0rem;">
+            <input type="checkbox" name="terms" id="terms" style="margin: 0em 0 1.25em 0.4em;">
+            <label style="font-size: small;">I Agree Terms &amp; Coditions!</label>
+
+            <div>
                 <button type="submit" name="logIn-btn" class="logIn-btn">Sign Up</button>
             </div>
-            <p style="padding: 0rem 4rem 0rem 0rem">Already have an account, <a href="logIn.html">Log In</a> </p>
+            <p>Already have an account, <a href="logIn.html">Log In</a> </p>
         </form>
     </div>
 

@@ -15,26 +15,8 @@
     border: 5px solid gray;
 }
 
-#android,
-#box {
-    float: left;
-    padding: 10px;
-    margin: 10px;
-    -moz-user-select: none;
-}
 
-#android {
-    background-color: none;
-    width: 75px;
-    height: 75px;
-}
 
-#box {
-    background-color: rgb(245, 228, 233);
-    width: 120px;
-    height: 120px;
-    border-style: dotted;
-}
 .content-form .form-title{
     text-align: center;
 }
@@ -94,9 +76,14 @@ p{
     border:1px solid red;
 }
 
+#android{
+    padding: 2px 1px 1px 9px;
+}
+
 #notRobot{
     width: 70px;
     height: 70px;
     border: 1px solid gray;
     display: inline-block;
+    margin: 10px 0 0 10px;
 }
