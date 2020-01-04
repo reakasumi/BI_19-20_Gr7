@@ -1,6 +1,6 @@
 // var  search_value="helloworld";
 
-var place = ["New York", "Berlin", "Paris"];
+var place = ["/new york/i", "Berlin", "Paris"];
 var startDate;
 var endDate;
 var guests;
