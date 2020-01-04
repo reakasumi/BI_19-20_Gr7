@@ -1,4 +1,4 @@
-@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+/* @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"); */
 /*Body css*/
 .centered-text-style {
     text-align: center;
@@ -89,7 +89,8 @@ Slider Styles
     background-position: center center;
     display: block;
     width: 100%;
-    height: 500px;
+    height: 100%;
+    margin: auto;
     /* height: 100vh; *//* If you want fullscreen */
     position: relative;
     background-size: cover;
@@ -131,7 +132,7 @@ Slider Styles
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.text {
+/* .text {
 	color: #f2f2f2;
 	font-size: 2em;
 	padding: 8px 12px;
@@ -143,15 +144,15 @@ Slider Styles
 	background: rgba(0, 0, 0, 0.5);
 	font-family: "Crafty Girls", cursive;
 	letter-spacing: 2px;
-}
+} */
 
-.numbertext {
+/* .numbertext {
 	color: #f2f2f2;
 	font-size: 12px;
 	padding: 8px 12px;
 	position: absolute;
 	top: 0;
-}
+} */
 
 .dot {
 	cursor: pointer;
