@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/places.css">
+    <link rel="stylesheet" href="css/homePage.css">
+    <link rel="stylesheet" href="css/newyork.css">
 
     <script src="js/nightMode.js"></script>
     <script src="js/geolocation.js"></script>
@@ -86,11 +88,64 @@
 
                 </ul>
             </nav>
+            <button id="modes" type="button" onclick="changeMode()">Change Background Color</button>
         </div>
+        
     </header>
     <!-- //HEADER -->
 
-    <button id="modes" type="button" onclick="changeMode()">Change Background Color</button>
+    
+
+
+
+      <div class="place-content">
+
+<div class="place-row"> 
+<p id="date">Date</p>
+<p id="guests">Guests</p>
+
+</div>
+
+
+
+  <section class="services" style="position: relative; top:50px;">
+            <h4 id="place" class="redbox">PLACE</h4>
+            
+            <div>
+                <img id="img1" src="images/icon2.jpg" alt="icon" width="300" height="200">
+                <p id="cost1"></p>
+                <p id="total_cost1"></p>
+                <p id="desc1"></p>
+              
+            </div>
+            <div>
+               <img id="img2" src="images/icon2.jpg" alt="icon" width="300" height="200">
+               <p id="cost2"></p>
+               <p id="total_cost2"></p>
+               <p id="desc2"></p>
+               
+            </div>
+            <div>
+                <img id="img3" src="images/icon2.jpg" alt="icon" width="300" height="200">
+                <p id="cost3"></p>
+               <p id="total_cost3"></p>
+               <p id="desc3"></p>
+                
+            </div>
+
+        </section>
+
+
+</div>
+
+
+
+
+
+
+
+
+
 
     <!-- CONTENT -->
     <div id="map" style="height:400px; width: 700px; margin: auto;"></div>
@@ -98,7 +153,9 @@
     <div class="earth3dmap-com"><iframe id="iframemap"
             src="https://maps.google.com/maps?q=kosovo&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="75%"
             height="500" frameborder="0" scrolling="no"
-            style="margin:0 0 0 10em ;"></iframe>
+            style="margin:0 0 0 10em ; position: relative; top: -150px;"></iframe>
+
+    </div>
         <!-- <div
             style="color: #333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right; padding: 10px;">
             Map by <a
@@ -184,6 +241,9 @@
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBxeeraroriooA1NxYn6QW6NLlYlvQvn4&callback=initMap">
                          
             </script>
+
+            <script src="js/header.js"></script>
+            <script src="js/newyork.js"></script>
 
 </body>
 
