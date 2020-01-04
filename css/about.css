@@ -88,8 +88,12 @@ table tbody tr:nth-child(even){
 }
 
 
-table tbody tr:hover , td:first-child:hover{
-    background-color:rgb(168, 42, 42);
+table tbody tr:hover {
+    background-color:rgba(168, 42, 42, 0.61);
+}
+
+#total{
+    background-color: rgb(168, 42, 42);
 }
 
 /* 
