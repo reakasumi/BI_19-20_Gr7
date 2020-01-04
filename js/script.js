@@ -27,9 +27,11 @@ function showSlides(n) {
 	}
 	for (i = 0; i < dots.length; i++) {
 		dots[i].className = dots[i].className.replace(" active", "");
-	}
-	slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-  
-  setTimeout((n+1),2000)
+  }
+  try{
+	  slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";} 
+    catch(e){
+      console.log("error, first time read the value is undefined.")
+    }
 }

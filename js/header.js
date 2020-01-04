@@ -71,12 +71,15 @@ var guests;
 
 
        function convertDateToString(date){
+           try{
            var dateArr = date.split('-');
            var dateString;
 
            if (dateArr.length > 1) {
                dateString=(dateArr[2] + '/' + dateArr[1] + '/' + dateArr[0]);
-            }  
+            }  } catch(e){
+               console.log("Error, the value is null or undefined.")
+           }
            return dateString;
         }
 
