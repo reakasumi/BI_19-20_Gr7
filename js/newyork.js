@@ -11,8 +11,10 @@ else{
 document.getElementById("guests").innerHTML= d+" guests";
 }
 
-document.getElementById("place").innerHTML= sessionStorage.getItem("placeText").toUpperCase();}catch{
-     console.log("Error value undefined or null.")
+document.getElementById("place").innerHTML= sessionStorage.getItem("placeText").toUpperCase();
+    }
+catch{
+     console.log("Error value undefined or null!")
  }
 
 
@@ -48,9 +50,9 @@ document.getElementById("place").innerHTML= sessionStorage.getItem("placeText").
     setImage( image2, cost2, totalcost_2 );
     setImage( image3, cost3, totalcost_3 );
    
- }
+    }
  }catch(e){
-     console.log("Value undefined or null!")
+     console.log("Error value undefined or null!")
  }
 
  function setImage( apImg, costDoc, totcos )

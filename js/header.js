@@ -1,6 +1,7 @@
 // var  search_value="helloworld";
 
 var place = ["New York", "Berlin", "Paris"];
+ var s=[/new\s*york/i,/berlin/i ,/paris/i];
 var startDate;
 var endDate;
 var guests;
@@ -24,7 +25,6 @@ var guests;
          var isgood=false;
          var isnotempty=false;
          search_value= document.getElementById("myInput").value;
-
          startDate = document.getElementById("myDate1").value;
          sessionStorage.setItem("startDatetext",startDate);
          endDate = document.getElementById("myDate2").value;
@@ -34,12 +34,32 @@ var guests;
          sessionStorage.setItem("numdays",getDays());
 
 
-         for (var i in place) {
-            if(place[i]==search_value){
-               sessionStorage.setItem("placeText",search_value); 
+         
+          
+         var a=search_value.match(/[1-4]/g);
+          console.log(a);
+
+          for (var i in s) {
+            if(s[i].test(search_value) && !(typeof a != "undefined"  && a != null  
+                        && a.length != null  && a.length > 0)){
+               var k=search_value.replace(s[i],place[i]);
+               sessionStorage.setItem("placeText",k); 
                isgood=true;
             }
          }
+
+
+         //  for (var i in s) {
+         //    if(search_value.match(s[i])!=""){
+         //       var k=search_value.replace(s[i],place[i]);
+         //       sessionStorage.setItem("placeText",k); 
+         //       isgood=true;
+         //    }
+         // }
+
+
+
+
         if(startDate!=""&&endDate!=""&&guests.toString()!=""){
             isnotempty=true;
         }
@@ -72,13 +92,15 @@ var guests;
 
        function convertDateToString(date){
            try{
-           var dateArr = date.split('-');
-           var dateString;
+                var dateArr = date.split('-');
+                var dateString;
 
            if (dateArr.length > 1) {
                dateString=(dateArr[2] + '/' + dateArr[1] + '/' + dateArr[0]);
-            }  } catch(e){
-               console.log("Error, the value is null or undefined.")
+            }  
+               } 
+               catch(e){
+               console.log("Error, the value is null or undefined!")
            }
            return dateString;
         }
