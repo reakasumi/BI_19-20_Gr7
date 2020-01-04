@@ -1,16 +1,18 @@
 // var  search_value="helloworld";
 
-// var place = ["newyork", "berlin", "paris"];
+var place = ["New York", "Berlin", "Paris"];
 var startDate;
 var endDate;
 var guests;
 
     
-   
+
 
     function start(){
      var enterButton=document.getElementById("button1");
-     enterButton.addEventListener("click", load, false ); 
+   
+     enterButton.addEventListener("click", load, false );
+
     
      
 
@@ -18,29 +20,48 @@ var guests;
     }
 
     function load(){
-
-
+         
+         var isgood=false;
+         var isnotempty=false;
          search_value= document.getElementById("myInput").value;
-         sessionStorage.setItem("placeText",search_value);
+
          startDate = document.getElementById("myDate1").value;
          sessionStorage.setItem("startDatetext",startDate);
          endDate = document.getElementById("myDate2").value;
          sessionStorage.setItem("endDatetext",endDate);
          guests= document.getElementById("myInput2").value;
          sessionStorage.setItem("guestsText", guests);
+         sessionStorage.setItem("numdays",getDays());
+
+
+         for (var i in place) {
+            if(place[i]==search_value){
+               sessionStorage.setItem("placeText",search_value); 
+               isgood=true;
+            }
+         }
+        if(startDate!=""&&endDate!=""&&guests.toString()!=""){
+            isnotempty=true;
+        }
+
+         if(isgood){
+            console.log(isnotempty);
+                  if(isnotempty){
+                  window.location.href="newyork.html";}
+                  else{
+                   window.alert("A field is empty");
+                  }
+            }
+            else{
+                window.alert("There is no " +search_value+ " in this website" );
+            }
+         
+   
          //var obj=new SDate();
 
          //document.getElementById("demo").innerHTML = obj.getStartDate();
 
-
-
-
-         // for (var i in place) {
-         //    if(place[i]==search_value){
-                window.location.href="newyork.html";
-         //    }
-         // }
-
+       
         // document.getElementById("demo").innerHTML = search_value;
          
         //window.location.href="ushtrime2.html";
@@ -79,10 +100,10 @@ var guests;
         }
 
 
-
+ 
 
             window.addEventListener("load",start, false);
-       
+
 
 
 
