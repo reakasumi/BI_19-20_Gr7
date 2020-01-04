@@ -257,10 +257,10 @@
             <li>
                 <h3><span style="font-size: 1.5em;font-weight: initial;"> R</span>ating</h3>
                 <p>Being kind whenever possible is always possible for us. <br>We appreciate your thoughts and take your reviews for further improvement.</p>
-                <table id="rating">
+                <table id="rating" cellpadding="1px" cellspacing="3px">
                     <caption style="font-size: 30px; color:#8AB4F8;text-align: left;">Costumer Rates</caption>
                     <tr>
-                        <td colspan="2" style="border-bottom: 3px solid lightgray;color:rgb(39, 90, 170); text-align: center;">Average based on reviews:</td>
+                        <td colspan="2" style="border-bottom: 3px solid lightgray;color:rgb(39, 90, 170); text-align: center;" id="average"></td>
                     </tr>
                     <tr>
                         <td>
@@ -271,7 +271,7 @@
                             <img src="images/star.png" alt="star" width="25px" height="20px">
                         </td>
                         <td>
-                            <progress id="prog" max="100" value="85">85%</progress>
+                            <progress class="prog" max="100" value="85">85</progress>
                         </td>
                     </tr>
                     <tr>
@@ -282,7 +282,7 @@
                             <img src="images/star.png" alt="star" width="25px" height="20px">
                         </td>
                         <td>
-                            <progress max="100" value="60"></progress>
+                            <progress class="prog" max="100" value="60">60</progress class="prog">
                         </td>
                     </tr>
                     <tr>
@@ -292,7 +292,7 @@
                             <img src="images/star.png" alt="star" width="25px" height="20px">
                         </td>
                         <td>
-                            <progress max="100" value="28"></progress>
+                            <progress class="prog" max="100" value="28">28</progress class="prog">
                         </td>
                     </tr>
                     <tr>
@@ -301,7 +301,7 @@
                             <img src="images/star.png" alt="star" width="25px" height="20px">
                         </td>
                         <td>
-                            <progress max="100" value="23"></progress>
+                            <progress class="prog" max="100" value="23">23</progress class="prog">
                         </td>
                     </tr>
                     <tr>
@@ -309,7 +309,7 @@
                             <img src="images/star.png" alt="star" width="25px" height="20px">
                         </td>
                         <td>
-                            <progress max="100" value="7"></progress>
+                            <progress class="prog" max="100" value="7">7</progress class="prog">
                         </td>
                     </tr>
                 </table>

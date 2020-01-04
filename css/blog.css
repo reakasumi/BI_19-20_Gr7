@@ -12,6 +12,7 @@
     color: #E2494C;
     background-color: #efe6e6;
     display: inline-block;
+    border: 0.5px dotted lightgray;
 }
     
 .blog .container-all{
