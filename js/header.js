@@ -67,7 +67,16 @@ var guests;
          if(isgood){
             console.log(isnotempty);
                   if(isnotempty){
-                  window.location.href="newyork.html";}
+                    if(isSmaller()){
+                  window.location.href="newyork.html";
+                  }
+                  else{
+                    window.alert("Start date must be smaller");
+                  }
+                }
+                       
+
+
                   else{
                    window.alert("A field is empty");
                   }
@@ -116,8 +125,8 @@ var guests;
         } 
 
 
-        function isInInterval(e){
-            return (e>=(new Date(startDate)) && e<=(new Date(endDate)));
+        function isSmaller(){
+            return (new Date(startDate))<=(new Date(endDate));
         }
        
         function getStartDate(){
