@@ -68,7 +68,7 @@ var guests;
             console.log(isnotempty);
                   if(isnotempty){
                     if(isSmaller()){
-                  window.location.href="newyork.html";
+                  window.location.href="places.html";
                   }
                   else{
                     window.alert("Start date must be smaller");
