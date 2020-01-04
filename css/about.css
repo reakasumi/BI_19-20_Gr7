@@ -108,4 +108,16 @@ table tbody tr td:first-child:hover{
 	 overflow-y: scroll;
 }
 
+#work{
+    margin-top: 1em;
+    border-spacing: 10px;
+    border-collapse: separate;
+}
 
+#work tr td{
+    background-color: white;
+    border: 1px solid gray;
+    width: 300px;
+    color: black;
+    text-align: center;
+}
