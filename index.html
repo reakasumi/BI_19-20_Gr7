@@ -199,8 +199,8 @@
 
             <div>
                 <img src="images/icon2.jpg" alt="icon" width="30" height="30">
-                <h3> Indonectetus facilis</h3>
-                <p>Hello world Hello world hello world hello world hello world
+                <h3 id="title1"> Indonectetus facilis</h3>
+                <p id="title_text1">Hello world Hello world hello world hello world hello world
                     Hello world Hello world Hello world Hello world Hello world
                     Hello world Hello world </p>
                 <details class="reddetails">
@@ -209,8 +209,8 @@
             </div>
             <div>
                 <img src="images/icon2.jpg" alt="icon" width="30" height="30">
-                <h3> Indonectetus facilis</h3>
-                <p>Hello world Hello world hello world hello world hello world
+                <h3 id="title2"> Indonectetus facilis</h3>
+                <p id="title_text2">Hello world Hello world hello world hello world hello world
                     Hello world Hello world Hello world Hello world Hello world
                     Hello world Hello world </p>
                 <details class="reddetails">
@@ -219,8 +219,8 @@
             </div>
             <div>
                 <img src="images/icon2.jpg" alt="icon" width="30" height="30">
-                <h3> Indonectetus facilis</h3>
-                <p>Hello world Hello world hello world hello world hello world
+                <h3 id="title3"> Indonectetus facilis</h3>
+                <p id="title_text3">Hello world Hello world hello world hello world hello world
                     Hello world Hello world Hello world Hello world Hello world
                     Hello world Hello world </p>
                 <details class="reddetails">
@@ -237,8 +237,8 @@
             <figure>
                 <img src="images/icon.jpg" alt="photo">
                 <figcaption>
-                    <h5><strong>Name: </strong>Jhon Doe</h5>
-                    <p>hsadgasdjhsgdjgha</p>
+                    <h4 id="name1">Jhon Doe</h4>
+                    <p id="text_person1">hsadgasdjhsgdjgha</p>
                     <details class="reddetails">
                         <summary>View more</summary>
                     </details>
@@ -248,8 +248,8 @@
             <figure>
                 <img src="images/icon.jpg" alt="photo">
                 <figcaption>
-                    <h5><strong>Name: </strong>Jhon Doe</h5>
-                    <p>hsadgasdjhsgdjgha</p>
+                    <h4 id="name2">Jhon Doe</h4>
+                    <p id="text_person2">hsadgasdjhsgdjgha</p>
                     <details class="reddetails">
                         <summary>View more</summary>
                     </details>
@@ -259,8 +259,8 @@
             <figure>
                 <img src="images/icon.jpg" alt="photo">
                 <figcaption>
-                    <h5><strong>Name: </strong>Jhon Doe</h5>
-                    <p>hsadgasdjhsgdjgha</p>
+                    <h4 id="name3">Jhon Doe</h4>
+                    <p id="text_person3">hsadgasdjhsgdjgha</p>
                     <details class="reddetails">
                         <summary>View more</summary>
                     </details>
@@ -270,8 +270,8 @@
             <figure>
                 <img src="images/icon.jpg" alt="photo">
                 <figcaption>
-                    <h5><strong>Name: </strong>Jhon Doe</h5>
-                    <p>hsadgasdjhsgdjgha</p>
+                    <h4 id="name4">Jhon Doe</h4>
+                    <p id="text_person4">hsadgasdjhsgdjgha</p>
                     <details class="reddetails">
                         <summary>View more</summary>
                     </details>
@@ -281,8 +281,8 @@
             <figure>
                 <img src="images/icon.jpg" alt="photo">
                 <figcaption>
-                    <h5><strong>Name: </strong>Jhon Doe</h5>
-                    <p>hsadgasdjhsgdjgha</p>
+                    <h4 id="name5">Jhon Doe</h4>
+                    <p id="text_person5">hsadgasdjhsgdjgha</p>
                     <details class="reddetails">
                         <summary>View more</summary>
                     </details>
@@ -379,6 +379,65 @@
 
     <script src="js/header.js"></script>
     <script src="js/newyork.js"></script>
+
+    <script type="text/javascript">
+        
+      function Person(first, last, desc) {
+        this.firstname = first;
+        this.lastname = last;
+        this.descVal = desc;
+      }
+
+       function TitleText(title, titleText) {
+        this.titleVal = title;
+        this.titleTextVal = titleText;
+       
+      }
+
+
+
+
+    var person1=new Person("Aurora", "Bytyqi", "Student of FSHMN");  
+    var person2=new Person("Q\xEBndresa", "Bekaj", "Student of FSHMN"); 
+    var person3=new Person("Rea", "Kasumi","Student of FSHMN"); 
+    var person4=new Person("Loreta", "Shala","Student of FSHMN"); 
+    var person5=new Person("Retina", "\xC7o\xE7aj", "Student of FSHMN");
+
+    var t_text1=new TitleText("Plan your travel", "The most wonderful places"
+        +" you can visit are displayed in our website");
+    var t_text2=new TitleText("Blog", "Activites and art works. See the rating of" +"people who visited the places before you");
+    var t_text3=new TitleText("Reservation", "Pick the best place to stay during"+
+        " your travel");
+
+
+     document.getElementById( "name1" ).innerHTML=person1.firstname+
+     " "+person1.lastname;  
+      document.getElementById( "name2" ).innerHTML=person2.firstname+
+     " "+person2.lastname; 
+      document.getElementById( "name3" ).innerHTML=person3.firstname+
+     " "+person3.lastname; 
+      document.getElementById( "name4" ).innerHTML=person4.firstname+
+     " "+person4.lastname;
+      document.getElementById( "name5" ).innerHTML=person5.firstname+
+     " "+person5.lastname; 
+
+      document.getElementById( "text_person1" ).innerHTML=person1.descVal;  
+      document.getElementById( "text_person2" ).innerHTML=person2.descVal;
+      document.getElementById( "text_person3" ).innerHTML=person3.descVal;
+      document.getElementById( "text_person4" ).innerHTML=person4.descVal;
+      document.getElementById( "text_person5" ).innerHTML=person5.descVal; 
+     
+      document.getElementById( "title1" ).innerHTML=t_text1.titleVal;  
+      document.getElementById( "title2" ).innerHTML=t_text2.titleVal;
+      document.getElementById( "title3" ).innerHTML=t_text3.titleVal;
+      document.getElementById( "title_text1" ).innerHTML=t_text1.titleTextVal;
+      document.getElementById( "title_text2" ).innerHTML=t_text2.titleTextVal;
+      document.getElementById( "title_text3" ).innerHTML=t_text3.titleTextVal;  
+
+
+
+
+    </script>
 
 </body>
 
