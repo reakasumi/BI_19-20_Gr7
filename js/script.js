@@ -10,7 +10,6 @@ function plusSlides(n) {
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides((slideIndex = n));
-  setTimeout(currentSlide(n),2000)
 }
 
 function showSlides(n) {

@@ -381,14 +381,16 @@ border: 2px solid black; */
     color: #E7FFFD;
     text-decoration: none;
     text-align: center;
-    padding-top: 2px;
+    padding-top: 0px;
     font-weight: lighter;
     cursor: pointer;
     width: 14%;
-    height: 24px;
+    height: 32px;
     margin-left: 4px;
     position: relative;
     top:-10px;
-    left:42.7%
+    left:42.7%;
+    align-content: center;
+    vertical-align: middle;
 
 }
