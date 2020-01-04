@@ -32,6 +32,6 @@ function showSlides(n) {
 	  slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";} 
     catch(e){
-      console.log("error, first time read the value is undefined.")
+      console.log("Error, first time rendered the value is undefined!")
     }
 }
