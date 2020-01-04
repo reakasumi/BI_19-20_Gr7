@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,9 @@
     <script src="js/geolocation.js"></script>
     <title>Places</title>
 </head>
+
 <body>
-     <!-- HEADER -->
+    <!-- HEADER -->
     <header>
         <!-- NAVIGATION -->
         <div class="navigation">
@@ -32,43 +34,44 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
-                    <li  class="dropdown" >              
-                    <a href="places.html" target="_self" >PLACES</a>
-                    <div class="dropdown-content">
-                        <!--<div class="header-menu">
+                    <li class="dropdown">
+                        <a href="places.html" target="_self">PLACES</a>
+                        <div class="dropdown-content">
+                            <!--<div class="header-menu">
                         <h2>Mega Menu</h2>
-                        </div>--> 
+                        </div>-->
 
-                        <div class="row">
-                            <div class="column">
-                                   <p>
-                                   <label class="just-text">Where do you want to go?</label>
-                                   <br>
-                                   <input type="text" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
+                            <div class="row">
+                                <div class="column">
+                                    <p>
+                                        <label class="just-text">Where do you want to go?</label>
+                                        <br>
+                                        <input type="text" placeholder="Search.." id="myInput"
+                                            style=" background-image: url('images/search.png');">
                                     </p>
                                     <p>
-                                    <label class="just-text">Check in</label><br>
-                                    <input type="date" placeholder="" id="myInput2">
+                                        <label class="just-text">Check in</label><br>
+                                        <input type="date" placeholder="" id="myInput2">
                                     </p>
                                     <p>
-                                    <label class="just-text">Check out</label><br>
-                                    <input type="date" placeholder="" id="myInput2">
+                                        <label class="just-text">Check out</label><br>
+                                        <input type="date" placeholder="" id="myInput2">
                                     </p>
                                     <p>
-                                    <label class="just-text">Guests</label><br>
-                                    <input type="number" placeholder="How many.." id="myInput">
+                                        <label class="just-text">Guests</label><br>
+                                        <input type="number" placeholder="How many.." id="myInput">
                                     </p>
+
+
+                                </div>
+
 
 
                             </div>
 
+                    </li>
 
-
-                        </div>
-
-                   </li>
-
-                   <!-- <div id="dropdown">
+                    <!-- <div id="dropdown">
                         <a href="places.html" target="_self">PLACES</a>
                         <ul id="dropdown-content">
                             <li><a href="" target="_self">NEW YORK</a></li>
@@ -78,7 +81,7 @@
                             <li><a href="" target="_self">THAILAND</a></li>
                         </ul>
                     <div>-->
-                    
+
                     <li><a href="logIn.html" target="_self">LOG IN</a></li>
 
                 </ul>
@@ -92,79 +95,93 @@
     <!-- CONTENT -->
     <div id="map" style="height:400px; width: 700px; margin: auto;"></div>
 
-    <!-- <img src="images/map.png" alt="" id="myMap" style="height:400px; width: 700px; margin: auto;"> -->
+    <div class="earth3dmap-com"><iframe id="iframemap"
+            src="https://maps.google.com/maps?q=kosovo&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="75%"
+            height="500" frameborder="0" scrolling="no"
+            style="margin:0 0 0 10em ;"></iframe>
+        <!-- <div
+            style="color: #333; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right; padding: 10px;">
+            Map by <a
+                style="color: #333; text-decoration: underline; font-size: 14px; font-family: Arial, Helvetica, sans-serif; text-align: right;"
+                href="http://earth3dmap.com/?from=embed" target="_blank">Earth3DMap.com</a></div> -->
 
-    <!-- //CONTENT -->
+        <!-- <img src="images/map.png" alt="" id="myMap" style="height:400px; width: 700px; margin: auto;"> -->
 
-    <!-- footer -->
-    <footer>
-        <div class="footer">
-            <div class="footer-content">
-                <div class="footer-section blog">
-                    <h2>Latest From The Blog</h2>
-                    <a href="blog.html" target="_blank">
-                        <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"
-                            alt="Thailand landscape" width="110px" height="110px">
-                        <h4>Thailand - the most visited country</h4>
-                        <p><span style="overflow-x: auto;">Due to researches made by statistical results Bangkok,
-                                Thailand is one of the most visited cities of 2019. People chose to go there because of
-                                its beautiful...</span></p>
-                    </a>
+        <!-- //CONTENT -->
 
-                    <a href="blog.html" style="float: left; margin-top: 25px;" target="_blank">
-                        <img src="images/vanGogh/Vincent_van_Gogh_-_Self-portrait_with_grey_felt_hat_-_Google_Art_Project.jpg"
-                            alt="Van Gogh" width="110px" height="110px">
+        <!-- footer -->
+        <footer>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section blog">
+                        <h2>Latest From The Blog</h2>
+                        <a href="blog.html" target="_blank">
+                            <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"
+                                alt="Thailand landscape" width="110px" height="110px">
+                            <h4>Thailand - the most visited country</h4>
+                            <p><span style="overflow-x: auto;">Due to researches made by statistical results Bangkok,
+                                    Thailand is one of the most visited cities of 2019. People chose to go there because
+                                    of
+                                    its beautiful...</span></p>
+                        </a>
 
-                        <h4>The art of Vincent van Gogh</h4>
-                        <p><span style="overflow-x: auto;">Vincent Willem van Gogh the Dutch post-impressionist painter
-                                who is among the most famous and influential figures in the history of Western art. The
-                                Starry Night by him is one of the most known picture...</span></p>
-                    </a>
+                        <a href="blog.html" style="float: left; margin-top: 25px;" target="_blank">
+                            <img src="images/vanGogh/Vincent_van_Gogh_-_Self-portrait_with_grey_felt_hat_-_Google_Art_Project.jpg"
+                                alt="Van Gogh" width="110px" height="110px">
+
+                            <h4>The art of Vincent van Gogh</h4>
+                            <p><span style="overflow-x: auto;">Vincent Willem van Gogh the Dutch post-impressionist
+                                    painter
+                                    who is among the most famous and influential figures in the history of Western art.
+                                    The
+                                    Starry Night by him is one of the most known picture...</span></p>
+                        </a>
+                    </div>
+
+                    <div class="footer-section details">
+                        <h2>Company Details</h2>
+                        <ul>
+                            <li>Travel</li>
+                            <li>
+                                <address>N&#xeb;n&#xeb; Tereza, 105</address>
+                            </li>
+                            <li>Prishtin&#xeb;</li>
+                            <li>10000</li>
+                            <br>
+                            <li>Tel:+383 44 129512</li>
+                            <li>Fax: 029 3458487617</li>
+                            <li>Email: <a href="mailto:contact@mydomain.com">travel@tr-pr.com</a></li>
+                            <br>
+                            <li>Office hours</li>
+                            <li>Monday 08:00~16:00</li>
+                            <li>Saturday 10:00~16:00</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section contact-form">
+                        <h2>Contact Us</h2>
+                        <form action="" method="post" id="contact">
+                            <input type="text" placeholder="Name" name="inputType1"><br>
+                            <input type="email" placeholder="Email" name="inputType1" required><br>
+                            <textarea placeholder="Message"></textarea><br>
+                            <input type="submit" form="contact" value="SUBMIT">
+                        </form>
+                    </div>
                 </div>
-
-                <div class="footer-section details">
-                    <h2>Company Details</h2>
-                    <ul>
-                        <li>Travel</li>
-                        <li>
-                            <address>N&#xeb;n&#xeb; Tereza, 105</address>
-                        </li>
-                        <li>Prishtin&#xeb;</li>
-                        <li>10000</li>
-                        <br>
-                        <li>Tel:+383 44 129512</li>
-                        <li>Fax: 029 3458487617</li>
-                        <li>Email: <a href="mailto:contact@mydomain.com">travel@tr-pr.com</a></li>
-                        <br>
-                        <li>Office hours</li>
-                        <li>Monday 08:00~16:00</li>
-                        <li>Saturday 10:00~16:00</li>
-                    </ul>
-                </div>
-
-                <div class="footer-section contact-form">
-                    <h2>Contact Us</h2>
-                    <form action="" method="post" id="contact">
-                        <input type="text" placeholder="Name" name="inputType1"><br>
-                        <input type="email" placeholder="Email" name="inputType1" required><br>
-                        <textarea placeholder="Message"></textarea><br>
-                        <input type="submit" form="contact" value="SUBMIT">
-                    </form>
+                <!-- <hr> -->
+                <div class="footer-bottom">
+                    <p id="copy">Copyright &copy; 2019 - All rights reserved</p>
+                    <p id="template">Travel Company</p>
                 </div>
             </div>
-            <!-- <hr> -->
-            <div class="footer-bottom">
-                <p id="copy">Copyright &copy; 2019 - All rights reserved</p>
-                <p id="template">Travel Company</p>
-            </div>
-        </div>
-    </footer>
-    <!-- //footer -->
+        </footer>
+        <!-- //footer -->
 
-    <!-- geolocation api key -->
-    <script async defer
-    src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyC5HCZFVPWj1nCHPozjCRngscz5bUK0jew">
-    </script>
+        <!-- geolocation api key -->
+        <!-- <script async defer
+            src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyC5HCZFVPWj1nCHPozjCRngscz5bUK0jew">
+            </script> -->
 
 </body>
+
 </html>
