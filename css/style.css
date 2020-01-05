@@ -516,18 +516,17 @@ footer .footer-content .contact-form textarea{
 
 
 /* media queries */
-@media only screen and (max-width:750px){
+@media only screen and(max-width:750px){
     header ul{
          /* float:right; */
         margin:0px;
         padding: 0px;
         list-style: none;
-         border: 1px solid red;  
+        border: 1px solid red;  
         padding: 1rem 1rem;
         border-radius:12px; 
         width: 100%;
         background-color:#E2494B;
-
     }
 
     header ul li{
@@ -549,9 +548,6 @@ footer .footer-content .contact-form textarea{
         margin-top:20px;
     }
 }
-
-
-
 
 footer p#copy{
     position: absolute;
