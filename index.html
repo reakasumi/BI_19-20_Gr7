@@ -89,7 +89,8 @@
     <!-- BODY -->
 
     <p class="centered-text-style">
-        “ It is not the destination where you end up but the mishaps and memories you create along the way „ ~ Penelope Riley 
+        “ It is not the destination where you end up but the mishaps and memories you create along the way „ ~ Penelope
+        Riley
     </p>
     <!-- Slider 1 -->
     <!-- <section id="slider"> -->
@@ -152,7 +153,7 @@
                     Hello world Hello world Hello world Hello world Hello world
                     Hello world Hello world </p>
                 <details>
-                    <summary  class="reddetails">Read more</summary>
+                    <summary class="reddetails">Read more</summary>
                 </details>
             </div>
             <div>
@@ -183,20 +184,18 @@
             <h4 class="redbox">OUR PLAYERS</h4>
 
             <figure>
-                <img src="images/people/people1.jpg" alt="photo" width="175" 
-                height="175">
+                <img src="images/people/people1.jpg" alt="photo" width="175" height="175">
                 <figcaption>
                     <h4 id="name1">Jhon Doe</h4>
                     <p id="text_person1">hsadgasdjhsgdjgha</p>
-                   
-                        <a href="" class="reddetails">View more</a>
-                   
+
+                    <a href="" class="reddetails">View more</a>
+
                 </figcaption>
             </figure>
 
             <figure>
-                <img src="images/people/people2.jpg" alt="photo" width="175" 
-                height="175">
+                <img src="images/people/people2.jpg" alt="photo" width="175" height="175">
                 <figcaption>
                     <h4 id="name2">Jhon Doe</h4>
                     <p id="text_person2">hsadgasdjhsgdjgha</p>
@@ -205,8 +204,7 @@
             </figure>
 
             <figure>
-                <img src="images/people/people3.jpg" alt="photo" width="175" 
-                height="175">
+                <img src="images/people/people3.jpg" alt="photo" width="175" height="175">
                 <figcaption>
                     <h4 id="name3">Jhon Doe</h4>
                     <p id="text_person3">hsadgasdjhsgdjgha</p>
@@ -215,8 +213,7 @@
             </figure>
 
             <figure>
-                <img src="images/people/people4.jpg" alt="photo" width="175" 
-                height="175">
+                <img src="images/people/people4.jpg" alt="photo" width="175" height="175">
                 <figcaption>
                     <h4 id="name4">Jhon Doe</h4>
                     <p id="text_person4">hsadgasdjhsgdjgha</p>
@@ -225,8 +222,7 @@
             </figure>
 
             <figure>
-                <img src="images/people/people5.jpg" alt="photo" width="175" 
-                height="175">
+                <img src="images/people/people5.jpg" alt="photo" width="175" height="175">
                 <figcaption>
                     <h4 id="name5">Jhon Doe</h4>
                     <p id="text_person5">hsadgasdjhsgdjgha</p>
@@ -248,7 +244,7 @@
     </article>
 
 
-  
+
 
     <!-- footer -->
     <footer>
@@ -313,8 +309,8 @@
             </div>
 
         </div>
-          
-           <!-- <audio id="audio1" controls>
+
+        <!-- <audio id="audio1" controls>
             <source id="audio2" src="audio/Haydn_Cello_Concerto_D-1.mp3" type="audio/mpeg">
             </audio> -->
 
@@ -339,60 +335,70 @@
     <script src="js/newyork.js"></script>
     <!-- <script type="text/javascript" src="js/signUp.js"></script> -->
     <script type="text/javascript">
-        
-      function Person(first, last, desc) {
-        this.firstname = first;
-        this.lastname = last;
-        this.descVal = desc;
-      }
 
-       function TitleText(title, titleText) {
-        this.titleVal = title;
-        this.titleTextVal = titleText;
-       
-      }
+        function Person(first, last, desc) {
+            this.firstname = first;
+            this.lastname = last;
+            this.descVal = desc;
+        }
 
+        function TitleText(title, titleText) {
+            this.titleVal = title;
+            this.titleTextVal = titleText;
 
+        }
 
 
-    var person1=new Person("Tyler", "Cammack", "Doctor");  
-    var person2=new Person("Brice", "Jeremiah", "Travel guide"); 
-    var person3=new Person("Josefina", "Dobson","Travel guide"); 
-    var person4=new Person("Nancy", "Brumfield","Hotel Manager"); 
-    var person5=new Person("Jennie", "Barkley", "Web Developer");
-
-    var t_text1=new TitleText("Plan your travel", "The most wonderful places"
-        +" you can visit are displayed in our website");
-    var t_text2=new TitleText("Blog", "Activites and art works. See the rating of" +"people who visited the places before you");
-    var t_text3=new TitleText("Reservation", "Pick the best place to stay during"+
-        " your travel");
 
 
-     document.getElementById( "name1" ).innerHTML=person1.firstname+
-     " "+person1.lastname;  
-      document.getElementById( "name2" ).innerHTML=person2.firstname+
-     " "+person2.lastname; 
-      document.getElementById( "name3" ).innerHTML=person3.firstname+
-     " "+person3.lastname; 
-      document.getElementById( "name4" ).innerHTML=person4.firstname+
-     " "+person4.lastname;
-      document.getElementById( "name5" ).innerHTML=person5.firstname+
-     " "+person5.lastname; 
+        var person1 = new Person("Tyler", "Cammack", "Doctor");
+        var person2 = new Person("Brice", "Jeremiah", "Travel guide");
+        var person3 = new Person("Josefina", "Dobson", "Travel guide");
+        var person4 = new Person("Nancy", "Brumfield", "Hotel Manager");
+        var person5 = new Person("Jennie", "Barkley", "Web Developer");
 
-      document.getElementById( "text_person1" ).innerHTML=person1.descVal;  
-      document.getElementById( "text_person2" ).innerHTML=person2.descVal;
-      document.getElementById( "text_person3" ).innerHTML=person3.descVal;
-      document.getElementById( "text_person4" ).innerHTML=person4.descVal;
-      document.getElementById( "text_person5" ).innerHTML=person5.descVal; 
-     
-      document.getElementById( "title1" ).innerHTML=t_text1.titleVal;  
-      document.getElementById( "title2" ).innerHTML=t_text2.titleVal;
-      document.getElementById( "title3" ).innerHTML=t_text3.titleVal;
-      document.getElementById( "title_text1" ).innerHTML=t_text1.titleTextVal;
-      document.getElementById( "title_text2" ).innerHTML=t_text2.titleTextVal;
-      document.getElementById( "title_text3" ).innerHTML=t_text3.titleTextVal;  
+        var t_text1 = new TitleText("Plan your travel", "The most wonderful places"
+            + " you can visit are displayed in our website");
+        var t_text2 = new TitleText("Blog", "Activites and art works. See the rating of" + "people who visited the places before you");
+        var t_text3 = new TitleText("Reservation", "Pick the best place to stay during" +
+            " your travel");
 
-      document.getElementById( "demo" ).innerHTML=localStorage.getItem("pass_word");  
+
+        document.getElementById("name1").innerHTML = person1.firstname +
+            " " + person1.lastname;
+        document.getElementById("name2").innerHTML = person2.firstname +
+            " " + person2.lastname;
+        document.getElementById("name3").innerHTML = person3.firstname +
+            " " + person3.lastname;
+        document.getElementById("name4").innerHTML = person4.firstname +
+            " " + person4.lastname;
+        document.getElementById("name5").innerHTML = person5.firstname +
+            " " + person5.lastname;
+
+        document.getElementById("text_person1").innerHTML = person1.descVal;
+        document.getElementById("text_person2").innerHTML = person2.descVal;
+        document.getElementById("text_person3").innerHTML = person3.descVal;
+        document.getElementById("text_person4").innerHTML = person4.descVal;
+        document.getElementById("text_person5").innerHTML = person5.descVal;
+
+        document.getElementById("title1").innerHTML = t_text1.titleVal;
+        document.getElementById("title2").innerHTML = t_text2.titleVal;
+        document.getElementById("title3").innerHTML = t_text3.titleVal;
+        document.getElementById("title_text1").innerHTML = t_text1.titleTextVal;
+        document.getElementById("title_text2").innerHTML = t_text2.titleTextVal;
+        document.getElementById("title_text3").innerHTML = t_text3.titleTextVal;
+
+        try {
+            document.getElementById("demo").innerHTML = localStorage.getItem("pass_word");
+
+            if (document.getElementById("demo") == "") throw "is Empty";
+            if (isNaN(document.getElementById("demo"))) throw "not a number";
+            if (document.getElementById("demo") == "null") throw "is Null";
+            if (document.getElementById("demo") == undefined) throw "undefined";
+        }
+        catch (e) {
+            console.warn("Error thrown:\n" + e + " !")
+        }
 
     </script>
 
