@@ -102,7 +102,11 @@ function convertDateToString(date) {
 function getDays() {
   var Difference_In_Time = (new Date(endDate)).getTime() - (new Date(startDate)).getTime();
   var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-  return Difference_In_Days + 1;
+  if(Number.isFinite(Difference_In_Days)){
+  return Difference_In_Days + 1;}
+  else{
+    console.warn("To many days");
+  }
 }
 
 
