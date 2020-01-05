@@ -48,7 +48,17 @@ function showSlides(n) {
 			}
 			slideIndex++;
 			if (slideIndex > x.length) {slideIndex = 1}
-			x[slideIndex-1].style.display = "block";
+			try{
+				x[slideIndex-1].style.display = "block";
+				if (x[slideIndex-1] == "") throw "is Empty";
+				if (isNaN(x[slideIndex-1])) throw "not a number";
+				if (x[slideIndex-1] == "null") throw "is Null";
+				if (x[slideIndex-1] == undefined) throw "undefined";
+				}
+				catch (e) {
+					console.warn("Error thrown:\n" + e + " !")
+				}
+		
 			setTimeout(slideShow, 3000); }// Change image every 2 seconds
 		else{
 		}
