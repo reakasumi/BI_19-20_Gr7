@@ -73,21 +73,21 @@ p{
     font-size: 16px;
 }
 
-.tabel1{
+#tabel1{
     table-layout: fixed;
     width: 100%;
 }
 
-.tabel1 td{
+#tabel1 td{
     width: 33%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 input[type=range]{
     width: 150px;
     padding-left: 5px;
     margin: 10px;
-    text-align: center;
+    /* text-align: center; */
     
 }
 .table1 td label{

@@ -23,7 +23,8 @@
     <script>
         var worker = new Worker('js/webWorker.js');
         worker.onmessage = function (event) {
-            alert("Completed " + event.data + "iterations");
+            var sec=event.data/1000;
+            alert("You waited " + sec + " seconds\nThank you!");
         };
         function showTime() {
             var date = new Date();
