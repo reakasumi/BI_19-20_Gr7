@@ -182,3 +182,91 @@ body {
   background-color: rgba(117, 123, 161, 0.61);
   color: rgb(4, 102, 4);
 }
+
+
+#wikipedia{
+  margin: auto;
+  width: 75%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#history{
+  column-count: 3;
+  column-gap: 1.5em;
+  column-rule-style: solid;
+  column-rule-width: 0.5px;
+  column-rule-color: lightslategray;
+  column-width: 150px;
+}
+
+.animated{
+  height: 100px;
+  width: 100px;
+   background-image: url(../images/emoji-4584568_960_720.png);
+   background-repeat: no-repeat;
+   /* background-attachment: fixed; */
+   background-size: 100px;
+   margin-left: 10em;
+
+   animation-name: anim2;
+   animation-duration: 10s; 
+   /* how long */
+   animation-delay: 5s;  
+   /* when to start */
+   animation-iteration-count: 1; 
+   /* how many times */
+   animation-direction: normal;
+   animation-timing-function: linear;
+   /* same speed from start to end  */
+   animation-fill-mode: forwards;
+   /* no change before or after animation starts */
+}
+
+@keyframes anim2{
+   10%{
+     transform: rotate(360deg);
+     transition-delay: 2s;
+     -webkit-transform: rotate(360deg);
+     -webkit-transition-delay: 2s;
+   }
+   20%{
+       transform: translateX(300px) ;
+      -webkit-transform: translateX(300px);
+   }
+   40%{
+     transform: skewX(45deg);
+     -webkit-transform: skewX(45deg);
+   }
+   50%{
+     transform: skew(0deg);
+     -webkit-transform: skew(0deg);
+   }
+   80%{
+     transform: rotateY(40deg);
+     -webkit-transform: rotateY(40deg);
+   }
+   99%{
+     transform: scale(1.2);
+     -webkit-transform: scale(1.2);
+   }
+   100%{
+    background-image: url(../images/collision-emoji.png);
+   }
+
+}
+
+#resize{
+  font-size: medium;
+  color: rgb(155, 155, 8);
+  padding:15px;
+  padding-left: 50px;
+  width: 300px;
+  resize: horizontal;
+  overflow: auto;
+  outline: 1px inset rgba(196, 196, 103, 0.473);
+  outline-offset: 2px;
+  margin: auto;
+}
