@@ -195,16 +195,17 @@
         <a href="#top" style="text-decoration: none; color: lightsalmon;">Go on top!</a>
     </div>
    
-    <div class="game">
-        <p >Play a some music</p>
+    <div class="game" style="margin-bottom: 100px; ">
+        <p style="margin-right: 40px;" >Play some music:</p>
         <audio id="audio1" controls>
         <source id="audio2" src="audio/Haydn_Cello_Concerto_D-1.mp3" type="audio/mpeg">
         </audio>
         
     </div>
 
-    <div>
-        
+    <div class="game" style="margin-bottom: 100px;">
+        <p >Play a video:</p>
+        <video width="400" controls="controls" id="videoPlayer" style="margin-left: 20px; " >
         
     </div>
 
@@ -289,6 +290,24 @@
     });
 
 }
+
+function videoPlay() {
+    document.getElementById("videoPlayer").setAttribute("src",
+     "video/SampleVideo_1280x720_10mb.mp4");
+    document.getElementById("videoPlayer").load();
+    document.getElementById("videoPlayer").play();
+}
+
+
+function myHandler() {
+  document.getElementById("videoPlayer").setAttribute("src",
+     "video/1280.mp4");
+    document.getElementById("videoPlayer").load();
+    document.getElementById("videoPlayer").play();
+}
+
+document.getElementById('videoPlayer').addEventListener('ended', myHandler, false);
+videoPlay(); // play the video
 window.addEventListener( "load", start, false );
 
     
