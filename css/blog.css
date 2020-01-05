@@ -1,50 +1,38 @@
 /* BLOG PAGE */
-body {
-  /* background-image: url("https://www.incimages.com/uploaded_files/image/970x450/getty_583734066_335273.jpg"); */
-  min-height: 500px; 
+main{
   background-attachment: fixed;
-  /* background-position: center;  */
-  /* background-repeat: no-repeat; */
-  padding: 25px;
-    background-image: url(https://i.pinimg.com/564x/c4/06/dd/c406ddf575fcc43c88dd0472635e6fea.jpg),
-    url(https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=733&q=80),
-    url(https://www.incimages.com/uploaded_files/image/970x450/getty_583734066_335273.jpg);
-    background-repeat: no-repeat;
-    background-origin: content-box, padding-box, padding-box;
-    background-position: center;
-    background-size: 290px,
-    800px,
-    2000px 1000px;
-    /* -webkit-backdrop-filter: blur(10px); */
-     backdrop-filter: blur(3px);
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.5);  
-  /* background-size: cover; */
-  }
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .body {
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.5);  
+  background-image: url('../images/background/rose-303848_960_720.png'),
+  url('../images/background/free-simple-backgrounds-1.jpg') ;
+  background-position: center;
+  background-size: 600px, cover;
+  background-repeat: no-repeat;
+  background-origin: inherit;
+  width: 100%;
+  height: 100%;
+  /* backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0.3;
+  z-index: -2; */
+  /* filter: blur(10px); */
+}
+  @supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em))) {
+    main{
+      /* background-color: rgba(255, 255, 255, .5); */
+      -webkit-backdrop-filter: blur(2em);
+      backdrop-filter: blur(2em);
     }
   }
-  
+
+  .content{
+    /* opacity: 1;
+    z-index: 3; */
+    background-color: rgba(139, 199, 248, 0.733);
+  }
 .blog {
     margin: 0 9em;
     overflow: hidden;
   }
-.background-images{
-    padding: 25px;
-    background: url(https://i.pinimg.com/564x/c4/06/dd/c406ddf575fcc43c88dd0472635e6fea.jpg),
-    url(https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=733&q=80),
-    url(https://mcdaniel.hu/wp-content/uploads/2015/02/globe-map-suitcase-travel-1176x445.jpg);
-    background-repeat: no-repeat;
-    background-origin: content-box, padding-box, padding-box;
-    background-position: center;
-    background-size: 500px,
-    800px,
-    2000px 1000px;
-}
+
 .mostVisited{
     margin: 1em 0.5em;
     padding: 0.3em;
@@ -307,7 +295,7 @@ body {
 
 #resize{
   font-size: medium;
-  color: rgb(155, 155, 8);
+  color: rgba(236, 236, 18, 0.822);
   padding:15px;
   padding-left: 50px;
   width: 300px;

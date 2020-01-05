@@ -13,7 +13,7 @@
 
 <body>
     <!-- HEADER -->
-   <header>
+    <header>
         <!-- NAVIGATION -->
         <div class="navigation">
             <nav>
@@ -31,43 +31,44 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
-                    <li  class="dropdown" >              
-                    <a href="#" target="_self" >PLACES</a>
-                    <div class="dropdown-content">
-                        <!--<div class="header-menu">
+                    <li class="dropdown">
+                        <a href="#" target="_self">PLACES</a>
+                        <div class="dropdown-content">
+                            <!--<div class="header-menu">
                         <h2>Mega Menu</h2>
-                        </div>--> 
+                        </div>-->
 
-                        <div class="row">
-                            <div class="column">
-                                   <p>
-                                   <label class="just-text">Where do you want to go?</label>
-                                   <br>
-                                   <input type="text" placeholder="Search.." id="myInput" style=" background-image: url('images/search.png');">
+                            <div class="row">
+                                <div class="column">
+                                    <p>
+                                        <label class="just-text">Where do you want to go?</label>
+                                        <br>
+                                        <input type="text" placeholder="Search.." id="myInput"
+                                            style=" background-image: url('images/search.png');">
                                     </p>
                                     <p>
-                                    <label class="just-text">Check in</label><br>
-                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                        <label class="just-text">Check in</label><br>
+                                        <input type="date" placeholder="dd-mm-yy" id="myInput2">
                                     </p>
                                     <p>
-                                    <label class="just-text">Check out</label><br>
-                                    <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                        <label class="just-text">Check out</label><br>
+                                        <input type="date" placeholder="dd-mm-yy" id="myInput2">
                                     </p>
                                     <p>
-                                    <label class="just-text">Guests</label><br>
-                                    <input type="number" placeholder="How many.." id="myInput">
+                                        <label class="just-text">Guests</label><br>
+                                        <input type="number" placeholder="How many.." id="myInput">
                                     </p>
+
+
+                                </div>
+
 
 
                             </div>
 
+                    </li>
 
-
-                        </div>
-
-                   </li>
-
-                   <!-- <div id="dropdown">
+                    <!-- <div id="dropdown">
                         <a href="places.html" target="_self">PLACES</a>
                         <ul id="dropdown-content">
                             <li><a href="" target="_self">NEW YORK</a></li>
@@ -77,7 +78,7 @@
                             <li><a href="" target="_self">THAILAND</a></li>
                         </ul>
                     <div>-->
-                    
+
                     <li><a href="logIn.html" target="_self">LOG IN</a></li>
 
                 </ul>
@@ -87,6 +88,7 @@
     <!-- //HEADER -->
 
     <!-- CONTENT -->
+<<<<<<< HEAD
         <div class="content-form">
             <form  method="post" onsubmit="return checkMatching2(this)">
                 <h2 class="form-title">Log In</h2>
@@ -124,6 +126,67 @@
              
            
         </div>
+=======
+    <div class="content-form">
+        <form action="logIn.php" method="post">
+            <h2 class="form-title">Log In</h2>
+            <div>
+                <label>Username:</label>
+                <input type="text" name="username" class="inputType" required autofocus>
+
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password" class="inputType" required>
+            </div>
+            <div>
+                <button type="submit" name="logIn-btn" class="logIn-btn">Log In</button>
+            </div>
+            <p>If you don't have an account, you can <a href="signUp.html">Sign Up</a> </p>
+
+        </form>
+        <br>
+
+        <p style="margin-right: 170px;color: #E2494C;">Please rate us:</p>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)" id="ratings">
+            <table id="tabel1" border="0">
+                <tr>
+                    <td>
+                        <label>Functionality: </label>
+                    </td>
+                    <td>
+                        <input type="range" id="a" value="25" min="0" max="50">
+                    </td>
+                    <td>
+                        0-50
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Visualization: </label>
+                    </td>
+                    <td>
+                        <input type="range" id="b" value="25" min="0" max="50">
+                    </td>
+                    <td>
+                        0-50
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Total: <output name="x" for="a b"></output>%
+                    </td>
+                    <td colspan="2">
+                        <input class="rate-btn" type="submit" name="rate" value="Rate Us" style="margin-left: 210px;">
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+
+    </div>
+>>>>>>> 62632c407d63b8f4e79ee6c1b3bda54e6d1617f3
 
 </body>
 
