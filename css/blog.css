@@ -1,9 +1,28 @@
 /* BLOG PAGE */
+body {
+  background-image: url("https://www.incimages.com/uploaded_files/image/970x450/getty_583734066_335273.jpg");
+  min-height: 500px; 
+  background-attachment: fixed;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
 .blog {
     margin: 0 9em;
     overflow: hidden;
   }
-
+.background-images{
+    padding: 25px;
+    background: url(https://i.pinimg.com/564x/c4/06/dd/c406ddf575fcc43c88dd0472635e6fea.jpg),
+    url(https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=733&q=80),
+    url(https://mcdaniel.hu/wp-content/uploads/2015/02/globe-map-suitcase-travel-1176x445.jpg);
+    background-repeat: no-repeat;
+    background-origin: content-box, padding-box, padding-box;
+    background-position: center;
+    background-size: 500px,
+    800px,
+    2000px 1000px;
+}
 .mostVisited{
     margin: 1em 0.5em;
     padding: 0.3em;
