@@ -1,4 +1,6 @@
 //drag and drop android
+// var user;
+// var pass;
 function dragStart(ev) {
     ev.dataTransfer.effectAllowed = 'move';
     ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
@@ -24,6 +26,7 @@ function checkMatching(form) {
     var password1 = form.password1.value;
     var password2 = form.password2.value;
 
+    
     // If password not entered 
     if (password1 == '')
         alert("Please enter Password");
@@ -41,6 +44,7 @@ function checkMatching(form) {
     // If same return True. 
     else {
 
+
         //check for robots
         if($('#notRobot').find('#android').length != 1)
         {
@@ -56,12 +60,29 @@ function checkMatching(form) {
         }
         //after check return true
         alert("Welcome!");
+           var user =form.username.value;
+        localStorage.setItem("user_name", user);
+        var pass =form.password1.value;
+        localStorage.setItem("pass_word", pass);
         window.location.href = 'index.html';
 
         return true;
     }
 
+
+
+    // user=document.getElementById("username1").value;
+    // document.getElementById("demo").innerHTML=user;
+    // pass=document.getElementById("password1").value;
+
+
+
 }
+
+
+
+
+
 
 
 

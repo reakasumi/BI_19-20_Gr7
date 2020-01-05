@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/logIn.css">
+    <script src="js/login.js"></script>
 
 </head>
 
@@ -87,7 +88,7 @@
 
     <!-- CONTENT -->
         <div class="content-form">
-            <form action="logIn.php" method="post">
+            <form  method="post" onsubmit="return checkMatching2(this)">
                 <h2 class="form-title">Log In</h2>
                 <div>
                     <label>Username:</label>
