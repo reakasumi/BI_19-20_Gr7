@@ -11,8 +11,8 @@ function checkMatching2(form){
          console.warn(" username/password wrong");
 	}
 	else{
-		 alert("Welcome"+user);
-		  window.location.href = "index.html";
+		 alert("Welcome "+user);
+		  window.location.href = 'index.html';
 	    }
 
 }
