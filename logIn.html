@@ -92,6 +92,7 @@
                 <div>
                     <label>Username:</label>
                     <input type="text" name="username" class="inputType" required autofocus>
+                    
                 </div>
                 <div>
                     <label>Password:</label>
@@ -101,7 +102,23 @@
                     <button type="submit" name="logIn-btn" class="logIn-btn">Log In</button>
                 </div>
                 <p>If you don't have an account, you can <a href="signUp.html">Sign Up</a> </p>
+
             </form>
+            <br>
+            
+             <p style="margin-right: 170px;">Please rate us:</p>
+             <br>
+             <form oninput="x.value=parseInt(a.value)+parseInt(b.value)" style="margin-left: 85px;">
+             <label>Functionality: </label>  
+             0<input type="range" id="a" value="25" min="0" max="50">50
+             <br>
+             <label >Visualization: </label>    
+             0<input type="range" id="b" value="25" min="0" max="50">50
+             <br>
+             Total: <output name="x" for="a b"></output>%
+             </form> 
+             
+           
         </div>
 
 </body>
