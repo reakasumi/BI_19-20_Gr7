@@ -313,10 +313,7 @@
             </div>
 
         </div>
-          
-           <audio id="audio1" controls>
-            <source id="audio2" src="audio/Haydn_Cello_Concerto_D-1.mp3" type="audio/mpeg">
-            </audio>
+        
 
 
 
@@ -392,18 +389,7 @@
       document.getElementById( "title_text2" ).innerHTML=t_text2.titleTextVal;
       document.getElementById( "title_text3" ).innerHTML=t_text3.titleTextVal;  
 
-     function start(){
-      var audio = document.getElementById( "audio1" );
-      audio.addEventListener('ended',function(){
-      audio.src = "audio/Vivaldi_Sonata_eminor_.mp3";
-      audio.pause();
-      audio.load();
-      audio.play();
-    });
-
-}
-window.addEventListener( "load", start, false );
-
+  
 
     </script>
 
