@@ -2,33 +2,34 @@ window.addEventListener("load", () => {
     const canvas=document.querySelector("#canvas");
     const ctx=canvas.getContext("2d");
 
+    const pi=Math.PI;
     //draw the dotes(circles)
     ctx.beginPath();
-    ctx.arc(40,110,2,0,2*Math.PI);
+    ctx.arc(40,110,2,0,2*pi);
     ctx.stroke();
     ctx.beginPath();
-    ctx.arc(48,102,2,0,2*Math.PI);
+    ctx.arc(48,102,2,0,2*pi);
     ctx.stroke();
     ctx.beginPath();
-    ctx.arc(58,95,2,0,2*Math.PI);
+    ctx.arc(58,95,2,0,2*pi);
     ctx.stroke();
     ctx.beginPath();
-    ctx.arc(70,97,2,0,2*Math.PI);
+    ctx.arc(70,97,2,0,2*pi);
     ctx.stroke();
     ctx.beginPath();
-    ctx.arc(82,104,2,0,2*Math.PI);
+    ctx.arc(82,104,2,0,2*pi);
     ctx.stroke();
     ctx.beginPath();
-    ctx.arc(95,111,2,0,2*Math.PI);
+    ctx.arc(95,111,2,0,2*pi);
     ctx.stroke();
     ctx.beginPath();
-    ctx.arc(107,120,2,0,2*Math.PI);
+    ctx.arc(107,120,2,0,2*pi);
     ctx.stroke();
     ctx.beginPath();
-    ctx.arc(122,124,2,0,2*Math.PI);
+    ctx.arc(122,124,2,0,2*pi);
     ctx.stroke();
     ctx.beginPath();
-    ctx.arc(130,115,2,0,2*Math.PI);
+    ctx.arc(130,115,2,0,2*pi);
     ctx.stroke();
 
     //draw the plane

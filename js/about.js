@@ -51,7 +51,7 @@ function avgRate(){
         count--;
     }
     console.log(sum);
-    var average=(avg/sum).toFixed(2);
+    const average=(avg/sum).toFixed(2);
     document.getElementById("average").innerHTML="Average based on reviews: "+average;
 }
 
