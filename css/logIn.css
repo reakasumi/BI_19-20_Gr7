@@ -69,32 +69,39 @@ p{
 
 #ratings{
     padding-left: 0.7em;
-    margin: 0.35em;
+    margin-right: 0.35em;
     font-size: 16px;
 }
 
 .tabel1{
     table-layout: fixed;
     width: 100%;
+    margin-right: 0.35em;
 }
 
 .tabel1 td{
     width: 33%;
-    text-align: center;
+    text-align: end;
 }
+ 
 
 input[type=range]{
-    width: 150px;
-    padding-left: 5px;
+    /* width: 150px; */
+    /* padding-left: 5px; */
     margin: 10px;
-    text-align: center;
+    /* text-align: center; */
     
 }
 .table1 td label{
     margin: 10px;
 }
 
+.align-text{
+    text-align: left;
+}
+
+
 .rate-btn{
     padding: 5px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
