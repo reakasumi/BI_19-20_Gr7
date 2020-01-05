@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="js/nightMode.js"></script>
-
     <link rel="stylesheet" href="css/homePage.css">
 
+    <script src="js/nightMode.js"></script>
     <script src="js/script.js"></script>
 
 </head>
@@ -141,22 +139,6 @@
         <span class="dot" onclick="currentSlide(6)"></span>
         <!-- </div> -->
     </div>
-
-    <script>
-        var slideIndex = 0;
-        slideShow();
-        function slideShow() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > x.length) {slideIndex = 1}
-        x[slideIndex-1].style.display = "block";
-        setTimeout(slideShow, 3000); // Change image every 2 seconds
-        }
-    </script>
 
     <article>
         <section class="services">
