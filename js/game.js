@@ -160,7 +160,8 @@ SnakeGame.Draw = function(context, snake) {
   };
   
   // collision and the score to win
-  this.collision = function(horizontal, vertical) {  
+  this.collision = function(horizontal, vertical) { 
+ 
     if (horizontal == -1 || horizontal == (snake.field.width / snake.field.parameters.cw) || vertical == -1 || vertical == (snake.field.height / snake.field.parameters.cw)) {
       return true;
     }
@@ -168,6 +169,8 @@ SnakeGame.Draw = function(context, snake) {
             window.alert("Congrats,you have reached the required score!!");
         return true;
     }
+
+
     return false;    
 	}
 };
