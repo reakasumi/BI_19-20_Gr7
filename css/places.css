@@ -4,8 +4,16 @@
     border-radius: 7px;
     height: 30px;
     padding: 3px 6px;
-    margin: 0 0 0 77%;
+    /* margin-right:0em; */
+    position: relative;
+    float: right;
+    margin-right: 20em;
     box-shadow: 2px 1px gray;
+}
+
+.place-content{
+    margin: auto;
+    margin-top: 3em;
 }
 
 .place-row p{
@@ -17,4 +25,28 @@
 	left: 13%;
 	top: 20px;
     color: #9A9A9A;
+}
+
+.place-content .content{
+    /* margin: auto; */
+    margin:2em 12em 3em 15em;
+    display: inline-block;
+}
+
+.hotels{
+    display: inline-block;
+    margin: 2em;
+    border-bottom: darkcyan 1px solid;
+}
+
+.hotels a{
+    float: right;
+}
+
+.hotels p{
+    width: 900px;
+}
+
+#desc1, #desc2, #desc3{
+    color: darkgray;
 }
