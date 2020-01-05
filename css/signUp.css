@@ -80,10 +80,11 @@ p{
     padding: 2px 1px 1px 9px;
 }
 
-#notRobot{
+#notRobot,#notRobot2{
     width: 70px;
     height: 70px;
     border: 1px solid gray;
     display: inline-block;
     margin: 10px 0 0 10px;
 }
+

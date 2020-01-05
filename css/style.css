@@ -70,7 +70,6 @@ header ul li a {
 
 
 header ul li {
-  float: left;
   display: inline;
   padding: 0 1em;
   padding-top: 14px; 

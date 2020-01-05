@@ -9,6 +9,10 @@
     float: right;
     margin-right: 20em;
     box-shadow: 2px 1px gray;
+    border: 3px solid transparent;
+  -webkit-border-image: url("../images/border1.png") 50 round; /* Safari 3.1-5 */
+  -o-border-image: url("../images/border1.png") 50 round; /* Opera 11-12.1 */
+  border-image: url("../images/border1.png") 50 round;
 }
 
 .place-content{

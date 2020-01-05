@@ -10,7 +10,7 @@
     <script type="text/javascript" src="js/signUp.js"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -91,8 +91,7 @@
 
     <!-- CONTENT -->
     <div class="content-form">
-        <form action="index.html" method="post" onsubmit="return checkMatching(this)"
-            id="myForm" name="myForm">
+        <form action="index.html" method="post" onsubmit="return checkMatching(this)" id="myForm" name="myForm">
             <h2 class="form-title">Sign Up</h2>
 
             <div>
@@ -131,13 +130,18 @@
             </div>
 
             <div>
-                <h6 style="margin-left: 0.8em; color: #A5C736;">If you're not a robot, please drag the android into the box.</h6>
+                <h6 style="margin-left: 0.8em; color: #A5C736;">If you're not a robot, please drag the android into the
+                    box.</h6>
 
                 <div id="notRobot" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)"
-                ondragover="return dragOver(event)"></div>
+                    ondragover="return dragOver(event)"></div>
 
-                <img src="images/872px-Android_robot.svg.png" alt="Andorid logo" id="android" draggable="true"
-                    ondragstart="return dragStart(event)" height="60px"/>
+                
+
+                <div id="notRobot2" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)"
+                    ondragover="return dragOver(event)">
+                    <img src="images/872px-Android_robot.svg.png" alt="Andorid logo" id="android" draggable="true"
+                    ondragstart="return dragStart(event)" height="60px" /></div>
 
             </div>
 
