@@ -8,6 +8,7 @@ function checkMatching2(form){
 
 	if(patt.exec(user)==null||pass!=localPass){
          alert("Check username/password or sign up");
+         console.warn(" username/password wrong");
 	}
 	else{
 		 alert("Welcome"+user);
