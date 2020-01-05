@@ -30,13 +30,7 @@
             var date = new Date();
             alert("Current time is: " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "\nHave a nice day!");
         }
-
-
-
-
-
     </script>
-
 </head>
 
 <body>
@@ -86,14 +80,8 @@
                                         <label class="just-text">Guests</label><br>
                                         <input type="number" placeholder="How many.." id="myInput">
                                     </p>
-
-
                                 </div>
-
-
-
                             </div>
-
                     </li>
 
                     <!-- <div id="dropdown">
@@ -108,7 +96,6 @@
                     <div>-->
 
                     <li><a href="logIn.html" target="_self">LOG IN</a></li>
-
                 </ul>
             </nav>
         </div>
@@ -116,18 +103,18 @@
     <!-- //HEADER -->
     <p id="top"></p>
     <!-- CONTENT -->
+
     <div id="animation">
         <p>WANDERLUST</p>
     </div>
 
     <article class="blog">
-        <!-- <h3 class="mostVisited">Most Visited Cities In 2019</h3> -->
         <p class="mostVisited">Based on statistical reports, most visited countries of 2019 are:</p>
+
         <input type="button" onclick="showTime();" value="Show time"
             style="color: #E2494C; font-size: 18px;text-decoration: underline; border-radius: 7px;width: 100px;height: 45px; margin-bottom: 15px;position:absolute;right: 13em;" />
-
         <div class="list">
-            
+
             <ol>
                 <li>Bangkok
                     <dl style="color: rgb(141, 159, 245); margin-left: 1em;">
@@ -137,15 +124,15 @@
                             Rattanakosin royal district, home to opulent Grand Palace and its sacred Wat Phra Kaew
                             Temple.</dd>
                     </dl>
-                    
                 </li>
-                <li>Paris, France
-                </li>
+                <li>Paris, France</li>
                 <li>London, England</li>
                 <li>Dubai, UAE
                     <dl style="color: rgb(141, 159, 245); margin-left: 1em;">
                         <dt>The capital of the Emirate of Dubai</dt>
-                        <dl>Located in the eastern part of the Arabian Peninsula on the coast of the Persian Gulf, Dubai aims to be the business hub of Western Asia.It is also a major global transport hub for passengers and cargo.</dl>
+                        <dl>Located in the eastern part of the Arabian Peninsula on the coast of the Persian Gulf, Dubai
+                            aims to be the business hub of Western Asia.It is also a major global transport hub for
+                            passengers and cargo.</dl>
                     </dl>
                 </li>
                 <li>Singapore, Malaysia</li>
@@ -222,9 +209,9 @@
     <div style="margin: auto;">
         <a href="#top" style="text-decoration: none; color: lightsalmon;">Go on top!</a>
     </div>
-   
+
     <div class="game" style="margin-bottom: 100px; ">
-        <p style="margin-right: 40px;" >Play some music:</p>
+        <p style="margin-right: 40px;">Play some music:</p>
         <audio id="audio1" controls>
             <source id="audio2" src="audio/Haydn_Cello_Concerto_D-1.mp3" type="audio/mpeg">
         </audio>
@@ -232,20 +219,19 @@
     </div>
 
     <div class="game" style="margin-bottom: 100px;">
-        <p >Play a video:</p>
-        <video width="400" controls="controls" id="videoPlayer" style="margin-left: 20px; " >
-        
+        <p>Play a video:</p>
+        <video width="400" controls="controls" id="videoPlayer" style="margin-left: 20px; ">
+
     </div>
 
 
 
     <!-- footer -->
     <footer>
-        <div class="background-images">
-            <div class="footer">
-                <div class="footer-content">
-                    <div class="footer-section blog">
-                        <h2>Latest From The Blog</h2>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section blog">
+                    <h2>Latest From The Blog</h2>
                         <a href="blog.html" target="_blank">
                             <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"
                                 alt="Thailand landscape" width="110px" height="110px">
@@ -306,44 +292,43 @@
                     <p id="copy">Copyright &copy; 2019 - All rights reserved</p>
                     <p id="template">Travel Company</p>
                 </div>
-            </div>
-        </div>
+         </div>
     </footer>
     <!-- //footer -->
-    
-<script type="text/javascript">
-     function start(){
-      var audio = document.getElementById( "audio1" );
-      audio.addEventListener('ended',function(){
-      audio.src = "audio/Vivaldi_Sonata_eminor_.mp3";
-      audio.pause();
-      audio.load();
-      audio.play();
-    });
 
-}
+    <script type="text/javascript">
+        function start() {
+            var audio = document.getElementById("audio1");
+            audio.addEventListener('ended', function () {
+                audio.src = "audio/Vivaldi_Sonata_eminor_.mp3";
+                audio.pause();
+                audio.load();
+                audio.play();
+            });
 
-function videoPlay() {
-    document.getElementById("videoPlayer").setAttribute("src",
-     "video/SampleVideo_1280x720_10mb.mp4");
-    document.getElementById("videoPlayer").load();
-    document.getElementById("videoPlayer").play();
-}
+        }
+
+        function videoPlay() {
+            document.getElementById("videoPlayer").setAttribute("src",
+                "video/SampleVideo_1280x720_10mb.mp4");
+            document.getElementById("videoPlayer").load();
+            document.getElementById("videoPlayer").play();
+        }
 
 
-function myHandler() {
-  document.getElementById("videoPlayer").setAttribute("src",
-     "video/1280.mp4");
-    document.getElementById("videoPlayer").load();
-    document.getElementById("videoPlayer").play();
-}
+        function myHandler() {
+            document.getElementById("videoPlayer").setAttribute("src",
+                "video/1280.mp4");
+            document.getElementById("videoPlayer").load();
+            document.getElementById("videoPlayer").play();
+        }
 
-document.getElementById('videoPlayer').addEventListener('ended', myHandler, false);
-videoPlay(); // play the video
-window.addEventListener( "load", start, false );
+        document.getElementById('videoPlayer').addEventListener('ended', myHandler, false);
+        videoPlay(); // play the video
+        window.addEventListener("load", start, false);
 
-    
-</script>
+
+    </script>
 
 
 
