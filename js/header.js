@@ -6,8 +6,6 @@ var endDate;
 var guests;
 
 
-
-
 function start() {
   var enterButton = document.getElementById("button1");
   enterButton.addEventListener("click", load, false);

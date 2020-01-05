@@ -300,7 +300,12 @@ a.button {
     margin: 0 9em;
 }*/
 
+
+
+
 .services{
+     position: relative;
+     top: 30px;
      border-bottom: 1px solid #e2e2e2;
      border-top: 1px solid #e2e2e2;
 }
@@ -390,7 +395,7 @@ a.button {
     color: #E7FFFD;
     text-decoration: none;
     text-align: center;
-    padding-top: 0px;
+    padding-top: 5px;
     font-weight: lighter;
     cursor: pointer;
     width: 14%;

@@ -1,3 +1,4 @@
+
 function checkMatching2(form){
 	var user=form.username.value;
 	var pass=form.password.value;
