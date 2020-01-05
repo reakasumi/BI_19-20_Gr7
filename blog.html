@@ -31,6 +31,11 @@
             var date = new Date();
             alert("Current time is: " + date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + "\nHave a nice day!");
         }
+
+
+
+
+
     </script>
 
 </head>
@@ -189,6 +194,17 @@
     <div style="margin: auto;">
         <a href="#top" style="text-decoration: none; color: lightsalmon;">Go on top!</a>
     </div>
+   
+    <div>
+        <p>Play a some music</p>
+        <audio id="audio1" controls>
+        <source id="audio2" src="audio/Haydn_Cello_Concerto_D-1.mp3" type="audio/mpeg">
+        </audio>
+        
+    </div>
+
+
+
     <!-- footer -->
     <footer>
         <div class="footer">
@@ -253,6 +269,26 @@
         </div>
     </footer>
     <!-- //footer -->
+    
+<script type="text/javascript">
+     function start(){
+      var audio = document.getElementById( "audio1" );
+      audio.addEventListener('ended',function(){
+      audio.src = "audio/Vivaldi_Sonata_eminor_.mp3";
+      audio.pause();
+      audio.load();
+      audio.play();
+    });
+
+}
+window.addEventListener( "load", start, false );
+
+    
+</script>
+
+
+
+
 </body>
 
 </html>

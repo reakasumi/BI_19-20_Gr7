@@ -377,11 +377,12 @@ input[name=search]:hover{
 
 
 /* FOOTER */
+
 footer{
     
     background-color: #E2E2E2 ;
     color: #9A9A9A;
-    height: 400px;
+    height: 460px;
     position: relative;
     width: 100%;
     /* padding: 0 5em; */

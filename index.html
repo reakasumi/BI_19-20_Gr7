@@ -35,7 +35,7 @@
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
                     <li class="dropdown">
-                        <a href="places.html" target="_self">PLACES</a>
+                        <a href="#" target="_self">PLACES</a>
                         <div class="dropdown-content">
 
                             <div class="row">
@@ -335,7 +335,17 @@
                 <p id="copy">Copyright &copy; 2019 - All rights reserved</p>
                 <p id="template">Travel Company</p>
             </div>
+
         </div>
+          
+           <audio id="audio1" controls>
+            <source id="audio2" src="audio/Haydn_Cello_Concerto_D-1.mp3" type="audio/mpeg">
+            </audio>
+
+
+
+
+
     </footer>
     <!-- //footer -->
 
@@ -406,7 +416,17 @@
       document.getElementById( "title_text2" ).innerHTML=t_text2.titleTextVal;
       document.getElementById( "title_text3" ).innerHTML=t_text3.titleTextVal;  
 
+     function start(){
+      var audio = document.getElementById( "audio1" );
+      audio.addEventListener('ended',function(){
+      audio.src = "audio/Vivaldi_Sonata_eminor_.mp3";
+      audio.pause();
+      audio.load();
+      audio.play();
+    });
 
+}
+window.addEventListener( "load", start, false );
 
 
     </script>
