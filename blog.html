@@ -11,6 +11,7 @@
     <script src="js/canvas.js"></script>
 
     <style>
+
         @font-face {
             font-family: myFont;
             src: url(fonts/PrequelDemo-Regular.ttf);
@@ -23,7 +24,6 @@
 
     <script>
         var worker = new Worker('js/webWorker.js');
-
         worker.onmessage = function (event) {
             alert("Completed " + event.data + "iterations");
         };
@@ -207,6 +207,7 @@
 
     <!-- footer -->
     <footer>
+        <div class="background-images">
         <div class="footer">
             <div class="footer-content">
                 <div class="footer-section blog">
@@ -215,7 +216,7 @@
                         <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"
                             alt="Thailand landscape" width="110px" height="110px">
                         <h4>Thailand - the most visited country</h4>
-                        <p><span style="overflow-x: auto;">Due to researches made by statistical results Bangkok,
+                        <p><span style="overflow-x: auto;background: gainsboro;color:midnightblue;">Due to researches made by statistical results Bangkok,
                                 Thailand is one of the most visited cities of 2019. People chose to go there because of
                                 its beautiful...</span></p>
                     </a>
@@ -225,12 +226,13 @@
                             alt="Van Gogh" width="110px" height="110px">
 
                         <h4>The art of Vincent van Gogh</h4>
-                        <p><span style="overflow-x: auto;">Vincent Willem van Gogh the Dutch post-impressionist painter
+                        <p><span style="overflow-x: auto;background: gainsboro;color:midnightblue;">Vincent Willem van Gogh the Dutch post-impressionist painter
                                 who is among the most famous and influential figures in the history of Western art. The
                                 Starry Night by him is one of the most known picture...</span></p>
                     </a>
                 </div>
 
+                
                 <div class="footer-section details">
                     <h2>Company Details</h2>
                     <ul>
@@ -267,6 +269,7 @@
                 <p id="template">Travel Company</p>
             </div>
         </div>
+     </div>
     </footer>
     <!-- //footer -->
     
