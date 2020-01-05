@@ -13,13 +13,15 @@ function changeMode() {
         window.alert("You already changed the color");
         
     }
-    else if(time>6 || time<20){
+    else if(time>6 ) {
+         if(time < 20){
         document.querySelector("#modes").innerHTML="Day Mode On";
         document.body.style.backgroundColor="#F0F8FF";
-    }
-    else if(time >= 20 || time<=6){
+        }
+        else if(time >= 20){
         document.querySelector("#modes").innerHTML="Night Mode On";
         document.body.style.backgroundColor = "#F5F5DC";
     }
+}
     
 }
