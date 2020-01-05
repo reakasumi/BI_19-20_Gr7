@@ -40,7 +40,8 @@ header ul{
     float: right;
     margin-left:180px;
 
-    padding: 0px;
+    padding-top: 13px;
+     padding-left: 5px;
     list-style: none;
     width: 58%;
     height: 50px;
@@ -58,12 +59,13 @@ float: left;
 header ul li a {
    /* display: block;*/
 
-    padding: 11px;
+    padding: 5px;
+
     font-size:1.1rem;
     text-decoration: none;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color:white;
-   /* padding: 1rem 1rem;*/
+    padding: 1rem 1rem;
    /* margin-left: 200px;*/
     border-radius:12px;
 }
@@ -71,8 +73,9 @@ header ul li a {
 
 header ul li {
   display: inline;
-  padding: 0 1em;
-  padding-top: 14px; 
+  padding: 0 8px;
+  padding-top: 10px; 
+  
 }
 
 

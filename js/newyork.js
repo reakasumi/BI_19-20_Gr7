@@ -88,7 +88,7 @@ try {
 
     }
 } catch (e) {
-    console.log("Error thrown:\n" +e +" !")
+    console.warn("Error thrown:\n" +e +" !")
 }
 
 function setImage(apImg, costDoc, totcos, descDoc) {
