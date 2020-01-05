@@ -427,6 +427,7 @@ footer .footer-content .blog h4{
     font-size: 0.75em;
     margin-top: 7px;
     padding-left: 20px;
+    text-transform: uppercase;
 }
 footer .footer-content .blog a{
     text-decoration: none;
