@@ -7,14 +7,14 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/logIn.css">
-  
     <script src="js/login.js"></script>
 
 </head>
 
 <body>
     <!-- HEADER -->
-       <header>
+    <header>
+        <!-- NAVIGATION -->
         <div class="navigation">
             <nav>
                 <div class="header-text">
@@ -34,39 +34,30 @@
                     <li class="dropdown">
                         <a href="#" target="_self">PLACES</a>
                         <div class="dropdown-content">
+                            <!--<div class="header-menu">
+                        <h2>Mega Menu</h2>
+                        </div>-->
 
                             <div class="row">
                                 <div class="column">
-                                    <form action="newyork.html">
-                                        <p>
-                                            <label class="just-text">Where do you want to go?</label>
-                                            <br>
-                                            <input list="browsers" class="inputStyle_1" name="browser"
-                                                placeholder="Search.." id="myInput"
-                                                style=" background-image: url('images/search.png');">
-                                            <datalist id="browsers">
-                                                <option value="New York">
-                                                <option value="Berlin">
-                                                <option value="Paris">
-                                            </datalist>
-                                        </p>
-                                        <p class="inline">
-                                            <label class="just-text">Check in</label><br>
-                                            <input class="inputStyle_2" type="date" id="myDate1">
-                                        </p>
-                                        <p class="inline">
-                                            <label class="just-text">Check out</label><br>
-                                            <input class="inputStyle_2" type="date" id="myDate2">
-                                        </p>
-                                        <p>
-                                            <label class="just-text">Guests</label><br>
-                                            <input type="number" class="inputStyle_1" placeholder="How many.." min="1"
-                                                max="30" step="1" id="myInput2">
-                                        </p>
-
-                                        <input type="button" name="search" id="button1" value="SEARCH">
-
-                                    </form>
+                                    <p>
+                                        <label class="just-text">Where do you want to go?</label>
+                                        <br>
+                                        <input type="text" placeholder="Search.." id="myInput"
+                                            style=" background-image: url('images/search.png');">
+                                    </p>
+                                    <p>
+                                        <label class="just-text">Check in</label><br>
+                                        <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                    </p>
+                                    <p>
+                                        <label class="just-text">Check out</label><br>
+                                        <input type="date" placeholder="dd-mm-yy" id="myInput2">
+                                    </p>
+                                    <p>
+                                        <label class="just-text">Guests</label><br>
+                                        <input type="number" placeholder="How many.." id="myInput">
+                                    </p>
 
 
                                 </div>
@@ -76,6 +67,17 @@
                             </div>
 
                     </li>
+
+                    <!-- <div id="dropdown">
+                        <a href="places.html" target="_self">PLACES</a>
+                        <ul id="dropdown-content">
+                            <li><a href="" target="_self">NEW YORK</a></li>
+                            <li><a href="" target="_self">LOS ANGELES</a></li>
+                            <li><a href="" target="_self">ITALY</a></li>
+                            <li><a href="" target="_self">SPAIN</a></li>
+                            <li><a href="" target="_self">THAILAND</a></li>
+                        </ul>
+                    <div>-->
 
                     <li><a href="logIn.html" target="_self">LOG IN</a></li>
 
@@ -146,9 +148,6 @@
 
 
     </div>
-
-    <script src="js/header.js"></script>
-    <script src="js/newyork.js"></script>
 
 </body>
 

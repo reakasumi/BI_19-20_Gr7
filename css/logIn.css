@@ -73,13 +73,13 @@ p{
     font-size: 16px;
 }
 
-.tabel1{
+#tabel1{
     table-layout: fixed;
     width: 100%;
     margin-right: 0.35em;
 }
 
-.tabel1 td{
+#tabel1 td{
     width: 33%;
     text-align: end;
 }
