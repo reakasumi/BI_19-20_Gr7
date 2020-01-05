@@ -12,9 +12,13 @@ try {
     }
 
     document.getElementById("place").innerHTML = sessionStorage.getItem("placeText").toUpperCase();
+    if(document.getElementById("date") == "")  throw "is Empty";
+    if(isNaN(document.getElementById("date"))) throw "not a number";
+    if(document.getElementById("date") == "null")   throw "is Null";
+    if(document.getElementById("date") == undefined)  throw "undefined";
 }
-catch{
-    console.log("Error value undefined or null!")
+catch(err){
+    console.log("Error thrown:\n"+err+ " !");
 }
 
 
@@ -77,9 +81,14 @@ try {
         setImage(image2, cost2, totalcost_2, desc_2);
         setImage(image3, cost3, totalcost_3, desc_3);
 
+        if(d== "")  throw "is Empty";
+        if(isNaN(d)) throw "not a number";
+        if(d == "null")   throw "is Null";
+        if(d == undefined)  throw "undefined";
+
     }
 } catch (e) {
-    console.log("Error value undefined or null!")
+    console.log("Error thrown:\n" +e +" !")
 }
 
 function setImage(apImg, costDoc, totcos, descDoc) {
