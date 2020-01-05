@@ -37,7 +37,6 @@ function maxMonth(){
     }
     var maxMonth=Math.max.apply(null,months);
     var index=months.indexOf(maxMonth);
-    // console.log(index);
     document.getElementById("max").innerHTML=table.rows[index].cells[0].innerHTML;
 }
 
