@@ -1,6 +1,18 @@
+html{
+  height: -webkit-fill-available;
+}
 body {
     text-align:center;
     font-family: helvetica;
+    color: rgba(255, 255, 255, 0.5);
+    padding-top: 76px;
+    text-align: center;
+    background: #222;
+    background: radial-gradient(black, transparent);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
   }
   canvas {
     border: 4px solid rgb(177, 78, 78);
