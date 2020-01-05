@@ -13,7 +13,7 @@ function checkMatching2(form){
 	}
 	else{
 		 alert("Welcome "+user);
-		  window.location.href = 'index.html';
+		  window.location.href ="index.html";
 	    }
 
 }
