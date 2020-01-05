@@ -47,6 +47,7 @@ main{
 
 .blog .list{
   margin-left: 3em;
+  margin-right: 3em;
 }
 .blog .list ol{
   list-style-type: 1;
@@ -55,7 +56,7 @@ main{
 }
 
 .blog .list ol li{
-  font-size: 22px;
+  font-size: 18px;
   color: rgb(0, 89, 255);
   font-weight: bold;
   counter-increment: li;
@@ -123,10 +124,9 @@ main{
   /* Creating an animation */
 
 #animation{
-  font-size: 12em;
+  font-size: 6em;
+  text-align: center;
   color: #E2494C;
-  margin: auto;
-  padding-left: 1em;
   font-weight: bold;
   animation: bounceIn 2s, lineThrough 1s 3s forwards;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
@@ -180,17 +180,17 @@ main{
 
 
 #myCanvas{
-  margin:2em 0 2em 11em;
+  margin:2em 0 2em 0em;
 }
 
 #canvas{
-  height: 400px;
-  width: 800px;
-  margin-left:2em;
+  height: 300px;
+  width: 400px;
+
 }
 
 .game{
-  margin: 1em 0 0 37em;
+  text-align: center;
 }
 .game p{
   font-size: 30px;

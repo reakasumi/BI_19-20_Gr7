@@ -107,23 +107,24 @@
 
         </form>
         <br>
+        
 
-        <p style="margin-right: 170px;color: #E2494C;">Please rate us:</p>
+        <p style="text-align:center; color:#E2494C;">Please rate us:</p>
         <form oninput="x.value=parseInt(a.value)+parseInt(b.value)" id="ratings">
-            <table id="tabel1" border="0">
+            <table  class="tabel1" border="0" style="padding: 2rem 1rem;">
                 <tr>
-                    <td>
+                    <td style="text-align: left;">
                         <label>Functionality: </label>
                     </td>
                     <td>
                         <input type="range" id="a" value="25" min="0" max="50">
                     </td>
-                    <td>
+                    <td style="text-align: right;">
                         0-50
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td style="text-align: left;">
                         <label>Visualization: </label>
                     </td>
                     <td>
@@ -134,11 +135,11 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td style="text-align: left;">
                         Total: <output name="x" for="a b"></output>%
                     </td>
                     <td colspan="2">
-                        <input class="rate-btn" type="submit" name="rate" value="Rate Us" style="margin-left: 210px;">
+                        <input class="rate-btn" type="submit" name="rate" value="Rate Us" style="margin-left: 118px;">
 
                     </td>
                 </tr>

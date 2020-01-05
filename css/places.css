@@ -7,7 +7,8 @@
     /* margin-right:0em; */
     position: relative;
     float: right;
-    margin-right: 20em;
+    margin-right: 16em;
+    margin-top:18px;
     box-shadow: 2px 1px gray;
     border: 3px solid transparent;
   -webkit-border-image: url("../images/border1.png") 50 round; /* Safari 3.1-5 */
@@ -33,7 +34,7 @@
 
 .place-content .content{
     /* margin: auto; */
-    margin:2em 12em 3em 15em;
+    margin:2em 12em 3em 12em;
     display: inline-block;
 }
 
