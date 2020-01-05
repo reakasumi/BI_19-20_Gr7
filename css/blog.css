@@ -33,7 +33,32 @@ body {
     display: inline-block;
     border: 0.5px dotted lightgray;
 }
-    
+
+
+.blog .list{
+  margin-left: 3em;
+}
+.blog .list ol{
+  list-style-type: 1;
+  list-style-position: inside;
+  list-style: none; counter-reset: li
+}
+
+.blog .list ol li{
+  font-size: 22px;
+  color: rgb(0, 89, 255);
+  font-weight: bold;
+  counter-increment: li;
+}
+
+
+.blog .list ol li::before{
+  content: counter(li);
+  color: rgba(24, 33, 83, 0.61);
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em
+}
 .blog .container-all{
     width: fit-content;
     margin: 20px auto;

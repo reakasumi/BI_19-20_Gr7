@@ -11,7 +11,6 @@
     <script src="js/canvas.js"></script>
 
     <style>
-
         @font-face {
             font-family: myFont;
             src: url(fonts/PrequelDemo-Regular.ttf);
@@ -122,9 +121,37 @@
     </div>
 
     <article class="blog">
-        <h3 class="mostVisited">Most Visited Cities In 2019</h3>
+        <!-- <h3 class="mostVisited">Most Visited Cities In 2019</h3> -->
+        <p class="mostVisited">Based on statistical reports, most visited countries of 2019 are:</p>
         <input type="button" onclick="showTime();" value="Show time"
             style="color: #E2494C; font-size: 18px;text-decoration: underline; border-radius: 7px;width: 100px;height: 45px; margin-bottom: 15px;position:absolute;right: 13em;" />
+
+        <div class="list">
+            
+            <ol>
+                <li>Bangkok
+                    <dl style="color: rgb(141, 159, 245); margin-left: 1em;">
+                        <dt>Thailand’s capital</dt>
+                        <dd>Is a large city known for ornate shrines and vibrant street
+                            life. The boat-filled Chao Phraya River feeds its network of canals, flowing past the
+                            Rattanakosin royal district, home to opulent Grand Palace and its sacred Wat Phra Kaew
+                            Temple.</dd>
+                    </dl>
+                    
+                </li>
+                <li>Paris, France
+                </li>
+                <li>London, England</li>
+                <li>Dubai, UAE
+                    <dl style="color: rgb(141, 159, 245); margin-left: 1em;">
+                        <dt>The capital of the Emirate of Dubai</dt>
+                        <dl>Located in the eastern part of the Arabian Peninsula on the coast of the Persian Gulf, Dubai aims to be the business hub of Western Asia.It is also a major global transport hub for passengers and cargo.</dl>
+                    </dl>
+                </li>
+                <li>Singapore, Malaysia</li>
+                <li>Kuala Lumpur</li>
+            </ol>
+        </div>
 
         <div class="container-all">
             <div class="container">
@@ -151,7 +178,7 @@
             </div>
             <div class="container">
                 <img src="images/cities/5bd36e4ddb01a-wallpaper-preview.jpg" alt="">
-                <span class="title">Kuala Lampur</span>
+                <span class="title">Kuala Lumpur</span>
             </div>
         </div>
     </article>
@@ -171,7 +198,8 @@
 
     <div id="wikipedia">
         <h3 style="color: lightslategray;margin-bottom: 1em;">Travel History</h3>
-        <p id="history">The origin of the word "travel" is most likely lost to history. The term "travel" may originate from the Old
+        <p id="history">The origin of the word "travel" is most likely lost to history. The term "travel" may originate
+            from the Old
             French word travail, which means 'work'. According to the Merriam Webster dictionary, the first known use
             of the word travel was in the 14th century. It also states that the word comes from Middle English
             travailen, travelen (which means to torment, labor, strive, journey) and earlier from Old French travailler
@@ -194,13 +222,13 @@
     <div style="margin: auto;">
         <a href="#top" style="text-decoration: none; color: lightsalmon;">Go on top!</a>
     </div>
-   
+
     <div>
         <p>Play a some music</p>
         <audio id="audio1" controls>
-        <source id="audio2" src="audio/Haydn_Cello_Concerto_D-1.mp3" type="audio/mpeg">
+            <source id="audio2" src="audio/Haydn_Cello_Concerto_D-1.mp3" type="audio/mpeg">
         </audio>
-        
+
     </div>
 
 
@@ -208,86 +236,90 @@
     <!-- footer -->
     <footer>
         <div class="background-images">
-        <div class="footer">
-            <div class="footer-content">
-                <div class="footer-section blog">
-                    <h2>Latest From The Blog</h2>
-                    <a href="blog.html" target="_blank">
-                        <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"
-                            alt="Thailand landscape" width="110px" height="110px">
-                        <h4>Thailand - the most visited country</h4>
-                        <p><span style="overflow-x: auto;background: gainsboro;color:midnightblue;">Due to researches made by statistical results Bangkok,
-                                Thailand is one of the most visited cities of 2019. People chose to go there because of
-                                its beautiful...</span></p>
-                    </a>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-section blog">
+                        <h2>Latest From The Blog</h2>
+                        <a href="blog.html" target="_blank">
+                            <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"
+                                alt="Thailand landscape" width="110px" height="110px">
+                            <h4>Thailand - the most visited country</h4>
+                            <p><span style="overflow-x: auto;background: gainsboro;color:midnightblue;">Due to
+                                    researches made by statistical results Bangkok,
+                                    Thailand is one of the most visited cities of 2019. People chose to go there because
+                                    of
+                                    its beautiful...</span></p>
+                        </a>
 
-                    <a href="blog.html" style="float: left; margin-top: 25px;" target="_blank">
-                        <img src="images/vanGogh/Vincent_van_Gogh_-_Self-portrait_with_grey_felt_hat_-_Google_Art_Project.jpg"
-                            alt="Van Gogh" width="110px" height="110px">
+                        <a href="blog.html" style="float: left; margin-top: 25px;" target="_blank">
+                            <img src="images/vanGogh/Vincent_van_Gogh_-_Self-portrait_with_grey_felt_hat_-_Google_Art_Project.jpg"
+                                alt="Van Gogh" width="110px" height="110px">
 
-                        <h4>The art of Vincent van Gogh</h4>
-                        <p><span style="overflow-x: auto;background: gainsboro;color:midnightblue;">Vincent Willem van Gogh the Dutch post-impressionist painter
-                                who is among the most famous and influential figures in the history of Western art. The
-                                Starry Night by him is one of the most known picture...</span></p>
-                    </a>
+                            <h4>The art of Vincent van Gogh</h4>
+                            <p><span style="overflow-x: auto;background: gainsboro;color:midnightblue;">Vincent Willem
+                                    van Gogh the Dutch post-impressionist painter
+                                    who is among the most famous and influential figures in the history of Western art.
+                                    The
+                                    Starry Night by him is one of the most known picture...</span></p>
+                        </a>
+                    </div>
+
+
+                    <div class="footer-section details">
+                        <h2>Company Details</h2>
+                        <ul>
+                            <li>Travel</li>
+                            <li>
+                                <address>N&#xeb;n&#xeb; Tereza, 105</address>
+                            </li>
+                            <li>Prishtin&#xeb;</li>
+                            <li>10000</li>
+                            <br>
+                            <li>Tel:+383 44 129512</li>
+                            <li>Fax: 029 3458487617</li>
+                            <li>Email: <a href="mailto:contact@mydomain.com">travel@tr-pr.com</a></li>
+                            <br>
+                            <li>Office hours</li>
+                            <li>Monday 08:00~16:00</li>
+                            <li>Saturday 10:00~16:00</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section contact-form">
+                        <h2>Contact Us</h2>
+                        <form action="" method="post" id="contact">
+                            <input type="text" placeholder="Name" name="inputType1"><br>
+                            <input type="email" placeholder="Email" name="inputType1" required><br>
+                            <textarea placeholder="Message"></textarea><br>
+                            <input type="submit" form="contact" value="SUBMIT">
+                        </form>
+                    </div>
                 </div>
-
-                
-                <div class="footer-section details">
-                    <h2>Company Details</h2>
-                    <ul>
-                        <li>Travel</li>
-                        <li>
-                            <address>N&#xeb;n&#xeb; Tereza, 105</address>
-                        </li>
-                        <li>Prishtin&#xeb;</li>
-                        <li>10000</li>
-                        <br>
-                        <li>Tel:+383 44 129512</li>
-                        <li>Fax: 029 3458487617</li>
-                        <li>Email: <a href="mailto:contact@mydomain.com">travel@tr-pr.com</a></li>
-                        <br>
-                        <li>Office hours</li>
-                        <li>Monday 08:00~16:00</li>
-                        <li>Saturday 10:00~16:00</li>
-                    </ul>
+                <!-- <hr> -->
+                <div class="footer-bottom">
+                    <p id="copy">Copyright &copy; 2019 - All rights reserved</p>
+                    <p id="template">Travel Company</p>
                 </div>
-
-                <div class="footer-section contact-form">
-                    <h2>Contact Us</h2>
-                    <form action="" method="post" id="contact">
-                        <input type="text" placeholder="Name" name="inputType1"><br>
-                        <input type="email" placeholder="Email" name="inputType1" required><br>
-                        <textarea placeholder="Message"></textarea><br>
-                        <input type="submit" form="contact" value="SUBMIT">
-                    </form>
-                </div>
-            </div>
-            <!-- <hr> -->
-            <div class="footer-bottom">
-                <p id="copy">Copyright &copy; 2019 - All rights reserved</p>
-                <p id="template">Travel Company</p>
             </div>
         </div>
-     </div>
     </footer>
     <!-- //footer -->
-    
-<script type="text/javascript">
-     function start(){
-      var audio = document.getElementById( "audio1" );
-      audio.addEventListener('ended',function(){
-      audio.src = "audio/Vivaldi_Sonata_eminor_.mp3";
-      audio.pause();
-      audio.load();
-      audio.play();
-    });
 
-}
-window.addEventListener( "load", start, false );
+    <script type="text/javascript">
+        function start() {
+            var audio = document.getElementById("audio1");
+            audio.addEventListener('ended', function () {
+                audio.src = "audio/Vivaldi_Sonata_eminor_.mp3";
+                audio.pause();
+                audio.load();
+                audio.play();
+            });
 
-    
-</script>
+        }
+        window.addEventListener("load", start, false);
+
+
+    </script>
 
 
 
