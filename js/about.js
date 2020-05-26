@@ -1,4 +1,3 @@
- ////hheljdslfjlkjz
  function total() {
     var table = document.getElementById("trips");
 
