@@ -1,12 +1,12 @@
 <?php
-	$dbhost = 'localhost:3316';
+	$dbhost = 'localhost:3306';
 	$dbuser = 'root';
 	$dbpass = '';
-	$db='travelDB';
+	$db='traveldb';
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
     
     if(! $conn ){
-        die('Nuk mund te lidhet databaza: ' . mysqli_connect_error());
+        die('Nuk mund te lidhet databaza: ' . mysqli_connect_errno());
     }
     echo 'Lidhja e suksesshme';
     mysqli_close($conn);
