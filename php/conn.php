@@ -1,5 +1,5 @@
 <?php
-	$dbhost = 'localhost:3306';
+	$dbhost = 'localhost:3316';
 	$dbuser = 'root';
 	$dbpass = '';
 	$db='travelDB';
@@ -26,12 +26,27 @@
     // }
     // echo "Tabela u krijua me sukses!\n";
 
-    $sql1 = 'insert into user values(1,"filan","iamugly");';
-    $retval = mysqli_query( $conn, $sql1 );
-    if(! $retval )
-    {
-    die('Te dhenat nuk mund te shtohen' . mysqli_connect_error());
+   // $sql1 = 'insert into user values(1,"filan","iamugly");';
+    //$retval = mysqli_query( $conn, $sql1 );
+    // if(! $retval )
+    // {
+    // die('Te dhenat nuk mund te shtohen' . mysqli_connect_error());
+    // }
+    // echo "Te dhenat u shtuan!\n";
+
+    $select = 'SELECT ID,UserName,Pass FROM user';
+    $retval = mysqli_query( $conn,$select);
+    
+    if(! $retval ) {
+       die('Could not get data: ' . mysqli_error());
     }
-    echo "Te dhenat u shtuan!\n";
+    
+    while($row = mysqli_fetch_array($retval, MYSQLI_NUM)) {
+       echo "ID :{$row[0]}  <br> ".
+          "userName : {$row[1]} <br> ".
+          "pass : {$row[2]} <br> ".
+          "--------------------------------<br>";
+    }
+
     mysqli_close($conn);
 ?>
