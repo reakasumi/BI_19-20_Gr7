@@ -17,7 +17,7 @@
     $sql = 'CREATE TABLE user (
         Id integer, 
         UserName varchar(20),
-        Pass varchar(20)';
+        Pass varchar(20))';
 
 
     $retval = mysqli_query( $conn, $sql );
