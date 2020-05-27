@@ -1,22 +1,31 @@
 <?php
+
+    //session_start();
+
     $dbhost = 'localhost:3316';
     $dbuser = 'root';
     $dbpass = '';
     $db='travelDB';
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
 
-    
 
 
-    class setData{
-        private $apartment_name;
-        private $location;
-        private $cost;
-        private $image;
-        private $desc;
-        private $guests;
+    echo "hello";
+    // class setData{
+         $apartment_name;
+         $location;
+         $cost;
+         $image;
+         $desc;
+         $guestsNumber;
+        
 
-        function search(){
+        // function __construct(){
+        // }
+
+       // function search(){
+            
+    echo "hello";
 
             if( isset($_GET['search'])) {
                 $city=$_GET['browser'];
@@ -39,27 +48,31 @@
                 else{
                     while($row = mysqli_fetch_array($retval, MYSQLI_NUM)) { 
                     global $apartment_name, $location, $cost, $image, $desc, $guests;
+                    
                         $apartment_name=$row[0];
                         $location=$row[1];
                         $cost=$row[2];
                         $image=$row[3];
-                        $desc=$row[4];
-                        $guests=$row[5];
+                        $guestsNumber=$row[5];
+                        //$_SESSION['guestsNumber']=$row[5];
 
-                        header("Location: ../places.php");
-                        //echo "$apartment_name";
+                        echo "na lodheee";
+                        echo "<p>".htmlspecialchars($guestsNumber)."</p>"; 
+
+                        header("Location: ../places.php?guests=);
+                        echo "$apartment_name";
                     }
 
                 }
                 //echo $city." ".$dateStart." ".$dateEnd." ".$guests;
             }
-        }
+        // }
 
-        function get_guests(){
-            global $guests;
-            return $this->$guests;
-        }
-    }
+        // function get_guests(){
+        //     //global $guests;
+        //     return $this->$guests;
+        // }
+    // }
 
 
     

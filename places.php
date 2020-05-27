@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +43,7 @@
 
                             <div class="row">
                                 <div class="column">
-                                    <form action="./php/search.php" method="get">
+                                    <form action="<?php echo $_SERVER['PHP_SELF']?>" method="get">
                                         <p>
                                             <label class="just-text">Where do you want to go?</label>
                                             <br>
@@ -93,28 +96,151 @@
 
 
 
+
+    <?php
+
+        //session_start();
+
+        $dbhost = 'localhost:3316';
+        $dbuser = 'root';
+        $dbpass = '';
+        $db='travelDB';
+        $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+
+
+
+        // class setData{
+            $apartment_name;
+            $location;
+            $cost;
+            $image;
+            $desc;
+            $guestsNumber;
+            $dateFrom;
+            $dateTo;
+            //$_SESSION['guestsNumber'];
+
+                if( isset($_GET['search'])) {
+                    $city=$_GET['browser'];
+                    $dateStart=$_GET['dateStart'];
+                    $dateEnd=$_GET['dateEnd'];
+                    $guests=$_GET['guests'];
+
+
+
+                    $sql="SELECT apartment_name,location,price,image,description,numOfGuests,dateFrom,dateTo FROM rent_apartments WHERE location='$city' AND dateFrom<='$dateStart' AND dateTo>='$dateEnd' AND numOfGuests>='$guests'";
+                    $retval = mysqli_query( $GLOBALS['conn'], $sql );
+                    $count = mysqli_num_rows($retval);
+                    if (!$retval) {
+                        printf("Error: %s\n", mysqli_error($conn));
+                        exit();
+                    }
+                    elseif($count===0){
+                        echo "Nuk ka ndonje apartament te lire me kushtet e cekura!";
+                    }
+                    else{
+                        while($row = mysqli_fetch_array($retval, MYSQLI_NUM)) { 
+                            global $apartment_name, $location, $cost, $image, $desc, $guestsNumber;
+                            
+                            $_SESSION['apartment_name']=$row[0];
+                            $_SESSION['location']=$row[1];
+                            $_SESSION['cost']=$row[2];
+                            $_SESSION['image']=$row[3];
+                            $_SESSION['desc']=$row[4];
+                            $_SESSION['guestsNumber']=$row[5];
+                            $_SESSION['dateFrom']=$row[6];
+                            $_SESSION['dateTo']=$row[7];
+
+                            //header("Location: ../places.php?guests=);
+                        }
+
+                    }
+                }
+ 
+?>
+
+
+
+
+
+
     <div class="place-content">
 
         <div class="place-row">
 
 
-            <p id="date">Date</p>
-            <p id="guests" name="guests">Guests</p>
-            <?php include_once('./php/search.php'); $search=new setData();
-            $guests=$search -> get_guests();
-            echo "<p>".htmlspecialchars($guests)."</p>"; ?>
+            <p id="date">Date available:</p>
+            <?php
+                echo "<p>".$_SESSION['dateFrom']."</p>";
+            ?>
+            <?php
+                echo "<p>".$_SESSION['dateTo']."</p>";
+            ?>
+            <p id="guests" name="guests">Guests:</p>
+            <?php
+                echo "<p>".$_SESSION['guestsNumber']."</p>";
+            ?>
+           
 
         </div>
         <section class="content">
-            <h4 id="place" class="redbox" style="padding-top: 4px;" name="place" <?php echo "$location"; ?>>PLACE</h4>
+            <h4 id="place" class="redbox" style="padding-top: 4px;" name="place">
+                <?php
+                    if(isset($_SESSION['location'])){
+                        echo $_SESSION['location'];
+                    }
+                    else{
+                        echo "PLACE";
+                    }
+                ?>
+        </h4>
 
             <div class="hotels" name="apartment">
                 <a href="https://www.airbnb.co.in/?logo=1" target="_blank">
-                    <img id="img1" src="images/icon2.jpg" alt="icon" width="300" height="200" name="img">
+                    <img id="img1" alt="icon"
+                        <?php 
+                            if(isset($_SESSION['image'])){
+                                echo " src='".$_SESSION['image']."' ";
+                            }
+                            else{
+                                echo " alt='there is nothing to show' ";
+                            }
+                            
+                        ?>
+                          width="300" height="200" name="img">
                 </a>
-                <p id="cost1" name="cost"></p>
-                <p id="total_cost1"></p>
-                <p id="desc1" name="desc"></p>
+                <p id="title" style="color:darkblue;font-size:23px;font-style:italic;">
+                    <?php
+                            if(isset($_SESSION['apartment_name'])){
+                                echo $_SESSION['apartment_name'];
+                            }
+                            else{
+                                echo "there is nothing to show";
+                            }
+                        ?>
+
+                </p>
+                <p id="cost1" name="cost">
+                <?php
+                    if(isset($_SESSION['cost'])){
+                        echo $_SESSION['cost']." € / night";
+                    }
+                    else{
+                        echo "there is nothing to show";
+                    }
+                ?>
+                </p>
+                
+                <p id="desc1" name="desc">
+                    <?php
+                        if(isset($_SESSION['desc'])){
+                            echo $_SESSION['desc'];
+                        }
+                        else{
+                            echo "there is nothing to show";
+                        }
+                    ?>
+                </p>
 
             </div>
 
