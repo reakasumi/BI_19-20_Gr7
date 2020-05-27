@@ -28,9 +28,14 @@ $dbhost = 'localhost:3316';
 
         }
         function insert_User(){
-            //$insert='INSERT INTO Users(ID,UserName,Passwordi,Email,Gender) VALUES(:$id,:$userName,:$pass,:$email,:$gender);'
+
+            $insert='INSERT INTO Users(ID,UserName,Passwordi,Email,Gender) VALUES(?,?,?,?,?);';
+            $stmt = $pdo->prepare($insert);
+            $stmt->execute([$id, $userName, $pass, $email, $gender]);
+            //$retval = mysqli_query( $conn, $insert );
+        } //$insert='INSERT INTO Users(ID,UserName,Passwordi,Email,Gender) VALUES(:$id,:$userName,:$pass,:$email,:$gender);'
         }
 
-    }
+
 
 ?>

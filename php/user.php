@@ -1,6 +1,6 @@
 <?php
 
-    class User{
+    class Useri{
         //private $uniqid=uniqid();
 
         private $ID=0;

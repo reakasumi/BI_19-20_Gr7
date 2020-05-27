@@ -88,7 +88,7 @@
 
     <!-- CONTENT -->
     <div class="content-form">
-        <form action="index.html" method="post" onsubmit="return checkMatching(this)" id="myForm" name="myForm">
+        <form action="./php/signUp.php" method="post" onsubmit="return checkMatching(this)" id="myForm" name="myForm">
             <h2 class="form-title">Sign Up</h2>
 
             <div>
@@ -118,11 +118,11 @@
                 <label>Gender:</label>
                 <div class="gender">
                     <label>M</label>
-                    <input type="radio" name="gender" required>
+                    <input type="radio" name="gender" required value="M">
                     <label>F</label>
-                    <input type="radio" name="gender">
+                    <input type="radio" name="gender" value="F">
                     <label> Other</label>
-                    <input type="radio" name="gender">
+                    <input type="radio" name="gender" value="O">
                 </div>
             </div>
 
