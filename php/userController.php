@@ -1,7 +1,7 @@
 <?php
 
-include ("user.php");
-$dbhost = 'localhost:3316';
+
+$dbhost = 'localhost:3306';
 	$dbuser = 'root';
 	$dbpass = '';
     $db='travelDB';
@@ -21,17 +21,33 @@ $dbhost = 'localhost:3316';
 
         function __construct($user){
             $id=$user -> get_ID();
-            $userName=$user -> get_username();
-            $pass=$user -> get_password();
+          
+            $userName=$user -> get_name();
+            echo($userName."hjsagdjashdgja");
+            $password=$user -> get_password();
             $email=$user -> get_email();
             $gender=$user -> get_gender();
 
         }
         function insert_User(){
 
-            $insert='INSERT INTO Users(ID,UserName,Passwordi,Email,Gender) VALUES(?,?,?,?,?);';
-            $stmt = $pdo->prepare($insert);
-            $stmt->execute([$id, $userName, $pass, $email, $gender]);
+            $insert="INSERT INTO Users(ID,UserName,Passwordi,Email,Gender) VALUES('$id','$userName', '$password', '$email', '$gender');";
+            // $stmt = $pdo->prepare($insert);
+            // $stmt->execute([$id, $userName, $password, $email, $gender]);
+
+            // $stmt = $mysqli->prepare($insert);
+            // $stmt->bind_param("ss",$id, $userName, $password, $email, $gender );
+            // $stmt->execute();
+            echo("HElloo");
+            $retval = mysqli_query( $conn, $insert );
+		if(! $retval )
+		{
+		  die('Could not enter data: ' . mysqli_connect_error());
+		}
+		echo "Te dhenat u regjistruan me sukses\n";
+		mysqli_close($conn);
+
+
             //$retval = mysqli_query( $conn, $insert );
         } //$insert='INSERT INTO Users(ID,UserName,Passwordi,Email,Gender) VALUES(:$id,:$userName,:$pass,:$email,:$gender);'
         }

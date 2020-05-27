@@ -1,6 +1,6 @@
 <?php
 
-    class Useri{
+    class Perdoruesi{
         //private $uniqid=uniqid();
 
         private $ID=0;
@@ -9,6 +9,8 @@
         private $email;
         private $gender;
 
+        function __construct(){
+        }
         
 
 
@@ -31,7 +33,7 @@
 
         // Methods
         function set_password($password) {
-            $this->password = $passwrod;
+            $this->password = $password;
         }
         function get_password() {
             return $this->password;
