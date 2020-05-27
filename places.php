@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/places.css">
+    <link rel="stylesheet" href="css/homePage.css">
+    <link rel="stylesheet" href="css/newyork.css">
+
+    <script src="js/nightMode.js"></script>
+    <script src="js/geolocation.js"></script>
+    <title>Places</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="navigation">
+            <nav>
+                <div class="header-text">
+                    <span class="composition-text">
+                        Travel
+                    </span>
+
+                    <span class="left-text">
+                        Dare to live outside your box!
+                    </span>
+                </div>
+                <i class="fa fa-bars menu-toggle"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html" target="_self">ABOUT</a></li>
+                    <li><a href="blog.html" target="_self">BLOG</a></li>
+                    <li class="dropdown">
+                        <a href="#">PLACES</a>
+                        <div class="dropdown-content">
+
+                            <div class="row">
+                                <div class="column">
+                                    <form action="./php/search.php" method="get">
+                                        <p>
+                                            <label class="just-text">Where do you want to go?</label>
+                                            <br>
+                                            <input list="browsers" class="inputStyle_1" name="browser"
+                                                placeholder="Search.." id="myInput"
+                                                style=" background-image: url('images/search.png');">
+                                            <datalist id="browsers">
+                                                <option value="New York">
+                                                <option value="Berlin">
+                                                <option value="Paris">
+                                            </datalist>
+                                        </p>
+                                        <p class="inline">
+                                            <label class="just-text">Check in</label><br>
+                                            <input class="inputStyle_2" type="date" id="myDate1" name="dateStart">
+                                        </p>
+                                        <p class="inline">
+                                            <label class="just-text">Check out</label><br>
+                                            <input class="inputStyle_2" type="date" id="myDate2" name="dateEnd">
+                                        </p>
+                                        <p>
+                                            <label class="just-text">Guests</label><br>
+                                            <input type="number" class="inputStyle_1" placeholder="How many.." min="1"
+                                                max="30" step="1" id="myInput2" name="guests">
+                                        </p>
+
+                                        <input type="submit" name="search" id="button1" value="SEARCH">
+
+                                    </form>
+
+
+                                </div>
+
+
+
+                            </div>
+
+                    </li>
+
+                    <li><a href="logIn.html" target="_self">LOG IN</a></li>
+
+                </ul>
+            </nav>
+            <button id="modes" type="button" onclick="changeMode()">Change Background Color</button>
+
+        </div>
+    </header>
+    <!-- //HEADER -->
+
+
+
+
+    <div class="place-content">
+
+        <div class="place-row">
+
+
+            <p id="date">Date</p>
+            <p id="guests" name="guests">Guests</p>
+            <?php include_once('./php/search.php'); $search=new setData();
+            $guests=$search -> get_guests();
+            echo "<p>".htmlspecialchars($guests)."</p>"; ?>
+
+        </div>
+        <section class="content">
+            <h4 id="place" class="redbox" style="padding-top: 4px;" name="place" <?php echo "$location"; ?>>PLACE</h4>
+
+            <div class="hotels" name="apartment">
+                <a href="https://www.airbnb.co.in/?logo=1" target="_blank">
+                    <img id="img1" src="images/icon2.jpg" alt="icon" width="300" height="200" name="img">
+                </a>
+                <p id="cost1" name="cost"></p>
+                <p id="total_cost1"></p>
+                <p id="desc1" name="desc"></p>
+
+            </div>
+
+            <div class="hotels">
+                <a href="https://www.airbnb.co.in/?logo=1" target="_blank">
+                    <img id="img2" src="images/icon2.jpg" alt="icon" width="300" height="200">
+                </a>
+                <p id="cost2"></p>
+                <p id="total_cost2"></p>
+                <p id="desc2"></p>
+
+            </div>
+            <div class="hotels">
+                <a href="https://www.airbnb.co.in/?logo=1" target="_blank">
+                    <img id="img3" src="images/icon2.jpg" alt="icon" width="300" height="200"></a>
+                <p id="cost3"></p>
+                <p id="total_cost3"></p>
+                <p id="desc3"></p>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- CONTENT -->
+    <div id="map" style="height:400px; width: 700px; margin: auto;"></div>
+
+    <!-- <div class="earth3dmap-com"><iframe id="iframemap"
+            src="https://maps.google.com/maps?q=kosovo&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="75%"
+            height="500" frameborder="0" scrolling="no"
+            style="margin:0 0 20% 10em ; position: relative; top: 140px;"></iframe>
+
+    </div> -->
+    <!-- <img src="images/map.png" alt="" id="myMap" style="height:400px; width: 700px; margin: auto;"> -->
+
+    <!-- //CONTENT -->
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section blog">
+                    <h2>Latest From The Blog</h2>
+                    <a href="blog.html" target="_blank">
+                        <img src="images/cities/Thailand-Wat-Arun-Buddhist-temple-in-Bangkok-Yai-district-of-Bangkok-Wallpaper-Hd-For-Desktop-Mobile-And-Tablet-3840x2400-915x515.jpg"
+                            alt="Thailand landscape" width="110px" height="110px">
+                        <h4>Thailand - the most visited country</h4>
+                        <p><span style="overflow-x: auto;">Due to researches made by statistical results Bangkok,
+                                Thailand is one of the most visited cities of 2019. People chose to go there because
+                                of
+                                its beautiful...</span></p>
+                    </a>
+
+                    <a href="blog.html" style="float: left; margin-top: 25px;" target="_blank">
+                        <img src="images/vanGogh/Vincent_van_Gogh_-_Self-portrait_with_grey_felt_hat_-_Google_Art_Project.jpg"
+                            alt="Van Gogh" width="110px" height="110px">
+
+                        <h4>The art of Vincent van Gogh</h4>
+                        <p><span style="overflow-x: auto;">Vincent Willem van Gogh the Dutch post-impressionist
+                                painter
+                                who is among the most famous and influential figures in the history of Western art.
+                                The
+                                Starry Night by him is one of the most known picture...</span></p>
+                    </a>
+                </div>
+
+                <div class="footer-section details">
+                    <h2>Company Details</h2>
+                    <ul>
+                        <li>Travel</li>
+                        <li>
+                            <address>N&#xeb;n&#xeb; Tereza, 105</address>
+                        </li>
+                        <li>Prishtin&#xeb;</li>
+                        <li>10000</li>
+                        <br>
+                        <li>Tel:+383 44 129512</li>
+                        <li>Fax: 029 3458487617</li>
+                        <li>Email: <a href="mailto:contact@mydomain.com">travel@tr-pr.com</a></li>
+                        <br>
+                        <li>Office hours</li>
+                        <li>Monday 08:00~16:00</li>
+                        <li>Saturday 10:00~16:00</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section contact-form">
+                    <h2>Contact Us</h2>
+                    <form action="" method="post" id="contact">
+                        <input type="text" placeholder="Name" name="inputType1"><br>
+                        <input type="email" placeholder="Email" name="inputType1" required><br>
+                        <textarea placeholder="Message"></textarea><br>
+                        <input type="submit" form="contact" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+            <!-- <hr> -->
+            <div class="footer-bottom">
+                <p id="copy">Copyright &copy; 2019 - All rights reserved</p>
+                <p id="template">Travel Company</p>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- geolocation api key -->
+    <!-- <script async defer
+            src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyC5HCZFVPWj1nCHPozjCRngscz5bUK0jew">
+            </script>  AIzaSyCihavCG28BbfqP3saRymM8W55RZKtuANg-->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBxeeraroriooA1NxYn6QW6NLlYlvQvn4&callback=initMap">
+
+        </script>
+
+    <!-- <script src="js/header.js"></script>
+    <script src="js/newyork.js"></script> -->
+
+</body>
+
+</html>
