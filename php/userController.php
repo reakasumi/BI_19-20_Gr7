@@ -36,6 +36,12 @@ $dbhost = 'localhost:3306';
 
             $passRegex=preg_match('@^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$@',$password);
             //echo $passRegex;
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                echo("$email is not a valid email address");
+             }
+             else{
+              
+             
 
             if($passRegex === 1){
                 $insert="INSERT INTO Users(ID,UserName,Passwordi,Email,Gender) VALUES('$id','$userName', '$password', '$email', '$gender');";
@@ -56,7 +62,7 @@ $dbhost = 'localhost:3306';
         
         } 
         
-        
+    }
 
       
 
