@@ -4,6 +4,7 @@ $dbuser = 'root';
 $dbpass = '';
 $db='travelDB';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+session_start();
 class loginController{
        
     
@@ -17,7 +18,10 @@ class loginController{
             
                 
                if($count===1){
-                   header("Location: ../index.html");
+                session_register("username");
+                $_SESSION['login_user'] = $myusername;
+               echo( $_SESSION['login_user']);
+               //    header("Location: ../index.html");
                    
                }
                else{
