@@ -12,9 +12,6 @@
         function __construct(){
         }
         
-
-
-
         // Methods
         function set_ID($ID) {
             $this->ID = $ID;
