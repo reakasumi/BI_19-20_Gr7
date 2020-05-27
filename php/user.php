@@ -3,7 +3,7 @@
     class Perdoruesi{
         //private $uniqid=uniqid();
 
-        private $ID=0;
+        private $ID;
         private $userName;
         private $password;
         private $email;

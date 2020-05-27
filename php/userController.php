@@ -23,21 +23,35 @@ $dbhost = 'localhost:3316';
             $email=$user -> get_email();
             $gender=$user -> get_gender();
         } 
-
+        
+        function __destruct() {
+            echo "Username i perdoruesit eshte {$this->userName}<br> ";
+            echo "Shfrytezuesi nuk mund te krijohet";
+          }
 
         function insert_User(){
 
             global $id,$userName,$password,$email,$gender;
 
-            $insert="INSERT INTO Users(ID,UserName,Passwordi,Email,Gender) VALUES('$id','$userName', '$password', '$email', '$gender');";
 
-            $retval = mysqli_query( $GLOBALS['conn'], $insert );
+            $passRegex=preg_match('@^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$@',$password);
+            //echo $passRegex;
 
-            if(! $retval ){
-                die('Could not enter data: ' . mysqli_connect_error());
+            if($passRegex === 1){
+                $insert="INSERT INTO Users(ID,UserName,Passwordi,Email,Gender) VALUES('$id','$userName', '$password', '$email', '$gender');";
+
+                $retval = mysqli_query( $GLOBALS['conn'], $insert );
+
+                if(! $retval ){
+                    die('Te dhenat nuk mund te shtohen: ' . mysqli_connect_error());
+                }
+                echo "Te dhenat u regjistruan me sukses\n";
             }
-            echo "Te dhenat u regjistruan me sukses\n";
-            
+            else{
+                header("Location: ../signUp.html");
+               // $fontColor='style="color:#ff442a;"';
+            }
+
             mysqli_close( $GLOBALS['conn']);
         
         } 
