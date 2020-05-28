@@ -1,5 +1,5 @@
 <?php
-	$dbhost = 'localhost:3306';
+	$dbhost = 'localhost:3316';
 	$dbuser = 'root';
 	$dbpass = '';
 	$db='travelDB';

@@ -1,7 +1,7 @@
 <?php
 
 
-$dbhost = 'localhost:3306';
+$dbhost = 'localhost:3316';
 	$dbuser = 'root';
 	$dbpass = '';
     $db='travelDB';
@@ -52,7 +52,7 @@ $dbhost = 'localhost:3306';
                     die('Te dhenat nuk mund te shtohen: ' . mysqli_connect_error());
                 }
                 echo "Te dhenat u regjistruan me sukses\n";
-                header("Location: ../logIn.html");
+                header("Location: ../loginPage.php");
 
             }
             else{

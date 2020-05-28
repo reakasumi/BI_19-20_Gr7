@@ -84,7 +84,7 @@ session_start();
 
                     </li>
 
-                    <li><a href="logIn.html" target="_self">LOG IN</a></li>
+                    <li><a href="loginPage.php" target="_self">LOG IN</a></li>
 
                 </ul>
             </nav>
@@ -101,7 +101,7 @@ session_start();
 
         //session_start();
 
-        define('dbhost','localhost:3306');
+        define('dbhost','localhost:3316');
         define('dbuser','root');
         define('dbpass','');
         define('db','travelDB');
@@ -130,6 +130,23 @@ session_start();
                     $dateEnd=$_GET['dateEnd'];
                     $guests=$_GET['guests'];
 
+                try{
+                    $d1 = preg_split('/[-]/',$dateStart);
+                    $d2 = preg_split('/[-]/',$dateEnd);
+
+                    $ystart=substr($d1[0],2);
+                    $yend=substr($d2[0],2);
+
+                    if($d2[2]>=$d1[2] && $d2[1]>=$d1[1] && $yend>=$ystart){
+                        $dateStart=implode("-",$d1);
+                        $dateEnd=implode("-",$d2);
+                    }
+                    else{
+                        throw new Exception("Date is invalid!");
+                    }
+               
+                    
+                
                     $searchCity="SELECT name FROM cities;";
                     $eval = mysqli_query( $GLOBALS['conn'], $searchCity );
                     if (!$eval) {
@@ -155,7 +172,7 @@ session_start();
                     }
                    
 
-                try{
+                 try{
                     $sql="SELECT apartment_name,location,price,image,description,numOfGuests,dateFrom,dateTo FROM rent_apartments WHERE location='$city' AND dateFrom<='$dateStart' AND dateTo>='$dateEnd' AND numOfGuests>='$guests'";
                     $retval = mysqli_query( $GLOBALS['conn'], $sql );
                     $count = mysqli_num_rows($retval);
@@ -279,10 +296,15 @@ session_start();
 
                                 }
                             }
-
-            catch(Exeption $e){
-                echo "Couldn't run query properly or other error is occuring";
-            }
+                   
+                    catch(Exception $e){
+                        echo "Couldn't run query properly or other error is occuring".$e->getMessage();;
+                    }
+                }    
+                catch(Exception $e){
+                    echo "<h3 style='color:red;float:right;'>Message: " .$e->getMessage()."</h3>";
+                 }
+                
             }
            
             
