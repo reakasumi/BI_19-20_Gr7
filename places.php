@@ -300,8 +300,8 @@ session_start();
 <label>Upload a file with your preferences:</label>
 
 
-    <input type="file" name="fileToUpload"  />
-    <input type="submit" value="Edit" name="editFile" style="background-color: #10498f;
+    <input type="file" name="uploadedfile"  />
+    <!-- <input type="submit" value="Edit" name="editFile" style="background-color: #10498f;
     border: none;
     border-radius: 7px;
     color: #E7FFFD;
@@ -310,8 +310,8 @@ session_start();
     cursor: pointer;
     width: 70px;
     height: 35px;
-   " />
-    <input type="submit" style="background-color: #E2494C;
+   " /> -->
+    <input type="submit" name="submit" style="background-color: #E2494C;
     border: none;
     border-radius: 7px;
     color: #E7FFFD;

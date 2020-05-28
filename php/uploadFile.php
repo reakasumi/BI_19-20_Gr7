@@ -1,36 +1,60 @@
 <?php
-//$target_dir = "files/";
-//$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-// echo $target_file;
+$target_dir = "files/";
+$target_file = $target_dir . basename($_FILES["uploadedfile"]["name"]);
+//echo $target_file;
 // $uploadOk = 1;
 // $inputFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// // Check if image file is a actual image or fake image
-// if(isset($_POST["submit"])) {
-//   //$check =  ($_FILES["fileToUpload"]["tmp_name"]);
-//   $check = $inputFileType['extension'];
-//   if($check == 'txt') {
-//     echo "File is aa text - " . $check["mime"] . ".";
-//     $uploadOk = 1;
-//   } else {
-//     echo "File is not text file.";
-//     $uploadOk = 0;
-//   }
-// }
 
 if(isset($_POST["submit"])) {
-$info = pathinfo($_FILES['fileToUpload']['name']);
-$ext = $info['extension']; // get the extension of the file
-$newname = "file.".$ext; 
+    $newFile = "../files/". basename($_FILES["uploadedfile"]["name"]);
+    move_uploaded_file($_FILES["uploadedfile"]["tmp_name"],  'data.txt');
+    //$uploadedfile=$_FILES['file']['name'];
+    //echo 'hello';
+    $myfile = fopen($newFile, "r+") or die("Unable to open file!");
 
-$target = '../files/'.$newname;
-move_uploaded_file( $_FILES['filetoUpload']['tmp_name'], $target);
- //move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], 'contents/' . $_FILE['name']);
-  //$uploadedfile=$_FILES['file']['name'];
+    try{
+            $fileData=fread($myfile,filesize($newFile));
 
- // $myfile = fopen($target_file, "r+") or die("Unable to open file!");
- // echo fread($myfile,filesize($target_file));
- // fclose($myfile);
+            $txt = " \n Favorite places of user!\n";
+            fwrite($myfile, $txt);
 
+
+        
+            $result = preg_replace_callback('/( ([a-z]{1}))/',function ($matches) {
+                                        return strtoupper($matches[0]);
+                                        } , $fileData);
+                                    // echo $result;
+
+
+
+            $arr= (explode(", ",$result));
+
+            sort($arr);
+
+            echo "<div style='margin:50px 650px;'>";
+            echo "<h3 style='color:darkblue;'>Data given from file:</h3>";
+
+            echo "<ul>";
+            for($i=0; $i<sizeof($arr); $i++){
+                echo "<li>".$arr[$i]."</li>";  
+            }
+            echo "</ul><button style='background-color: #814989;
+            border: none;
+            border-radius: 7px;
+            color: #E7FFFD;
+            font-size: 0.7em;
+            text-decoration: none;
+            cursor: pointer;
+            width: 150px;
+            height: 35px;
+            '><a href='../places.php' style='color:white;font-weight:bold;text-decoration:none;'>Go Back!</a> </button></div>";
+
+            fclose($myfile);
+        }
+    catch(Exception $e){
+        echo "Couldn't read given file";
+    }
 }
+
 
 ?>
