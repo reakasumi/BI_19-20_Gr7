@@ -116,6 +116,12 @@
              define('db','travelDB');
              $conn = mysqli_connect(dbhost, dbuser, dbpass, db);
 
+
+             $updt="UPDATE staff SET name = UPPER(name)";
+             $updt2="UPDATE staff SET lastName=UPPER(lastName)";
+             $eval = mysqli_query( $conn, $updt );
+             $eval2 = mysqli_query( $conn, $updt2 );
+
                 $sql="SELECT name,lastName,bio,profile FROM staff;";
                 $retval = mysqli_query( $conn, $sql );
                 $count = mysqli_num_rows($retval);
