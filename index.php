@@ -109,16 +109,41 @@
         <section class="players">
             <h4 style="top:13px" class="redbox">OUR PLAYERS</h4>
 
+            <?php 
+             define('dbhost','localhost:3316');
+             define('dbuser','root');
+             define('dbpass','');
+             define('db','travelDB');
+             $conn = mysqli_connect(dbhost, dbuser, dbpass, db);
+
+                $sql="SELECT name,lastName,bio,profile FROM staff;";
+                $retval = mysqli_query( $conn, $sql );
+                $count = mysqli_num_rows($retval);
+
+                $apartments=array();
+
+                if (!$retval) {
+                    printf("Error: %s\n", mysqli_error($conn));
+                    exit();
+                }
+                else{
+                    
+                    while($row = mysqli_fetch_array($retval, MYSQLI_NUM)) { 
+                        ?>
+
+
             <figure>
-                <img src="images/people/people1.jpg" alt="photo" width="175" height="175">
+                <img <?php echo "src='$row[3]'" ?> alt="photo" width="175" height="175">
                 <figcaption>
-                  <h4 >Name:  <span id="name1" style="font-weight: lighter;">  </span></h4>
-                    <p id="text_person1"></p>
+                  <h4 >Name: <span id="name1" style="font-weight: lighter;"><?php echo $row[0]." ".$row[1]; ?> </span></h4>
+                    <p id="text_person1"><?php echo $row[2]; ?></p>
                     <a href="https://www.linkedin.com" class="reddetails">View profile</a>
                 </figcaption>
             </figure>
 
-            <figure>
+                    <?php }} ?>
+
+            <!-- <figure>
                 <img src="images/people/people2.jpg" alt="photo" width="175" height="175">
                 <figcaption>
                     <h4 >Name:  <span id="name2" style="font-weight: lighter;">  </span></h4>
@@ -152,7 +177,7 @@
                     <p id="text_person5"></p>
                     <a href="https://www.linkedin.com" class="reddetails">View profile</a>
                 </figcaption>
-            </figure>
+            </figure> -->
 
         </section>
 
@@ -192,14 +217,14 @@
     <!-- <script type="text/javascript" src="js/signUp.js"></script> -->
     <script type="text/javascript">
        
-        // var num = 5.56789;
-        // var n = num.toExponential();
+        var num = 5.56789;
+        var n = num.toExponential();
 
-        function Person(first, last, desc) {
-            this.firstname = first;
-            this.lastname = last;
-            this.descVal = desc;
-        }
+        // function Person(first, last, desc) {
+        //     this.firstname = first;
+        //     this.lastname = last;
+        //     this.descVal = desc;
+        // }
 
         function TitleText(title, titleText) {
             this.titleVal = title;
@@ -210,11 +235,11 @@
 
 
 
-        var person1 = new Person("Tyler", "Cammack", "Dr Cammack is a French trained General Practice Family Doctor. He graduated in 1991 from Toulouse Rangueil University.");
-        var person2 = new Person("Brice", "Jeremiah", "Brice Jeremiah is a German lover of travelling and a honorable student.He graduated in 1998 from Berlin University.");
-        var person3 = new Person("Josefina", "Dobson", "Josefina has a master degree and a whole lot of experiences into travelling.She graduated in 1999 from Berlin University.");
-        var person4 = new Person("Nancy", "Brumfield", "Mr.Brumfield is an American who has trained and studied hotelerism.She graduated in 2005 from Moscow University");
-        var person5 = new Person("Jennie", "Barkley", "Jennie Barkley is a web developer has bachelor and master degree on Computer Science, San Francisco University of Technology.");
+        // var person1 = new Person("Tyler", "Cammack", "Dr Cammack is a French trained General Practice Family Doctor. He graduated in 1991 from Toulouse Rangueil University.");
+        // var person2 = new Person("Brice", "Jeremiah", "Brice Jeremiah is a German lover of travelling and a honorable student.He graduated in 1998 from Berlin University.");
+        // var person3 = new Person("Josefina", "Dobson", "Josefina has a master degree and a whole lot of experiences into travelling.She graduated in 1999 from Berlin University.");
+        // var person4 = new Person("Nancy", "Brumfield", "Mr.Brumfield is an American who has trained and studied hotelerism.She graduated in 2005 from Moscow University");
+        // var person5 = new Person("Jennie", "Barkley", "Jennie Barkley is a web developer has bachelor and master degree on Computer Science, San Francisco University of Technology.");
 
         var t_text1 = new TitleText("Plan your travel", "The most wonderful places"
             + " you can visit are displayed in our website.By breaking the country into smaller, more manageable areas, the site aims to create a virtual travel experience that allows the user to explore.");
@@ -223,22 +248,22 @@
             " your travel. Also find other activities, organizations and participate or voulenteer to help others as long as you stay in touch with the world, you learn more about cultures.");
 
 
-        document.getElementById("name1").innerHTML = person1.firstname +
-            " " + person1.lastname;
-        document.getElementById("name2").innerHTML = person2.firstname +
-            " " + person2.lastname;
-        document.getElementById("name3").innerHTML = person3.firstname +
-            " " + person3.lastname;
-        document.getElementById("name4").innerHTML = person4.firstname +
-            " " + person4.lastname;
-        document.getElementById("name5").innerHTML = person5.firstname +
-            " " + person5.lastname;
+        // document.getElementById("name1").innerHTML = person1.firstname +
+        //     " " + person1.lastname;
+        // document.getElementById("name2").innerHTML = person2.firstname +
+        //     " " + person2.lastname;
+        // document.getElementById("name3").innerHTML = person3.firstname +
+        //     " " + person3.lastname;
+        // document.getElementById("name4").innerHTML = person4.firstname +
+        //     " " + person4.lastname;
+        // document.getElementById("name5").innerHTML = person5.firstname +
+        //     " " + person5.lastname;
 
-        document.getElementById("text_person1").innerHTML = person1.descVal;
-        document.getElementById("text_person2").innerHTML = person2.descVal;
-        document.getElementById("text_person3").innerHTML = person3.descVal;
-        document.getElementById("text_person4").innerHTML = person4.descVal;
-        document.getElementById("text_person5").innerHTML = person5.descVal;
+        // document.getElementById("text_person1").innerHTML = person1.descVal;
+        // document.getElementById("text_person2").innerHTML = person2.descVal;
+        // document.getElementById("text_person3").innerHTML = person3.descVal;
+        // document.getElementById("text_person4").innerHTML = person4.descVal;
+        // document.getElementById("text_person5").innerHTML = person5.descVal;
 
         document.getElementById("title1").innerHTML = t_text1.titleVal;
         document.getElementById("title2").innerHTML = t_text2.titleVal;
