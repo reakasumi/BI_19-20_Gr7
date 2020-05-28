@@ -25,6 +25,7 @@ class loginController{
                 echo(" login"); 
                }
                else{
+                setcookie("type", "",time()-(86400 * 30));
                 header("Location: ../login.html");
                 echo("not loged in");
             }
