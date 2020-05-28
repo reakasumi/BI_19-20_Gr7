@@ -13,7 +13,7 @@
 
 <body>
     <!-- HEADER -->
-    <header>
+    <!-- <header>
         <div class="navigation">
             <nav>
                 <div class="header-text">
@@ -81,7 +81,9 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> -->
+
+    <?php include('header.php')?>
 
     <!-- //HEADER -->
 
@@ -145,6 +147,7 @@
     </div>
      <!-- <script src="js/header.js"></script>
     <script src="js/newyork.js"></script> -->
+    <?php include('footer.php')?>
 </body>
 </html>
 <!-- onsubmit="return checkMatching2(this) -->

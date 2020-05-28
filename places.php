@@ -34,7 +34,7 @@ session_start();
                 </div>
                 <i class="fa fa-bars menu-toggle"></i>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.php">HOME</a></li>
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
                     <li class="dropdown">
@@ -101,7 +101,7 @@ session_start();
 
         //session_start();
 
-        define('dbhost','localhost:3316');
+        define('dbhost','localhost:3306');
         define('dbuser','root');
         define('dbpass','');
         define('db','travelDB');
