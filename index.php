@@ -78,22 +78,15 @@
 
                     </li>
 
-                    <li><a href="logIn.html">
-                    <?php //include_once('..php/login.php');
-                    if(isset($_COOKIE["type1"] ) )
-                             {   
-                                 //echo("");
-                                 //echo($_COOKIE["cookie4"]);
-                                 echo("LOG OUT");
-                             }
-                   else{//echo("");
-                    echo("LOG IN");
-                         
-                        
-                          
-                          }?>    
-                    
-                    </a></li>
+                    <li> <?php
+                         //include_once('login.php');
+                          if(isset($_COOKIE["type4"] )){  
+                             
+                             echo("<a href='logout.php' target='_self' > LOG OUT");
+                           }
+                           else{
+                               echo("<a href='logIn.html' target='_self' > LOG IN");
+                           }?></a></li>
 
                 </ul>
             </nav>

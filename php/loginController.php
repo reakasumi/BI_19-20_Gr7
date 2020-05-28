@@ -20,9 +20,14 @@ class loginController{
                 
                if($count===1){
                 // session_register("username");
-                setcookie("type", $myusername,  time() + (86400 * 1));
+               // header("Location: ../index.php");
+              // echo("log out ");
+
+                setcookie("type2", $myusername,  time() + (86400 * 2));
                 header("Location: ../index.php");
-                echo(" login"); 
+               
+                
+                //echo("<script> alert('Welcome '".$_COOKIE["type"].");</script>"); 
                }
                else{
                 //setcookie("type", "",time()-(86400 * 1));
