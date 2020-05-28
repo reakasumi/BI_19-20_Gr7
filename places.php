@@ -102,11 +102,15 @@ session_start();
 
         //session_start();
 
-        $dbhost = 'localhost:3306';
-        $dbuser = 'root';
-        $dbpass = '';
-        $db='travelDB';
-        $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+        define('dbhost','localhost:3316');
+        define('dbuser','root');
+        define('dbpass','');
+        define('db','travelDB');
+        // $dbhost = 'localhost:3316';
+        // $dbuser = 'root';
+        // $dbpass = '';
+        // $db='travelDB';
+        $conn = mysqli_connect(dbhost, dbuser, dbpass, db);
 
 
 
@@ -134,26 +138,25 @@ session_start();
                         exit();
                     }
                     else{
-                        $k=0;
-                        while($row = mysqli_fetch_array($eval, MYSQLI_NUM) && ($k!==mysqli_num_rows($eval))) {
-                            $cityName=$row[$k];
+                        $k=$city;
+                        while($row = mysqli_fetch_array($eval, MYSQLI_NUM)) {
+                            $cityName['name']=$row[0]; 
 
-                            $numOfChars=strlen($cityName);
-                            $similarity=similar_text($city,$cityName,$percent);
+                            $numOfChars=strlen($cityName['name']);
+                            $similarity=similar_text($k,$cityName['name'],$percent);
 
                             if(($numOfChars-2)==$similarity || $percent>=45){
-                                $city=$cityName;
+                                $city=$cityName['name'];
+                            break;
                             }
                             else{
-                                $city=str_replace($city,"StringNotApplicable",$city);
+                                $city=str_replace($k,"StringNotApplicable",$k);
                             }
-                            $k++;
-                        }    
+                        }   
                     }
+                   
 
-                    
-
-               // try{
+                try{
                     $sql="SELECT apartment_name,location,price,image,description,numOfGuests,dateFrom,dateTo FROM rent_apartments WHERE location='$city' AND dateFrom<='$dateStart' AND dateTo>='$dateEnd' AND numOfGuests>='$guests'";
                     $retval = mysqli_query( $GLOBALS['conn'], $sql );
                     $count = mysqli_num_rows($retval);
@@ -274,11 +277,11 @@ session_start();
                                     }
 
                                 }
-            //                 }
+                            }
 
-            // catch(Exeption $e){
-            //     echo "Couldn't run query properly or other error is occuring";
-            // }
+            catch(Exeption $e){
+                echo "Couldn't run query properly or other error is occuring";
+            }
             }
            
             
