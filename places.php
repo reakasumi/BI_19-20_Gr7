@@ -101,7 +101,7 @@ session_start();
 
         //session_start();
 
-        $dbhost = 'localhost:3316';
+        $dbhost = 'localhost:3306';
         $dbuser = 'root';
         $dbpass = '';
         $db='travelDB';
