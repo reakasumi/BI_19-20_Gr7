@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/homePage.css">
 
     <!-- <script src="js/nightMode.js"></script> -->
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 
 </head>
 
@@ -38,7 +38,7 @@
 
                             <div class="row">
                                 <div class="column">
-                                    <form action="newyork.html">
+                                    <form action="places.php">
                                         <p>
                                             <label class="just-text">Where do you want to go?</label>
                                             <br>
@@ -53,19 +53,19 @@
                                         </p>
                                         <p class="inline">
                                             <label class="just-text">Check in</label><br>
-                                            <input class="inputStyle_2" type="date" id="myDate1">
+                                            <input class="inputStyle_2" type="date" id="myDate1" name="dateStart">
                                         </p>
                                         <p class="inline">
                                             <label class="just-text">Check out</label><br>
-                                            <input class="inputStyle_2" type="date" id="myDate2">
+                                            <input class="inputStyle_2" type="date" id="myDate2" name="dateEnd">
                                         </p>
                                         <p>
                                             <label class="just-text">Guests</label><br>
                                             <input type="number" class="inputStyle_1" placeholder="How many.." min="1"
-                                                max="30" step="1" id="myInput2">
+                                                max="30" step="1" id="myInput2" name="guests">
                                         </p>
 
-                                        <input type="button" name="search" id="button1" value="SEARCH">
+                                        <input type="submit" name="search" id="button1" value="SEARCH">
 
                                     </form>
 
@@ -319,13 +319,13 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- Script -->
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-    <script src="js/header.js"></script>
-    <script src="js/newyork.js"></script>
+    <!-- <script src="js/header.js"></script> -->
+    <!-- <script src="js/newyork.js"></script> -->
     <!-- <script type="text/javascript" src="js/signUp.js"></script> -->
     <script type="text/javascript">
        

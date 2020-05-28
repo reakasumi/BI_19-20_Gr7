@@ -54,6 +54,7 @@ session_start();
                                                 <option value="New York">
                                                 <option value="Berlin">
                                                 <option value="Paris">
+                                                <option value="London">
                                             </datalist>
                                         </p>
                                         <p class="inline">
@@ -121,13 +122,38 @@ session_start();
             //$_SESSION['guestsNumber'];
 
                 if( isset($_GET['search'])) {
-                    $city=$_GET['browser'];
+                    $city=trim($_GET['browser']);
                     $dateStart=$_GET['dateStart'];
                     $dateEnd=$_GET['dateEnd'];
                     $guests=$_GET['guests'];
 
+                    $searchCity="SELECT name FROM cities;";
+                    $eval = mysqli_query( $GLOBALS['conn'], $searchCity );
+                    if (!$eval) {
+                        printf("Error: %s\n", mysqli_error($conn));
+                        exit();
+                    }
+                    else{
+                        $k=0;
+                        while($row = mysqli_fetch_array($eval, MYSQLI_NUM) && ($k!==mysqli_num_rows($eval))) {
+                            $cityName=$row[$k];
 
+                            $numOfChars=strlen($cityName);
+                            $similarity=similar_text($city,$cityName,$percent);
 
+                            if(($numOfChars-2)==$similarity || $percent>=45){
+                                $city=$cityName;
+                            }
+                            else{
+                                $city=str_replace($city,"StringNotApplicable",$city);
+                            }
+                            $k++;
+                        }    
+                    }
+
+                    
+
+               // try{
                     $sql="SELECT apartment_name,location,price,image,description,numOfGuests,dateFrom,dateTo FROM rent_apartments WHERE location='$city' AND dateFrom<='$dateStart' AND dateTo>='$dateEnd' AND numOfGuests>='$guests'";
                     $retval = mysqli_query( $GLOBALS['conn'], $sql );
                     $count = mysqli_num_rows($retval);
@@ -248,7 +274,13 @@ session_start();
                                     }
 
                                 }
-                            }
+            //                 }
+
+            // catch(Exeption $e){
+            //     echo "Couldn't run query properly or other error is occuring";
+            // }
+            }
+           
             
             ?>
 
