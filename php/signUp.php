@@ -2,7 +2,7 @@
     include_once('user.php');
     include_once('userController.php');
 
-    $useri=new Perdoruesi();
+    $useri=new User();
   
 
     if( $_POST["email"] || $_POST["username"] || $_POST["password1"] || $_POST["gender"]) {

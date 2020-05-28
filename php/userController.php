@@ -26,7 +26,7 @@ $dbhost = 'localhost:3306';
         
         function __destruct() {
             echo "Username i perdoruesit eshte {$this->userName}<br> ";
-            echo "Shfrytezuesi nuk mund te krijohet";
+           // echo "Shfrytezuesi nuk mund te krijohet";
           }
 
         function insert_User(){
@@ -52,6 +52,8 @@ $dbhost = 'localhost:3306';
                     die('Te dhenat nuk mund te shtohen: ' . mysqli_connect_error());
                 }
                 echo "Te dhenat u regjistruan me sukses\n";
+                header("Location: ../logIn.html");
+
             }
             else{
                 header("Location: ../signUp.html");
