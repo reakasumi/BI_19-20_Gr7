@@ -1,7 +1,7 @@
 <?php
    // include_once('user.php');
     include_once('loginController.php');
-
+    session_start();
     $login=new loginController();
   
 
@@ -11,5 +11,7 @@
 
         exit();
     }
+
+ 
 
 ?>

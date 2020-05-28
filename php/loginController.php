@@ -18,8 +18,9 @@ class loginController{
             
                 
                if($count===1){
-                session_register("username");
+                // session_register("username");
                 $_SESSION['login_user'] = $myusername;
+                $_SESSION['logout_user'] = "LOG OUT";
                echo( $_SESSION['login_user']);
                //    header("Location: ../index.html");
                    

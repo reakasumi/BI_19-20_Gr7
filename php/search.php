@@ -1,5 +1,5 @@
 <?php
-    $dbhost = 'localhost:3316';
+    $dbhost = 'localhost:3306';
     $dbuser = 'root';
     $dbpass = '';
     $db='travelDB';
@@ -17,6 +17,7 @@
         private $guests;
 
         function search(){
+            echo("hello");
 
             if( isset($_GET['search'])) {
                 $city=$_GET['browser'];
@@ -44,9 +45,10 @@
                         $cost=$row[2];
                         $image=$row[3];
                         $desc=$row[4];
-                        $guests=$row[5];
+                        $guests=12;
+                        echo($guests);
 
-                        header("Location: ../places.php");
+                        //header("Location: ../places.php");
                         //echo "$apartment_name";
                     }
 
@@ -61,6 +63,7 @@
         }
     }
 
-
+$f = new setData();
+$f->search();
     
 ?>
