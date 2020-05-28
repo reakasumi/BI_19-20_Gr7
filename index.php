@@ -78,7 +78,15 @@
 
                     </li>
 
-                    <li><a href="logIn.html" target="_self">LOG IN</a></li>
+                    <li> <?php
+                         //include_once('login.php');
+                          if(isset($_COOKIE["type4"] )){  
+                             
+                             echo("<a href='logout.php' target='_self' > LOG OUT");
+                           }
+                           else{
+                               echo("<a href='logIn.html' target='_self' > LOG IN");
+                           }?></a></li>
 
                 </ul>
             </nav>
