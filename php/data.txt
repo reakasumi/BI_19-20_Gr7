@@ -1,1 +1,3 @@
 New york, los angeles, moskow, london, paris, rome 
+ 
+ Favorite places of user!
