@@ -33,7 +33,7 @@
                     <li><a href="about.html" target="_self">ABOUT</a></li>
                     <li><a href="blog.html" target="_self">BLOG</a></li>
                     <li class="dropdown">
-                        <a href="#" target="_self">PLACES</a>
+                        <a href="places.php" target="_self">PLACES</a>
                         <div class="dropdown-content">
 
                             <div class="row">
@@ -78,7 +78,22 @@
 
                     </li>
 
-                    <li><a href="logIn.html" target="_self">LOG IN</a></li>
+                    <li><a href="logIn.html">
+                    <?php //include_once('..php/login.php');
+                    if(isset($_COOKIE["type1"] ) )
+                             {   
+                                 //echo("");
+                                 //echo($_COOKIE["cookie4"]);
+                                 echo("LOG OUT");
+                             }
+                   else{//echo("");
+                    echo("LOG IN");
+                         
+                        
+                          
+                          }?>    
+                    
+                    </a></li>
 
                 </ul>
             </nav>

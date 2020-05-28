@@ -88,8 +88,7 @@ session_start();
 
                 </ul>
             </nav>
-            <button id="modes" type="button" onclick="changeMode()">Change Background Color</button>
-
+            <!-- <button id="modes" type="button" onclick="changeMode()">Change Background Color</button> -->
         </div>
     </header>
     <!-- //HEADER -->
@@ -193,7 +192,9 @@ session_start();
                         }
                         ?>
 
+
                         <h4 id="place" class="redbox" style="padding-top: 4px;margin-top:54px;" name="place">
+
                                     <?php
                                         if(isset($_SESSION['location'])){
                                             echo $apartments[0][3];
@@ -288,19 +289,44 @@ session_start();
             ?>
 
 
-   
-
-
-
-
-
-
-
-
 
 
     <!-- CONTENT -->
-    <div id="map" style="height:400px; width: 700px; margin: auto;"></div>
+
+
+<!-- //content -->
+<div >
+<form action="php/uploadFile.php" enctype="multipart/form-data" method="post" style="margin:20px 430px ;">
+<label>Upload a file with your preferences:</label>
+
+
+    <input type="file" name="fileToUpload"  />
+    <input type="submit" value="Edit" name="editFile" style="background-color: #10498f;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.7em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+   " />
+    <input type="submit" style="background-color: #E2494C;
+    border: none;
+    border-radius: 7px;
+    color: #E7FFFD;
+    font-size: 0.7em;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+   " />
+
+</form>
+
+            </div>
+
+    <div id="map" style="height:400px; width: 700px; margin: auto; "></div>
 
     <!-- <div class="earth3dmap-com"><iframe id="iframemap"
             src="https://maps.google.com/maps?q=kosovo&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="75%"
