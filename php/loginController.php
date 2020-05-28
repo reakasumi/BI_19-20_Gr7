@@ -4,7 +4,8 @@ $dbuser = 'root';
 $dbpass = '';
 $db='travelDB';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
-session_start();
+
+
 class loginController{
        
     
@@ -19,15 +20,13 @@ class loginController{
                 
                if($count===1){
                 // session_register("username");
-                $_SESSION['login_user'] = $myusername;
-                $_SESSION['logout_user'] = "LOG OUT";
-               echo( $_SESSION['login_user']);
-               //    header("Location: ../index.html");
-                   
+                setcookie("type", $myusername,  time() + (86400 * 30));
+                header("Location: ../index.php");
+                echo(" login"); 
                }
                else{
                 header("Location: ../login.html");
-               
+                echo("not loged in");
             }
             mysqli_close( $GLOBALS['conn']);
         }

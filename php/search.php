@@ -69,14 +69,9 @@
                 }
                 //echo $city." ".$dateStart." ".$dateEnd." ".$guests;
             }
-        // }
+         }
 
-        // function get_guests(){
-        //     //global $guests;
-        //     return $this->$guests;
-        // }
-    // }
-
+      
 $f = new setData();
 $f->search();
     
