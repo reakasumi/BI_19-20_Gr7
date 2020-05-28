@@ -1,13 +1,10 @@
 <?php
 
     class Perdoruesi{
-        //private $uniqid=uniqid();
-
         private $ID;
-        private $userName;
         private $password;
         private $email;
-        private $gender;
+      
 
         function __construct(){
         }
@@ -18,14 +15,6 @@
         }
         function get_ID() {
             return $this->ID;
-        }
-
-        // Methods
-        function set_name($userName) {
-            $this->userName = $userName;
-        }
-        function get_name() {
-            return $this->userName;
         }
 
         // Methods
@@ -43,17 +32,30 @@
         function get_email() {
             return $this->email;
         }
-
-        // Methods
-        function set_gender($gender) {
-            $this->gender = $gender;
-        }
-        function get_gender() {
-            return $this->gender;
-        }
-
         
     }
+  
 
+    
+class User extends Perdoruesi{
+  
+ private $userName;
+ private $gender;
+
+ function set_name($userName) {
+    $this->userName = $userName;
+}
+function get_name() {
+    return $this->userName;
+}
+ // Methods
+ function set_gender($gender) {
+    $this->gender = $gender;
+}
+function get_gender() {
+    return $this->gender;
+}
+    
+}
 
 ?>

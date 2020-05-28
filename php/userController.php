@@ -52,6 +52,8 @@ $dbhost = 'localhost:3306';
                     die('Te dhenat nuk mund te shtohen: ' . mysqli_connect_error());
                 }
                 echo "Te dhenat u regjistruan me sukses\n";
+                header("Location: ../logIn.html");
+
             }
             else{
                 header("Location: ../signUp.html");

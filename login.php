@@ -1,16 +1,11 @@
 <?php
-   // include_once('user.php');
-    //include_once('loginController.php');
+  
     $dbhost = 'localhost:3306';
     $dbuser = 'root';
     $dbpass = '';
     $db='travelDB';
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
- 
-    //$login=new loginController();
-   
-
-    
+     
    if(isset($_POST['logIn-btn'])){
        
     if(  $_POST["username"] || $_POST["password"] ) {
@@ -22,7 +17,7 @@
         
             
            if($count===1){
-            setcookie("type4", $myusername,  time() + (86400 * 30));
+            setcookie("type4", $myusername,  time() + (86400 * 1));
             header("Location: index.php");
            
            }
