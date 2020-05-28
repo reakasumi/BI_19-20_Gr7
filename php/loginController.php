@@ -20,13 +20,13 @@ class loginController{
                 
                if($count===1){
                 // session_register("username");
-                setcookie("type", $myusername,  time() + (86400 * 30));
+                setcookie("type", $myusername,  time() + (86400 * 1));
                 header("Location: ../index.php");
                 echo(" login"); 
                }
                else{
-                setcookie("type", "",time()-(86400 * 30));
-                header("Location: ../login.html");
+                //setcookie("type", "",time()-(86400 * 1));
+                //header("Location: ../login.html");
                 echo("not loged in");
             }
             mysqli_close( $GLOBALS['conn']);
